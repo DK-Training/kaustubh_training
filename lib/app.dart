@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:sizer/sizer.dart';
 
 import 'domain/core/config/app_config.dart';
 import 'domain/core/config/injection.dart';
@@ -62,7 +63,7 @@ class MainApp extends StatelessWidget {
 
 Future appInitializer(AppConfig appConfig) async {
   final GlobalKey<NavigatorState> key = GlobalKey<NavigatorState>();
-  final bool isAuthorized=true;
+  const bool isAuthorized = false;
   setupLocator(key);
   AppConfig updatedAppConfig = AppConfig(
       appTitle: appConfig.appTitle,
@@ -71,7 +72,9 @@ Future appInitializer(AppConfig appConfig) async {
         create: (context) {
           return AppStateNotifier(isAuthorized: isAuthorized);
         },
-        child: const MainApp(),
+        child: Sizer(builder: (context, orientation, deviceType) {
+          return const MainApp();
+        }),
       ));
   return runApp(updatedAppConfig);
 }
