@@ -90,6 +90,9 @@ class CustomTextField extends StatelessWidget {
     TextFormField textFormField = TextFormField(
       controller: controller,
       initialValue: initialVal,
+      validator: validator,
+      autovalidateMode: AutovalidateMode.onUserInteraction,
+
       cursorColor: Theme.of(context).primaryColor,
       cursorHeight: isUpload ? 0 : null,
       textCapitalization: textCapitalization ?? TextCapitalization.none,
@@ -99,6 +102,7 @@ class CustomTextField extends StatelessWidget {
       inputFormatters: inputFormatters,
       onTap: onTap,
       enabled: !readOnly,
+
       keyboardType: isUpload ? TextInputType.none : keyboardType,
       decoration: InputDecoration(
         counter: const Offstage(),
