@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "417714493855",
+    "project_id": "kaustubhtraining-f5b9b",
+    "storage_bucket": "kaustubhtraining-f5b9b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:417714493855:android:68cfd67aa23c7dfb4a85aa",
+        "android_client_info": {
+          "package_name": "com.kaustubh.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "417714493855-b2unr5f9ig0e36vt2558qu0aaqmpm1qf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvTrjYertWCeEHtrNs1vtN5xV8kQSfn2Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "417714493855-b2unr5f9ig0e36vt2558qu0aaqmpm1qf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
