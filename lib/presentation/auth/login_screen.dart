@@ -47,6 +47,10 @@ class LoginScreenConsumer extends StatelessWidget {
             content: Text(state.errorMessage),
             duration: const Duration(seconds: 3),
           ));
+          context.read<LogInBloc>().add(LogInEvent.emitFromAnyWhere(
+                  state: state.copyWith(
+                isFailed: false,
+              )));
         }
       }
     }, builder: (context, state) {

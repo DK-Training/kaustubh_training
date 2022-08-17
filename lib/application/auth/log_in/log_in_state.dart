@@ -17,6 +17,7 @@ class LogInState with _$LogInState {
     required AppStateNotifier appStateNotifier,
     required TextEditingController userEmailController,
     required TextEditingController passwordController,
+    required AuthRepository authRepository,
   }) = _LogInState;
   factory LogInState.initial({
     required AppStateNotifier appStateNotifier,
@@ -25,6 +26,7 @@ class LogInState with _$LogInState {
         errorPassword: '',
         obscurePassword: true,
         obscureConfirmPassword: true,
+        authRepository:IAuthRepository(),
         // userProfile: null,
         errorEmail: '',
         errorMessage: '',
