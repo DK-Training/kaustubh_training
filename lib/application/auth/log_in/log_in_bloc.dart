@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -22,14 +23,23 @@ class LogInBloc extends Bloc<LogInEvent, LogInState> {
       final String email = state.userEmailController.text;
       final String password = state.passwordController.text;
       // print(email);
-      final bool response =
+      final Either<String, bool> response =
           await state.authRepository.login(email: email, password: password);
-      add(LogInEvent.emitFromAnyWhere(
-          state: state.copyWith(
-              isLoading: false,
-              isSuccessful: response,
-              isFailed: !response,
-              errorMessage: 'login failed')));
+      response.fold(
+        (l) {
+          add(LogInEvent.emitFromAnyWhere(
+              state: state.copyWith(
+                  isLoading: false,
+                  isSuccessful: false,
+                  isFailed: true,
+                  errorMessage: l)));
+        },
+        (r) {
+          add(LogInEvent.emitFromAnyWhere(
+              state: state.copyWith(
+                  isLoading: false, isSuccessful: true, isFailed: false)));
+        },
+      );
     });
   }
 }
