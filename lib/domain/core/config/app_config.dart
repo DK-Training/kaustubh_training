@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
 
+import '../../../infrastructure/auth/dto/user/user_dto.dart';
+
+
 class AppStateNotifier extends ChangeNotifier {
   bool isAuthorized;
-
+  UserDto? user;
   AppStateNotifier({
     required this.isAuthorized,
   });
 
-  Future<void> updateAfterAuthChange({
-    required bool isAuthorized,
-  }) async {
+  Future<void> updateAfterAuthChange(
+      {required bool isAuthorized, UserDto? user}) async {
     this.isAuthorized = isAuthorized;
+    this.user = user;
     notifyListeners();
   }
 

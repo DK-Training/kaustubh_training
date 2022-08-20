@@ -354,7 +354,8 @@ class _$LogInStateTearOff {
       required AppStateNotifier appStateNotifier,
       required TextEditingController userEmailController,
       required TextEditingController passwordController,
-      required AuthRepository authRepository}) {
+      required AuthRepository authRepository,
+      UserDto? user}) {
     return _LogInState(
       isLoading: isLoading,
       isSuccessful: isSuccessful,
@@ -369,6 +370,7 @@ class _$LogInStateTearOff {
       userEmailController: userEmailController,
       passwordController: passwordController,
       authRepository: authRepository,
+      user: user,
     );
   }
 }
@@ -386,15 +388,14 @@ mixin _$LogInState {
   String get errorEmail => throw _privateConstructorUsedError;
   String get errorPassword => throw _privateConstructorUsedError;
   String get errorMessage => throw _privateConstructorUsedError;
-  GlobalKey<FormState> get formKey =>
-      throw _privateConstructorUsedError; // required UserDto? userProfile,
-// required AuthRepository authRepository,
+  GlobalKey<FormState> get formKey => throw _privateConstructorUsedError;
   AppStateNotifier get appStateNotifier => throw _privateConstructorUsedError;
   TextEditingController get userEmailController =>
       throw _privateConstructorUsedError;
   TextEditingController get passwordController =>
       throw _privateConstructorUsedError;
   AuthRepository get authRepository => throw _privateConstructorUsedError;
+  UserDto? get user => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $LogInStateCopyWith<LogInState> get copyWith =>
@@ -419,7 +420,10 @@ abstract class $LogInStateCopyWith<$Res> {
       AppStateNotifier appStateNotifier,
       TextEditingController userEmailController,
       TextEditingController passwordController,
-      AuthRepository authRepository});
+      AuthRepository authRepository,
+      UserDto? user});
+
+  $UserDtoCopyWith<$Res>? get user;
 }
 
 /// @nodoc
@@ -445,6 +449,7 @@ class _$LogInStateCopyWithImpl<$Res> implements $LogInStateCopyWith<$Res> {
     Object? userEmailController = freezed,
     Object? passwordController = freezed,
     Object? authRepository = freezed,
+    Object? user = freezed,
   }) {
     return _then(_value.copyWith(
       isLoading: isLoading == freezed
@@ -499,7 +504,22 @@ class _$LogInStateCopyWithImpl<$Res> implements $LogInStateCopyWith<$Res> {
           ? _value.authRepository
           : authRepository // ignore: cast_nullable_to_non_nullable
               as AuthRepository,
+      user: user == freezed
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as UserDto?,
     ));
+  }
+
+  @override
+  $UserDtoCopyWith<$Res>? get user {
+    if (_value.user == null) {
+      return null;
+    }
+
+    return $UserDtoCopyWith<$Res>(_value.user!, (value) {
+      return _then(_value.copyWith(user: value));
+    });
   }
 }
 
@@ -522,7 +542,11 @@ abstract class _$LogInStateCopyWith<$Res> implements $LogInStateCopyWith<$Res> {
       AppStateNotifier appStateNotifier,
       TextEditingController userEmailController,
       TextEditingController passwordController,
-      AuthRepository authRepository});
+      AuthRepository authRepository,
+      UserDto? user});
+
+  @override
+  $UserDtoCopyWith<$Res>? get user;
 }
 
 /// @nodoc
@@ -550,6 +574,7 @@ class __$LogInStateCopyWithImpl<$Res> extends _$LogInStateCopyWithImpl<$Res>
     Object? userEmailController = freezed,
     Object? passwordController = freezed,
     Object? authRepository = freezed,
+    Object? user = freezed,
   }) {
     return _then(_LogInState(
       isLoading: isLoading == freezed
@@ -604,6 +629,10 @@ class __$LogInStateCopyWithImpl<$Res> extends _$LogInStateCopyWithImpl<$Res>
           ? _value.authRepository
           : authRepository // ignore: cast_nullable_to_non_nullable
               as AuthRepository,
+      user: user == freezed
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as UserDto?,
     ));
   }
 }
@@ -624,7 +653,8 @@ class _$_LogInState implements _LogInState {
       required this.appStateNotifier,
       required this.userEmailController,
       required this.passwordController,
-      required this.authRepository});
+      required this.authRepository,
+      this.user});
 
   @override
   final bool isLoading;
@@ -644,8 +674,7 @@ class _$_LogInState implements _LogInState {
   final String errorMessage;
   @override
   final GlobalKey<FormState> formKey;
-  @override // required UserDto? userProfile,
-// required AuthRepository authRepository,
+  @override
   final AppStateNotifier appStateNotifier;
   @override
   final TextEditingController userEmailController;
@@ -653,10 +682,12 @@ class _$_LogInState implements _LogInState {
   final TextEditingController passwordController;
   @override
   final AuthRepository authRepository;
+  @override
+  final UserDto? user;
 
   @override
   String toString() {
-    return 'LogInState(isLoading: $isLoading, isSuccessful: $isSuccessful, isFailed: $isFailed, obscurePassword: $obscurePassword, obscureConfirmPassword: $obscureConfirmPassword, errorEmail: $errorEmail, errorPassword: $errorPassword, errorMessage: $errorMessage, formKey: $formKey, appStateNotifier: $appStateNotifier, userEmailController: $userEmailController, passwordController: $passwordController, authRepository: $authRepository)';
+    return 'LogInState(isLoading: $isLoading, isSuccessful: $isSuccessful, isFailed: $isFailed, obscurePassword: $obscurePassword, obscureConfirmPassword: $obscureConfirmPassword, errorEmail: $errorEmail, errorPassword: $errorPassword, errorMessage: $errorMessage, formKey: $formKey, appStateNotifier: $appStateNotifier, userEmailController: $userEmailController, passwordController: $passwordController, authRepository: $authRepository, user: $user)';
   }
 
   @override
@@ -686,7 +717,8 @@ class _$_LogInState implements _LogInState {
             const DeepCollectionEquality()
                 .equals(other.passwordController, passwordController) &&
             const DeepCollectionEquality()
-                .equals(other.authRepository, authRepository));
+                .equals(other.authRepository, authRepository) &&
+            const DeepCollectionEquality().equals(other.user, user));
   }
 
   @override
@@ -704,7 +736,8 @@ class _$_LogInState implements _LogInState {
       const DeepCollectionEquality().hash(appStateNotifier),
       const DeepCollectionEquality().hash(userEmailController),
       const DeepCollectionEquality().hash(passwordController),
-      const DeepCollectionEquality().hash(authRepository));
+      const DeepCollectionEquality().hash(authRepository),
+      const DeepCollectionEquality().hash(user));
 
   @JsonKey(ignore: true)
   @override
@@ -726,7 +759,8 @@ abstract class _LogInState implements LogInState {
       required AppStateNotifier appStateNotifier,
       required TextEditingController userEmailController,
       required TextEditingController passwordController,
-      required AuthRepository authRepository}) = _$_LogInState;
+      required AuthRepository authRepository,
+      UserDto? user}) = _$_LogInState;
 
   @override
   bool get isLoading;
@@ -746,8 +780,7 @@ abstract class _LogInState implements LogInState {
   String get errorMessage;
   @override
   GlobalKey<FormState> get formKey;
-  @override // required UserDto? userProfile,
-// required AuthRepository authRepository,
+  @override
   AppStateNotifier get appStateNotifier;
   @override
   TextEditingController get userEmailController;
@@ -755,6 +788,8 @@ abstract class _LogInState implements LogInState {
   TextEditingController get passwordController;
   @override
   AuthRepository get authRepository;
+  @override
+  UserDto? get user;
   @override
   @JsonKey(ignore: true)
   _$LogInStateCopyWith<_LogInState> get copyWith =>

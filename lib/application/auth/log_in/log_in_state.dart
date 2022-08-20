@@ -12,12 +12,11 @@ class LogInState with _$LogInState {
     required String errorPassword,
     required String errorMessage,
     required GlobalKey<FormState> formKey,
-    // required UserDto? userProfile,
-    // required AuthRepository authRepository,
     required AppStateNotifier appStateNotifier,
     required TextEditingController userEmailController,
     required TextEditingController passwordController,
     required AuthRepository authRepository,
+    UserDto? user,
   }) = _LogInState;
   factory LogInState.initial({
     required AppStateNotifier appStateNotifier,
@@ -26,8 +25,7 @@ class LogInState with _$LogInState {
         errorPassword: '',
         obscurePassword: true,
         obscureConfirmPassword: true,
-        authRepository:IAuthRepository(),
-        // userProfile: null,
+        authRepository: IAuthRepository(),
         errorEmail: '',
         errorMessage: '',
         formKey: GlobalKey<FormState>(),
@@ -37,6 +35,5 @@ class LogInState with _$LogInState {
         appStateNotifier: appStateNotifier,
         userEmailController: TextEditingController(),
         passwordController: TextEditingController(),
-        // authRepository: IAuthRepository(),
       );
 }

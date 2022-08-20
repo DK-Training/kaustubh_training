@@ -1,17 +1,25 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 import '../../domain/auth/auth_repository.dart';
+import 'dto/user/user_dto.dart';
 
 class IAuthRepository extends AuthRepository {
   @override
-  Future<Either<String, bool>> login(
+  Future<Either<String, UserDto>> login(
       {required String email, required String password}) async {
     try {
       UserCredential credential = await FirebaseAuth.instance
           .signInWithEmailAndPassword(email: email, password: password);
-      print(credential.user!.uid);
-      return right(true);
+      final String uid = credential.user!.uid;
+      final DocumentSnapshot<Map<String, dynamic>> documentSnapshot =
+          await FirebaseFirestore.instance.collection('users').doc(uid).get();
+      if (!documentSnapshot.exists) {
+        return left('Login failed');
+      }
+      final UserDto user = UserDto.fromJson(documentSnapshot.data()!);
+      return right(user);
     } on FirebaseAuthException catch (e) {
       String error = 'Login failed';
       if (e.code == 'invalid-email') {
@@ -29,5 +37,3 @@ class IAuthRepository extends AuthRepository {
     }
   }
 }
-
-
