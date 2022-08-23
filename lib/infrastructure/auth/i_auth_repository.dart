@@ -36,4 +36,36 @@ class IAuthRepository extends AuthRepository {
       return left('Login failed');
     }
   }
+
+  @override
+  Future<Either<String, UserDto>> register(
+      {required UserDto tempUser, required String password}) async {
+    try {
+      UserCredential credential = await FirebaseAuth.instance
+          .createUserWithEmailAndPassword(
+              email: tempUser.email, password: password);
+      //
+      final uid = credential.user!.uid;
+      final UserDto toSaveUser = tempUser.copyWith(id: uid);
+      await FirebaseFirestore.instance
+          .collection('users')
+          .doc(uid)
+          .set(toSaveUser.toJson());
+      return right(toSaveUser);
+    } on FirebaseAuthException catch (e) {
+      String error = 'Login failed';
+      if (e.code == 'invalid-email') {
+        error = 'Email id is not valid';
+      } else if (e.code == 'email-already-in-use') {
+        error = 'Email already in use';
+      } else if (e.code == 'operation-not-allowed') {
+        error = 'Can\'t perform this operation';
+      } else if (e.code == 'weak-password') {
+        error = 'Password is too weak';
+      }
+      return left(error);
+    } catch (error) {
+      return left('Registration failed');
+    }
+  }
 }

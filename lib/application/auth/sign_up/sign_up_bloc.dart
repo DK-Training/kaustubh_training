@@ -17,7 +17,9 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
     on<_OnRegisterPressed>((event, emit) {
       debugPrint('register user');
       emit(state.copyWith(isLoading: true));
-
+      // 
+      //UserDto 
+      //register //
       Future.delayed(const Duration(seconds: 5), () {
         add(SignUpEvent.emitFromAnyWhere(
             state: state.copyWith(
