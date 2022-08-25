@@ -22,6 +22,13 @@ class HomeScreen extends StatelessWidget {
                   'On Home :->${appStateNotifier.user == null ? '' : appStateNotifier.user!.fullName}')),
           ElevatedButton(
             onPressed: () async {
+              navigator<NavigationService>()
+                  .navigateTo(CoreRoute.updateProfile);
+            },
+            child: const Text('go to update'),
+          ),
+          ElevatedButton(
+            onPressed: () async {
               await FirebaseAuth.instance.signOut();
               Future.delayed(const Duration(milliseconds: 200), (() {
                 appStateNotifier.updateAfterAuthChange(isAuthorized: false);

@@ -5,4 +5,5 @@ class AuthRoutes {
 
 class CoreRoute {
   static const String home = '';
+  static const String updateProfile = 'update_profile';
 }

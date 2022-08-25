@@ -4,6 +4,7 @@ import '../../../../../infrastructure/platform/platform_enum.dart';
 import '../../../../../presentation/auth/login_screen.dart';
 import '../../../../../presentation/auth/sign_screen.dart';
 import '../../../../../presentation/home/home_screen.dart';
+import '../../../../../presentation/home/update_user_info.dart';
 import '../../../extensions/string_extensions.dart';
 import '../../../config/determine_platform.dart'
     if (dart.library.html) '../../../config/determine_platform_web.dart';
@@ -17,6 +18,12 @@ Route<dynamic> authorizedNavigation(RouteSettings settings) {
     case CoreRoute.home:
       return _getPageRoute(
         const HomeScreen(),
+        settings,
+      );
+      
+    case CoreRoute.updateProfile:
+      return _getPageRoute(
+        const UpdateUserInfo(),
         settings,
       );
 
