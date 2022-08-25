@@ -7,4 +7,5 @@ abstract class AuthRepository {
       {required String email, required String password});
   Future<Either<String, UserDto>> register(
       {required UserDto tempUser, required String password});
+  Future<bool> logoutUser();
 }

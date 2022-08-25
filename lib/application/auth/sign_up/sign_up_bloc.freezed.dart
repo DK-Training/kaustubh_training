@@ -354,6 +354,8 @@ class _$SignUpStateTearOff {
       required String errorMessage,
       required String errorAge,
       required GlobalKey<FormState> formKey,
+      UserDto? user,
+      required AuthRepository authRepository,
       required AppStateNotifier appStateNotifier,
       required TextEditingController fullNameController,
       required TextEditingController userEmailController,
@@ -371,6 +373,8 @@ class _$SignUpStateTearOff {
       errorMessage: errorMessage,
       errorAge: errorAge,
       formKey: formKey,
+      user: user,
+      authRepository: authRepository,
       appStateNotifier: appStateNotifier,
       fullNameController: fullNameController,
       userEmailController: userEmailController,
@@ -395,9 +399,9 @@ mixin _$SignUpState {
   String get errorPassword => throw _privateConstructorUsedError;
   String get errorMessage => throw _privateConstructorUsedError;
   String get errorAge => throw _privateConstructorUsedError;
-  GlobalKey<FormState> get formKey =>
-      throw _privateConstructorUsedError; // required UserDto? userProfile,
-// required AuthRepository authRepository,
+  GlobalKey<FormState> get formKey => throw _privateConstructorUsedError;
+  UserDto? get user => throw _privateConstructorUsedError;
+  AuthRepository get authRepository => throw _privateConstructorUsedError;
   AppStateNotifier get appStateNotifier => throw _privateConstructorUsedError;
   TextEditingController get fullNameController =>
       throw _privateConstructorUsedError;
@@ -429,11 +433,15 @@ abstract class $SignUpStateCopyWith<$Res> {
       String errorMessage,
       String errorAge,
       GlobalKey<FormState> formKey,
+      UserDto? user,
+      AuthRepository authRepository,
       AppStateNotifier appStateNotifier,
       TextEditingController fullNameController,
       TextEditingController userEmailController,
       TextEditingController passwordController,
       TextEditingController ageController});
+
+  $UserDtoCopyWith<$Res>? get user;
 }
 
 /// @nodoc
@@ -457,6 +465,8 @@ class _$SignUpStateCopyWithImpl<$Res> implements $SignUpStateCopyWith<$Res> {
     Object? errorMessage = freezed,
     Object? errorAge = freezed,
     Object? formKey = freezed,
+    Object? user = freezed,
+    Object? authRepository = freezed,
     Object? appStateNotifier = freezed,
     Object? fullNameController = freezed,
     Object? userEmailController = freezed,
@@ -508,6 +518,14 @@ class _$SignUpStateCopyWithImpl<$Res> implements $SignUpStateCopyWith<$Res> {
           ? _value.formKey
           : formKey // ignore: cast_nullable_to_non_nullable
               as GlobalKey<FormState>,
+      user: user == freezed
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as UserDto?,
+      authRepository: authRepository == freezed
+          ? _value.authRepository
+          : authRepository // ignore: cast_nullable_to_non_nullable
+              as AuthRepository,
       appStateNotifier: appStateNotifier == freezed
           ? _value.appStateNotifier
           : appStateNotifier // ignore: cast_nullable_to_non_nullable
@@ -530,6 +548,17 @@ class _$SignUpStateCopyWithImpl<$Res> implements $SignUpStateCopyWith<$Res> {
               as TextEditingController,
     ));
   }
+
+  @override
+  $UserDtoCopyWith<$Res>? get user {
+    if (_value.user == null) {
+      return null;
+    }
+
+    return $UserDtoCopyWith<$Res>(_value.user!, (value) {
+      return _then(_value.copyWith(user: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -551,11 +580,16 @@ abstract class _$SignUpStateCopyWith<$Res>
       String errorMessage,
       String errorAge,
       GlobalKey<FormState> formKey,
+      UserDto? user,
+      AuthRepository authRepository,
       AppStateNotifier appStateNotifier,
       TextEditingController fullNameController,
       TextEditingController userEmailController,
       TextEditingController passwordController,
       TextEditingController ageController});
+
+  @override
+  $UserDtoCopyWith<$Res>? get user;
 }
 
 /// @nodoc
@@ -581,6 +615,8 @@ class __$SignUpStateCopyWithImpl<$Res> extends _$SignUpStateCopyWithImpl<$Res>
     Object? errorMessage = freezed,
     Object? errorAge = freezed,
     Object? formKey = freezed,
+    Object? user = freezed,
+    Object? authRepository = freezed,
     Object? appStateNotifier = freezed,
     Object? fullNameController = freezed,
     Object? userEmailController = freezed,
@@ -632,6 +668,14 @@ class __$SignUpStateCopyWithImpl<$Res> extends _$SignUpStateCopyWithImpl<$Res>
           ? _value.formKey
           : formKey // ignore: cast_nullable_to_non_nullable
               as GlobalKey<FormState>,
+      user: user == freezed
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as UserDto?,
+      authRepository: authRepository == freezed
+          ? _value.authRepository
+          : authRepository // ignore: cast_nullable_to_non_nullable
+              as AuthRepository,
       appStateNotifier: appStateNotifier == freezed
           ? _value.appStateNotifier
           : appStateNotifier // ignore: cast_nullable_to_non_nullable
@@ -671,6 +715,8 @@ class _$_SignUpState implements _SignUpState {
       required this.errorMessage,
       required this.errorAge,
       required this.formKey,
+      this.user,
+      required this.authRepository,
       required this.appStateNotifier,
       required this.fullNameController,
       required this.userEmailController,
@@ -699,8 +745,11 @@ class _$_SignUpState implements _SignUpState {
   final String errorAge;
   @override
   final GlobalKey<FormState> formKey;
-  @override // required UserDto? userProfile,
-// required AuthRepository authRepository,
+  @override
+  final UserDto? user;
+  @override
+  final AuthRepository authRepository;
+  @override
   final AppStateNotifier appStateNotifier;
   @override
   final TextEditingController fullNameController;
@@ -713,7 +762,7 @@ class _$_SignUpState implements _SignUpState {
 
   @override
   String toString() {
-    return 'SignUpState(isLoading: $isLoading, isSuccessful: $isSuccessful, isFailed: $isFailed, obscurePassword: $obscurePassword, obscureConfirmPassword: $obscureConfirmPassword, errorFullName: $errorFullName, errorEmail: $errorEmail, errorPassword: $errorPassword, errorMessage: $errorMessage, errorAge: $errorAge, formKey: $formKey, appStateNotifier: $appStateNotifier, fullNameController: $fullNameController, userEmailController: $userEmailController, passwordController: $passwordController, ageController: $ageController)';
+    return 'SignUpState(isLoading: $isLoading, isSuccessful: $isSuccessful, isFailed: $isFailed, obscurePassword: $obscurePassword, obscureConfirmPassword: $obscureConfirmPassword, errorFullName: $errorFullName, errorEmail: $errorEmail, errorPassword: $errorPassword, errorMessage: $errorMessage, errorAge: $errorAge, formKey: $formKey, user: $user, authRepository: $authRepository, appStateNotifier: $appStateNotifier, fullNameController: $fullNameController, userEmailController: $userEmailController, passwordController: $passwordController, ageController: $ageController)';
   }
 
   @override
@@ -739,6 +788,9 @@ class _$_SignUpState implements _SignUpState {
                 .equals(other.errorMessage, errorMessage) &&
             const DeepCollectionEquality().equals(other.errorAge, errorAge) &&
             const DeepCollectionEquality().equals(other.formKey, formKey) &&
+            const DeepCollectionEquality().equals(other.user, user) &&
+            const DeepCollectionEquality()
+                .equals(other.authRepository, authRepository) &&
             const DeepCollectionEquality()
                 .equals(other.appStateNotifier, appStateNotifier) &&
             const DeepCollectionEquality()
@@ -765,6 +817,8 @@ class _$_SignUpState implements _SignUpState {
       const DeepCollectionEquality().hash(errorMessage),
       const DeepCollectionEquality().hash(errorAge),
       const DeepCollectionEquality().hash(formKey),
+      const DeepCollectionEquality().hash(user),
+      const DeepCollectionEquality().hash(authRepository),
       const DeepCollectionEquality().hash(appStateNotifier),
       const DeepCollectionEquality().hash(fullNameController),
       const DeepCollectionEquality().hash(userEmailController),
@@ -790,6 +844,8 @@ abstract class _SignUpState implements SignUpState {
       required String errorMessage,
       required String errorAge,
       required GlobalKey<FormState> formKey,
+      UserDto? user,
+      required AuthRepository authRepository,
       required AppStateNotifier appStateNotifier,
       required TextEditingController fullNameController,
       required TextEditingController userEmailController,
@@ -818,8 +874,11 @@ abstract class _SignUpState implements SignUpState {
   String get errorAge;
   @override
   GlobalKey<FormState> get formKey;
-  @override // required UserDto? userProfile,
-// required AuthRepository authRepository,
+  @override
+  UserDto? get user;
+  @override
+  AuthRepository get authRepository;
+  @override
   AppStateNotifier get appStateNotifier;
   @override
   TextEditingController get fullNameController;

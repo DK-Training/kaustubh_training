@@ -14,8 +14,8 @@ class SignUpState with _$SignUpState {
     required String errorMessage,
     required String errorAge,
     required GlobalKey<FormState> formKey,
-    // required UserDto? userProfile,
-    // required AuthRepository authRepository,
+    UserDto? user,
+    required AuthRepository authRepository,
     required AppStateNotifier appStateNotifier,
     required TextEditingController fullNameController,
     required TextEditingController userEmailController,
@@ -44,6 +44,6 @@ class SignUpState with _$SignUpState {
         userEmailController: TextEditingController(),
         passwordController: TextEditingController(),
         ageController: TextEditingController(),
-        // authRepository: IAuthRepository(),
+        authRepository: IAuthRepository(),
       );
 }

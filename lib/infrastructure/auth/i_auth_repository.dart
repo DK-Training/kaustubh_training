@@ -18,6 +18,7 @@ class IAuthRepository extends AuthRepository {
       if (!documentSnapshot.exists) {
         return left('Login failed');
       }
+      print(documentSnapshot.data());
       final UserDto user = UserDto.fromJson(documentSnapshot.data()!);
       return right(user);
     } on FirebaseAuthException catch (e) {
@@ -67,5 +68,17 @@ class IAuthRepository extends AuthRepository {
     } catch (error) {
       return left('Registration failed');
     }
+  }
+
+  @override
+  Future<bool> logoutUser() async {
+    bool isLogout = false;
+    try {
+      await FirebaseAuth.instance.signOut();
+      isLogout = true;
+    } catch (e) {
+      return isLogout;
+    }
+    return isLogout;
   }
 }
