@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
@@ -7,6 +8,8 @@ import 'domain/core/config/injection.dart';
 import 'domain/core/services/navigation_service/navigation_service.dart';
 import 'domain/core/services/navigation_service/routers/route_names.dart';
 import 'domain/core/services/navigation_service/routers/routing_config.dart';
+import 'infrastructure/auth/dto/user/user_dto.dart';
+import 'infrastructure/auth/i_auth_repository.dart';
 
 class MainApp extends StatelessWidget {
   const MainApp({Key? key}) : super(key: key);
@@ -63,14 +66,16 @@ class MainApp extends StatelessWidget {
 
 Future appInitializer(AppConfig appConfig) async {
   final GlobalKey<NavigatorState> key = GlobalKey<NavigatorState>();
-  const bool isAuthorized = false;
+  // FirebaseAuth.instance.signOut();
+  UserDto? user = await IAuthRepository().isUserLogged();
+  bool isAuthorized = user != null;
   setupLocator(key);
   AppConfig updatedAppConfig = AppConfig(
       appTitle: appConfig.appTitle,
       buildFlavor: appConfig.buildFlavor,
       child: ChangeNotifierProvider<AppStateNotifier>(
         create: (context) {
-          return AppStateNotifier(isAuthorized: isAuthorized);
+          return AppStateNotifier(isAuthorized: isAuthorized, user: user);
         },
         child: Sizer(builder: (context, orientation, deviceType) {
           return const MainApp();

@@ -8,6 +8,7 @@ class AppStateNotifier extends ChangeNotifier {
   UserDto? user;
   AppStateNotifier({
     required this.isAuthorized,
+    this.user
   });
 
   Future<void> updateAfterAuthChange(

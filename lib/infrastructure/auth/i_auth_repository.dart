@@ -81,4 +81,17 @@ class IAuthRepository extends AuthRepository {
     }
     return isLogout;
   }
+
+  @override
+  Future<UserDto?> isUserLogged() async {
+    final currentUser = FirebaseAuth.instance.currentUser;
+    if (currentUser == null) {
+      return null;
+    }
+    final uid = currentUser.uid;
+    final response =
+        await FirebaseFirestore.instance.collection('users').doc(uid).get();
+    final UserDto user = UserDto.fromJson(response.data()!);
+    return user;
+  }
 }
