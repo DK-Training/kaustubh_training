@@ -9,4 +9,7 @@ abstract class AuthRepository {
       {required UserDto tempUser, required String password});
   Future<bool> logoutUser();
   Future<UserDto?> isUserLogged();
+  Future<Either<String, UserDto>> updateProfile({
+    required UserDto updatedUser,
+  });
 }

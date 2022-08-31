@@ -1,49 +1,40 @@
-part of 'sign_up_bloc.dart';
+part of 'login_bloc.dart';
 
 @freezed
-class SignUpState with _$SignUpState {
-  const factory SignUpState({
+class LogInState with _$LogInState {
+  const factory LogInState({
     required bool isLoading,
     required bool isSuccessful,
     required bool isFailed,
     required bool obscurePassword,
     required bool obscureConfirmPassword,
-    required String errorFullName,
     required String errorEmail,
     required String errorPassword,
     required String errorMessage,
-    required String errorAge,
     required GlobalKey<FormState> formKey,
-    UserDto? user,
-    required AuthRepository authRepository,
     required AppStateNotifier appStateNotifier,
-    required TextEditingController fullNameController,
     required TextEditingController userEmailController,
     required TextEditingController passwordController,
-    required TextEditingController ageController,
-  }) = _SignUpState;
+    required AuthRepository authRepository,
+    // UserDto? user,
+  }) = _LogInState;
 
-  factory SignUpState.initial({
+  factory LogInState.initial({
     required AppStateNotifier appStateNotifier,
   }) =>
-      SignUpState(
+      LogInState(
         errorPassword: '',
-        errorFullName: '',
         obscurePassword: true,
         obscureConfirmPassword: true,
-        // userProfile: null,
+        authRepository: IAuthRepository(),
         errorEmail: '',
         errorMessage: '',
-        errorAge: '',
         formKey: GlobalKey<FormState>(),
         isLoading: false,
         isSuccessful: false,
         isFailed: false,
         appStateNotifier: appStateNotifier,
-        fullNameController: TextEditingController(),
         userEmailController: TextEditingController(),
         passwordController: TextEditingController(),
-        ageController: TextEditingController(),
-        authRepository: IAuthRepository(),
       );
 }

@@ -19,23 +19,26 @@ class HomeScreen extends StatelessWidget {
         children: [
           Center(
               child: Text(
-                  'On Home :->${appStateNotifier.user == null ? '' : appStateNotifier.user!.fullName}')),
+                  'On Home :->${appStateNotifier.user == null ? '' : appStateNotifier.user!.firstName}')),
           ElevatedButton(
             onPressed: () async {
-              navigator<NavigationService>()
-                  .navigateTo(CoreRoute.updateProfile);
+              // navigator<NavigationService>()
+              //     .navigateTo(CoreRoute.updateProfile);
             },
-            child: const Text('go to update'),
+            child: const Text('Edit'),
           ),
           ElevatedButton(
             onPressed: () async {
               await FirebaseAuth.instance.signOut();
+              appStateNotifier.updateAfterAuthChange(isAuthorized: false);
               Future.delayed(const Duration(milliseconds: 200), (() {
-                appStateNotifier.updateAfterAuthChange(isAuthorized: false);
-                navigator<NavigationService>().navigateTo(AuthRoutes.login);
+                navigator<NavigationService>()
+                    .navigateTo(AuthRoutes.login, isClearStack: true);
               }));
             },
-            child: const Text('Logout'),
+            child: const Text(
+              'Logout',
+            ),
           ),
         ],
       ),

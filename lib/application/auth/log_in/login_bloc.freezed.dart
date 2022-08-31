@@ -2,7 +2,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
-part of 'sign_up_bloc.dart';
+part of 'login_bloc.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,114 +14,113 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-class _$SignUpEventTearOff {
-  const _$SignUpEventTearOff();
+class _$LogInEventTearOff {
+  const _$LogInEventTearOff();
 
-  _OnRegisterPressed onRegisterPressed() {
-    return const _OnRegisterPressed();
+  _onLogInPressed onLogInPressed() {
+    return const _onLogInPressed();
   }
 
-  _EmitFromAnyWhere emitFromAnyWhere({required SignUpState state}) {
-    return _EmitFromAnyWhere(
+  _onEmitFromAnywhere emitFromAnywhere({required LogInState state}) {
+    return _onEmitFromAnywhere(
       state: state,
     );
   }
 }
 
 /// @nodoc
-const $SignUpEvent = _$SignUpEventTearOff();
+const $LogInEvent = _$LogInEventTearOff();
 
 /// @nodoc
-mixin _$SignUpEvent {
+mixin _$LogInEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() onRegisterPressed,
-    required TResult Function(SignUpState state) emitFromAnyWhere,
+    required TResult Function() onLogInPressed,
+    required TResult Function(LogInState state) emitFromAnywhere,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? onRegisterPressed,
-    TResult Function(SignUpState state)? emitFromAnyWhere,
+    TResult Function()? onLogInPressed,
+    TResult Function(LogInState state)? emitFromAnywhere,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? onRegisterPressed,
-    TResult Function(SignUpState state)? emitFromAnyWhere,
+    TResult Function()? onLogInPressed,
+    TResult Function(LogInState state)? emitFromAnywhere,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_OnRegisterPressed value) onRegisterPressed,
-    required TResult Function(_EmitFromAnyWhere value) emitFromAnyWhere,
+    required TResult Function(_onLogInPressed value) onLogInPressed,
+    required TResult Function(_onEmitFromAnywhere value) emitFromAnywhere,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_OnRegisterPressed value)? onRegisterPressed,
-    TResult Function(_EmitFromAnyWhere value)? emitFromAnyWhere,
+    TResult Function(_onLogInPressed value)? onLogInPressed,
+    TResult Function(_onEmitFromAnywhere value)? emitFromAnywhere,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_OnRegisterPressed value)? onRegisterPressed,
-    TResult Function(_EmitFromAnyWhere value)? emitFromAnyWhere,
+    TResult Function(_onLogInPressed value)? onLogInPressed,
+    TResult Function(_onEmitFromAnywhere value)? emitFromAnywhere,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $SignUpEventCopyWith<$Res> {
-  factory $SignUpEventCopyWith(
-          SignUpEvent value, $Res Function(SignUpEvent) then) =
-      _$SignUpEventCopyWithImpl<$Res>;
+abstract class $LogInEventCopyWith<$Res> {
+  factory $LogInEventCopyWith(
+          LogInEvent value, $Res Function(LogInEvent) then) =
+      _$LogInEventCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$SignUpEventCopyWithImpl<$Res> implements $SignUpEventCopyWith<$Res> {
-  _$SignUpEventCopyWithImpl(this._value, this._then);
+class _$LogInEventCopyWithImpl<$Res> implements $LogInEventCopyWith<$Res> {
+  _$LogInEventCopyWithImpl(this._value, this._then);
 
-  final SignUpEvent _value;
+  final LogInEvent _value;
   // ignore: unused_field
-  final $Res Function(SignUpEvent) _then;
+  final $Res Function(LogInEvent) _then;
 }
 
 /// @nodoc
-abstract class _$OnRegisterPressedCopyWith<$Res> {
-  factory _$OnRegisterPressedCopyWith(
-          _OnRegisterPressed value, $Res Function(_OnRegisterPressed) then) =
-      __$OnRegisterPressedCopyWithImpl<$Res>;
+abstract class _$onLogInPressedCopyWith<$Res> {
+  factory _$onLogInPressedCopyWith(
+          _onLogInPressed value, $Res Function(_onLogInPressed) then) =
+      __$onLogInPressedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$OnRegisterPressedCopyWithImpl<$Res>
-    extends _$SignUpEventCopyWithImpl<$Res>
-    implements _$OnRegisterPressedCopyWith<$Res> {
-  __$OnRegisterPressedCopyWithImpl(
-      _OnRegisterPressed _value, $Res Function(_OnRegisterPressed) _then)
-      : super(_value, (v) => _then(v as _OnRegisterPressed));
+class __$onLogInPressedCopyWithImpl<$Res> extends _$LogInEventCopyWithImpl<$Res>
+    implements _$onLogInPressedCopyWith<$Res> {
+  __$onLogInPressedCopyWithImpl(
+      _onLogInPressed _value, $Res Function(_onLogInPressed) _then)
+      : super(_value, (v) => _then(v as _onLogInPressed));
 
   @override
-  _OnRegisterPressed get _value => super._value as _OnRegisterPressed;
+  _onLogInPressed get _value => super._value as _onLogInPressed;
 }
 
 /// @nodoc
 
-class _$_OnRegisterPressed implements _OnRegisterPressed {
-  const _$_OnRegisterPressed();
+class _$_onLogInPressed implements _onLogInPressed {
+  const _$_onLogInPressed();
 
   @override
   String toString() {
-    return 'SignUpEvent.onRegisterPressed()';
+    return 'LogInEvent.onLogInPressed()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _OnRegisterPressed);
+        (other.runtimeType == runtimeType && other is _onLogInPressed);
   }
 
   @override
@@ -130,30 +129,30 @@ class _$_OnRegisterPressed implements _OnRegisterPressed {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() onRegisterPressed,
-    required TResult Function(SignUpState state) emitFromAnyWhere,
+    required TResult Function() onLogInPressed,
+    required TResult Function(LogInState state) emitFromAnywhere,
   }) {
-    return onRegisterPressed();
+    return onLogInPressed();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? onRegisterPressed,
-    TResult Function(SignUpState state)? emitFromAnyWhere,
+    TResult Function()? onLogInPressed,
+    TResult Function(LogInState state)? emitFromAnywhere,
   }) {
-    return onRegisterPressed?.call();
+    return onLogInPressed?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? onRegisterPressed,
-    TResult Function(SignUpState state)? emitFromAnyWhere,
+    TResult Function()? onLogInPressed,
+    TResult Function(LogInState state)? emitFromAnywhere,
     required TResult orElse(),
   }) {
-    if (onRegisterPressed != null) {
-      return onRegisterPressed();
+    if (onLogInPressed != null) {
+      return onLogInPressed();
     }
     return orElse();
   }
@@ -161,75 +160,75 @@ class _$_OnRegisterPressed implements _OnRegisterPressed {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_OnRegisterPressed value) onRegisterPressed,
-    required TResult Function(_EmitFromAnyWhere value) emitFromAnyWhere,
+    required TResult Function(_onLogInPressed value) onLogInPressed,
+    required TResult Function(_onEmitFromAnywhere value) emitFromAnywhere,
   }) {
-    return onRegisterPressed(this);
+    return onLogInPressed(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_OnRegisterPressed value)? onRegisterPressed,
-    TResult Function(_EmitFromAnyWhere value)? emitFromAnyWhere,
+    TResult Function(_onLogInPressed value)? onLogInPressed,
+    TResult Function(_onEmitFromAnywhere value)? emitFromAnywhere,
   }) {
-    return onRegisterPressed?.call(this);
+    return onLogInPressed?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_OnRegisterPressed value)? onRegisterPressed,
-    TResult Function(_EmitFromAnyWhere value)? emitFromAnyWhere,
+    TResult Function(_onLogInPressed value)? onLogInPressed,
+    TResult Function(_onEmitFromAnywhere value)? emitFromAnywhere,
     required TResult orElse(),
   }) {
-    if (onRegisterPressed != null) {
-      return onRegisterPressed(this);
+    if (onLogInPressed != null) {
+      return onLogInPressed(this);
     }
     return orElse();
   }
 }
 
-abstract class _OnRegisterPressed implements SignUpEvent {
-  const factory _OnRegisterPressed() = _$_OnRegisterPressed;
+abstract class _onLogInPressed implements LogInEvent {
+  const factory _onLogInPressed() = _$_onLogInPressed;
 }
 
 /// @nodoc
-abstract class _$EmitFromAnyWhereCopyWith<$Res> {
-  factory _$EmitFromAnyWhereCopyWith(
-          _EmitFromAnyWhere value, $Res Function(_EmitFromAnyWhere) then) =
-      __$EmitFromAnyWhereCopyWithImpl<$Res>;
-  $Res call({SignUpState state});
+abstract class _$onEmitFromAnywhereCopyWith<$Res> {
+  factory _$onEmitFromAnywhereCopyWith(
+          _onEmitFromAnywhere value, $Res Function(_onEmitFromAnywhere) then) =
+      __$onEmitFromAnywhereCopyWithImpl<$Res>;
+  $Res call({LogInState state});
 
-  $SignUpStateCopyWith<$Res> get state;
+  $LogInStateCopyWith<$Res> get state;
 }
 
 /// @nodoc
-class __$EmitFromAnyWhereCopyWithImpl<$Res>
-    extends _$SignUpEventCopyWithImpl<$Res>
-    implements _$EmitFromAnyWhereCopyWith<$Res> {
-  __$EmitFromAnyWhereCopyWithImpl(
-      _EmitFromAnyWhere _value, $Res Function(_EmitFromAnyWhere) _then)
-      : super(_value, (v) => _then(v as _EmitFromAnyWhere));
+class __$onEmitFromAnywhereCopyWithImpl<$Res>
+    extends _$LogInEventCopyWithImpl<$Res>
+    implements _$onEmitFromAnywhereCopyWith<$Res> {
+  __$onEmitFromAnywhereCopyWithImpl(
+      _onEmitFromAnywhere _value, $Res Function(_onEmitFromAnywhere) _then)
+      : super(_value, (v) => _then(v as _onEmitFromAnywhere));
 
   @override
-  _EmitFromAnyWhere get _value => super._value as _EmitFromAnyWhere;
+  _onEmitFromAnywhere get _value => super._value as _onEmitFromAnywhere;
 
   @override
   $Res call({
     Object? state = freezed,
   }) {
-    return _then(_EmitFromAnyWhere(
+    return _then(_onEmitFromAnywhere(
       state: state == freezed
           ? _value.state
           : state // ignore: cast_nullable_to_non_nullable
-              as SignUpState,
+              as LogInState,
     ));
   }
 
   @override
-  $SignUpStateCopyWith<$Res> get state {
-    return $SignUpStateCopyWith<$Res>(_value.state, (value) {
+  $LogInStateCopyWith<$Res> get state {
+    return $LogInStateCopyWith<$Res>(_value.state, (value) {
       return _then(_value.copyWith(state: value));
     });
   }
@@ -237,22 +236,22 @@ class __$EmitFromAnyWhereCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_EmitFromAnyWhere implements _EmitFromAnyWhere {
-  const _$_EmitFromAnyWhere({required this.state});
+class _$_onEmitFromAnywhere implements _onEmitFromAnywhere {
+  const _$_onEmitFromAnywhere({required this.state});
 
   @override
-  final SignUpState state;
+  final LogInState state;
 
   @override
   String toString() {
-    return 'SignUpEvent.emitFromAnyWhere(state: $state)';
+    return 'LogInEvent.emitFromAnywhere(state: $state)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _EmitFromAnyWhere &&
+            other is _onEmitFromAnywhere &&
             const DeepCollectionEquality().equals(other.state, state));
   }
 
@@ -262,36 +261,36 @@ class _$_EmitFromAnyWhere implements _EmitFromAnyWhere {
 
   @JsonKey(ignore: true)
   @override
-  _$EmitFromAnyWhereCopyWith<_EmitFromAnyWhere> get copyWith =>
-      __$EmitFromAnyWhereCopyWithImpl<_EmitFromAnyWhere>(this, _$identity);
+  _$onEmitFromAnywhereCopyWith<_onEmitFromAnywhere> get copyWith =>
+      __$onEmitFromAnywhereCopyWithImpl<_onEmitFromAnywhere>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() onRegisterPressed,
-    required TResult Function(SignUpState state) emitFromAnyWhere,
+    required TResult Function() onLogInPressed,
+    required TResult Function(LogInState state) emitFromAnywhere,
   }) {
-    return emitFromAnyWhere(state);
+    return emitFromAnywhere(state);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? onRegisterPressed,
-    TResult Function(SignUpState state)? emitFromAnyWhere,
+    TResult Function()? onLogInPressed,
+    TResult Function(LogInState state)? emitFromAnywhere,
   }) {
-    return emitFromAnyWhere?.call(state);
+    return emitFromAnywhere?.call(state);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? onRegisterPressed,
-    TResult Function(SignUpState state)? emitFromAnyWhere,
+    TResult Function()? onLogInPressed,
+    TResult Function(LogInState state)? emitFromAnywhere,
     required TResult orElse(),
   }) {
-    if (emitFromAnyWhere != null) {
-      return emitFromAnyWhere(state);
+    if (emitFromAnywhere != null) {
+      return emitFromAnywhere(state);
     }
     return orElse();
   }
@@ -299,158 +298,135 @@ class _$_EmitFromAnyWhere implements _EmitFromAnyWhere {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_OnRegisterPressed value) onRegisterPressed,
-    required TResult Function(_EmitFromAnyWhere value) emitFromAnyWhere,
+    required TResult Function(_onLogInPressed value) onLogInPressed,
+    required TResult Function(_onEmitFromAnywhere value) emitFromAnywhere,
   }) {
-    return emitFromAnyWhere(this);
+    return emitFromAnywhere(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_OnRegisterPressed value)? onRegisterPressed,
-    TResult Function(_EmitFromAnyWhere value)? emitFromAnyWhere,
+    TResult Function(_onLogInPressed value)? onLogInPressed,
+    TResult Function(_onEmitFromAnywhere value)? emitFromAnywhere,
   }) {
-    return emitFromAnyWhere?.call(this);
+    return emitFromAnywhere?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_OnRegisterPressed value)? onRegisterPressed,
-    TResult Function(_EmitFromAnyWhere value)? emitFromAnyWhere,
+    TResult Function(_onLogInPressed value)? onLogInPressed,
+    TResult Function(_onEmitFromAnywhere value)? emitFromAnywhere,
     required TResult orElse(),
   }) {
-    if (emitFromAnyWhere != null) {
-      return emitFromAnyWhere(this);
+    if (emitFromAnywhere != null) {
+      return emitFromAnywhere(this);
     }
     return orElse();
   }
 }
 
-abstract class _EmitFromAnyWhere implements SignUpEvent {
-  const factory _EmitFromAnyWhere({required SignUpState state}) =
-      _$_EmitFromAnyWhere;
+abstract class _onEmitFromAnywhere implements LogInEvent {
+  const factory _onEmitFromAnywhere({required LogInState state}) =
+      _$_onEmitFromAnywhere;
 
-  SignUpState get state;
+  LogInState get state;
   @JsonKey(ignore: true)
-  _$EmitFromAnyWhereCopyWith<_EmitFromAnyWhere> get copyWith =>
+  _$onEmitFromAnywhereCopyWith<_onEmitFromAnywhere> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-class _$SignUpStateTearOff {
-  const _$SignUpStateTearOff();
+class _$LogInStateTearOff {
+  const _$LogInStateTearOff();
 
-  _SignUpState call(
+  _LogInState call(
       {required bool isLoading,
       required bool isSuccessful,
       required bool isFailed,
       required bool obscurePassword,
       required bool obscureConfirmPassword,
-      required String errorFullName,
       required String errorEmail,
       required String errorPassword,
       required String errorMessage,
-      required String errorAge,
       required GlobalKey<FormState> formKey,
-      UserDto? user,
-      required AuthRepository authRepository,
       required AppStateNotifier appStateNotifier,
-      required TextEditingController fullNameController,
       required TextEditingController userEmailController,
       required TextEditingController passwordController,
-      required TextEditingController ageController}) {
-    return _SignUpState(
+      required AuthRepository authRepository}) {
+    return _LogInState(
       isLoading: isLoading,
       isSuccessful: isSuccessful,
       isFailed: isFailed,
       obscurePassword: obscurePassword,
       obscureConfirmPassword: obscureConfirmPassword,
-      errorFullName: errorFullName,
       errorEmail: errorEmail,
       errorPassword: errorPassword,
       errorMessage: errorMessage,
-      errorAge: errorAge,
       formKey: formKey,
-      user: user,
-      authRepository: authRepository,
       appStateNotifier: appStateNotifier,
-      fullNameController: fullNameController,
       userEmailController: userEmailController,
       passwordController: passwordController,
-      ageController: ageController,
+      authRepository: authRepository,
     );
   }
 }
 
 /// @nodoc
-const $SignUpState = _$SignUpStateTearOff();
+const $LogInState = _$LogInStateTearOff();
 
 /// @nodoc
-mixin _$SignUpState {
+mixin _$LogInState {
   bool get isLoading => throw _privateConstructorUsedError;
   bool get isSuccessful => throw _privateConstructorUsedError;
   bool get isFailed => throw _privateConstructorUsedError;
   bool get obscurePassword => throw _privateConstructorUsedError;
   bool get obscureConfirmPassword => throw _privateConstructorUsedError;
-  String get errorFullName => throw _privateConstructorUsedError;
   String get errorEmail => throw _privateConstructorUsedError;
   String get errorPassword => throw _privateConstructorUsedError;
   String get errorMessage => throw _privateConstructorUsedError;
-  String get errorAge => throw _privateConstructorUsedError;
   GlobalKey<FormState> get formKey => throw _privateConstructorUsedError;
-  UserDto? get user => throw _privateConstructorUsedError;
-  AuthRepository get authRepository => throw _privateConstructorUsedError;
   AppStateNotifier get appStateNotifier => throw _privateConstructorUsedError;
-  TextEditingController get fullNameController =>
-      throw _privateConstructorUsedError;
   TextEditingController get userEmailController =>
       throw _privateConstructorUsedError;
   TextEditingController get passwordController =>
       throw _privateConstructorUsedError;
-  TextEditingController get ageController => throw _privateConstructorUsedError;
+  AuthRepository get authRepository => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $SignUpStateCopyWith<SignUpState> get copyWith =>
+  $LogInStateCopyWith<LogInState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $SignUpStateCopyWith<$Res> {
-  factory $SignUpStateCopyWith(
-          SignUpState value, $Res Function(SignUpState) then) =
-      _$SignUpStateCopyWithImpl<$Res>;
+abstract class $LogInStateCopyWith<$Res> {
+  factory $LogInStateCopyWith(
+          LogInState value, $Res Function(LogInState) then) =
+      _$LogInStateCopyWithImpl<$Res>;
   $Res call(
       {bool isLoading,
       bool isSuccessful,
       bool isFailed,
       bool obscurePassword,
       bool obscureConfirmPassword,
-      String errorFullName,
       String errorEmail,
       String errorPassword,
       String errorMessage,
-      String errorAge,
       GlobalKey<FormState> formKey,
-      UserDto? user,
-      AuthRepository authRepository,
       AppStateNotifier appStateNotifier,
-      TextEditingController fullNameController,
       TextEditingController userEmailController,
       TextEditingController passwordController,
-      TextEditingController ageController});
-
-  $UserDtoCopyWith<$Res>? get user;
+      AuthRepository authRepository});
 }
 
 /// @nodoc
-class _$SignUpStateCopyWithImpl<$Res> implements $SignUpStateCopyWith<$Res> {
-  _$SignUpStateCopyWithImpl(this._value, this._then);
+class _$LogInStateCopyWithImpl<$Res> implements $LogInStateCopyWith<$Res> {
+  _$LogInStateCopyWithImpl(this._value, this._then);
 
-  final SignUpState _value;
+  final LogInState _value;
   // ignore: unused_field
-  final $Res Function(SignUpState) _then;
+  final $Res Function(LogInState) _then;
 
   @override
   $Res call({
@@ -459,19 +435,14 @@ class _$SignUpStateCopyWithImpl<$Res> implements $SignUpStateCopyWith<$Res> {
     Object? isFailed = freezed,
     Object? obscurePassword = freezed,
     Object? obscureConfirmPassword = freezed,
-    Object? errorFullName = freezed,
     Object? errorEmail = freezed,
     Object? errorPassword = freezed,
     Object? errorMessage = freezed,
-    Object? errorAge = freezed,
     Object? formKey = freezed,
-    Object? user = freezed,
-    Object? authRepository = freezed,
     Object? appStateNotifier = freezed,
-    Object? fullNameController = freezed,
     Object? userEmailController = freezed,
     Object? passwordController = freezed,
-    Object? ageController = freezed,
+    Object? authRepository = freezed,
   }) {
     return _then(_value.copyWith(
       isLoading: isLoading == freezed
@@ -494,10 +465,6 @@ class _$SignUpStateCopyWithImpl<$Res> implements $SignUpStateCopyWith<$Res> {
           ? _value.obscureConfirmPassword
           : obscureConfirmPassword // ignore: cast_nullable_to_non_nullable
               as bool,
-      errorFullName: errorFullName == freezed
-          ? _value.errorFullName
-          : errorFullName // ignore: cast_nullable_to_non_nullable
-              as String,
       errorEmail: errorEmail == freezed
           ? _value.errorEmail
           : errorEmail // ignore: cast_nullable_to_non_nullable
@@ -510,30 +477,14 @@ class _$SignUpStateCopyWithImpl<$Res> implements $SignUpStateCopyWith<$Res> {
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
               as String,
-      errorAge: errorAge == freezed
-          ? _value.errorAge
-          : errorAge // ignore: cast_nullable_to_non_nullable
-              as String,
       formKey: formKey == freezed
           ? _value.formKey
           : formKey // ignore: cast_nullable_to_non_nullable
               as GlobalKey<FormState>,
-      user: user == freezed
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as UserDto?,
-      authRepository: authRepository == freezed
-          ? _value.authRepository
-          : authRepository // ignore: cast_nullable_to_non_nullable
-              as AuthRepository,
       appStateNotifier: appStateNotifier == freezed
           ? _value.appStateNotifier
           : appStateNotifier // ignore: cast_nullable_to_non_nullable
               as AppStateNotifier,
-      fullNameController: fullNameController == freezed
-          ? _value.fullNameController
-          : fullNameController // ignore: cast_nullable_to_non_nullable
-              as TextEditingController,
       userEmailController: userEmailController == freezed
           ? _value.userEmailController
           : userEmailController // ignore: cast_nullable_to_non_nullable
@@ -542,31 +493,19 @@ class _$SignUpStateCopyWithImpl<$Res> implements $SignUpStateCopyWith<$Res> {
           ? _value.passwordController
           : passwordController // ignore: cast_nullable_to_non_nullable
               as TextEditingController,
-      ageController: ageController == freezed
-          ? _value.ageController
-          : ageController // ignore: cast_nullable_to_non_nullable
-              as TextEditingController,
+      authRepository: authRepository == freezed
+          ? _value.authRepository
+          : authRepository // ignore: cast_nullable_to_non_nullable
+              as AuthRepository,
     ));
-  }
-
-  @override
-  $UserDtoCopyWith<$Res>? get user {
-    if (_value.user == null) {
-      return null;
-    }
-
-    return $UserDtoCopyWith<$Res>(_value.user!, (value) {
-      return _then(_value.copyWith(user: value));
-    });
   }
 }
 
 /// @nodoc
-abstract class _$SignUpStateCopyWith<$Res>
-    implements $SignUpStateCopyWith<$Res> {
-  factory _$SignUpStateCopyWith(
-          _SignUpState value, $Res Function(_SignUpState) then) =
-      __$SignUpStateCopyWithImpl<$Res>;
+abstract class _$LogInStateCopyWith<$Res> implements $LogInStateCopyWith<$Res> {
+  factory _$LogInStateCopyWith(
+          _LogInState value, $Res Function(_LogInState) then) =
+      __$LogInStateCopyWithImpl<$Res>;
   @override
   $Res call(
       {bool isLoading,
@@ -574,33 +513,25 @@ abstract class _$SignUpStateCopyWith<$Res>
       bool isFailed,
       bool obscurePassword,
       bool obscureConfirmPassword,
-      String errorFullName,
       String errorEmail,
       String errorPassword,
       String errorMessage,
-      String errorAge,
       GlobalKey<FormState> formKey,
-      UserDto? user,
-      AuthRepository authRepository,
       AppStateNotifier appStateNotifier,
-      TextEditingController fullNameController,
       TextEditingController userEmailController,
       TextEditingController passwordController,
-      TextEditingController ageController});
-
-  @override
-  $UserDtoCopyWith<$Res>? get user;
+      AuthRepository authRepository});
 }
 
 /// @nodoc
-class __$SignUpStateCopyWithImpl<$Res> extends _$SignUpStateCopyWithImpl<$Res>
-    implements _$SignUpStateCopyWith<$Res> {
-  __$SignUpStateCopyWithImpl(
-      _SignUpState _value, $Res Function(_SignUpState) _then)
-      : super(_value, (v) => _then(v as _SignUpState));
+class __$LogInStateCopyWithImpl<$Res> extends _$LogInStateCopyWithImpl<$Res>
+    implements _$LogInStateCopyWith<$Res> {
+  __$LogInStateCopyWithImpl(
+      _LogInState _value, $Res Function(_LogInState) _then)
+      : super(_value, (v) => _then(v as _LogInState));
 
   @override
-  _SignUpState get _value => super._value as _SignUpState;
+  _LogInState get _value => super._value as _LogInState;
 
   @override
   $Res call({
@@ -609,21 +540,16 @@ class __$SignUpStateCopyWithImpl<$Res> extends _$SignUpStateCopyWithImpl<$Res>
     Object? isFailed = freezed,
     Object? obscurePassword = freezed,
     Object? obscureConfirmPassword = freezed,
-    Object? errorFullName = freezed,
     Object? errorEmail = freezed,
     Object? errorPassword = freezed,
     Object? errorMessage = freezed,
-    Object? errorAge = freezed,
     Object? formKey = freezed,
-    Object? user = freezed,
-    Object? authRepository = freezed,
     Object? appStateNotifier = freezed,
-    Object? fullNameController = freezed,
     Object? userEmailController = freezed,
     Object? passwordController = freezed,
-    Object? ageController = freezed,
+    Object? authRepository = freezed,
   }) {
-    return _then(_SignUpState(
+    return _then(_LogInState(
       isLoading: isLoading == freezed
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
@@ -644,10 +570,6 @@ class __$SignUpStateCopyWithImpl<$Res> extends _$SignUpStateCopyWithImpl<$Res>
           ? _value.obscureConfirmPassword
           : obscureConfirmPassword // ignore: cast_nullable_to_non_nullable
               as bool,
-      errorFullName: errorFullName == freezed
-          ? _value.errorFullName
-          : errorFullName // ignore: cast_nullable_to_non_nullable
-              as String,
       errorEmail: errorEmail == freezed
           ? _value.errorEmail
           : errorEmail // ignore: cast_nullable_to_non_nullable
@@ -660,30 +582,14 @@ class __$SignUpStateCopyWithImpl<$Res> extends _$SignUpStateCopyWithImpl<$Res>
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
               as String,
-      errorAge: errorAge == freezed
-          ? _value.errorAge
-          : errorAge // ignore: cast_nullable_to_non_nullable
-              as String,
       formKey: formKey == freezed
           ? _value.formKey
           : formKey // ignore: cast_nullable_to_non_nullable
               as GlobalKey<FormState>,
-      user: user == freezed
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as UserDto?,
-      authRepository: authRepository == freezed
-          ? _value.authRepository
-          : authRepository // ignore: cast_nullable_to_non_nullable
-              as AuthRepository,
       appStateNotifier: appStateNotifier == freezed
           ? _value.appStateNotifier
           : appStateNotifier // ignore: cast_nullable_to_non_nullable
               as AppStateNotifier,
-      fullNameController: fullNameController == freezed
-          ? _value.fullNameController
-          : fullNameController // ignore: cast_nullable_to_non_nullable
-              as TextEditingController,
       userEmailController: userEmailController == freezed
           ? _value.userEmailController
           : userEmailController // ignore: cast_nullable_to_non_nullable
@@ -692,36 +598,31 @@ class __$SignUpStateCopyWithImpl<$Res> extends _$SignUpStateCopyWithImpl<$Res>
           ? _value.passwordController
           : passwordController // ignore: cast_nullable_to_non_nullable
               as TextEditingController,
-      ageController: ageController == freezed
-          ? _value.ageController
-          : ageController // ignore: cast_nullable_to_non_nullable
-              as TextEditingController,
+      authRepository: authRepository == freezed
+          ? _value.authRepository
+          : authRepository // ignore: cast_nullable_to_non_nullable
+              as AuthRepository,
     ));
   }
 }
 
 /// @nodoc
 
-class _$_SignUpState implements _SignUpState {
-  const _$_SignUpState(
+class _$_LogInState implements _LogInState {
+  const _$_LogInState(
       {required this.isLoading,
       required this.isSuccessful,
       required this.isFailed,
       required this.obscurePassword,
       required this.obscureConfirmPassword,
-      required this.errorFullName,
       required this.errorEmail,
       required this.errorPassword,
       required this.errorMessage,
-      required this.errorAge,
       required this.formKey,
-      this.user,
-      required this.authRepository,
       required this.appStateNotifier,
-      required this.fullNameController,
       required this.userEmailController,
       required this.passwordController,
-      required this.ageController});
+      required this.authRepository});
 
   @override
   final bool isLoading;
@@ -734,42 +635,32 @@ class _$_SignUpState implements _SignUpState {
   @override
   final bool obscureConfirmPassword;
   @override
-  final String errorFullName;
-  @override
   final String errorEmail;
   @override
   final String errorPassword;
   @override
   final String errorMessage;
   @override
-  final String errorAge;
-  @override
   final GlobalKey<FormState> formKey;
   @override
-  final UserDto? user;
-  @override
-  final AuthRepository authRepository;
-  @override
   final AppStateNotifier appStateNotifier;
-  @override
-  final TextEditingController fullNameController;
   @override
   final TextEditingController userEmailController;
   @override
   final TextEditingController passwordController;
   @override
-  final TextEditingController ageController;
+  final AuthRepository authRepository;
 
   @override
   String toString() {
-    return 'SignUpState(isLoading: $isLoading, isSuccessful: $isSuccessful, isFailed: $isFailed, obscurePassword: $obscurePassword, obscureConfirmPassword: $obscureConfirmPassword, errorFullName: $errorFullName, errorEmail: $errorEmail, errorPassword: $errorPassword, errorMessage: $errorMessage, errorAge: $errorAge, formKey: $formKey, user: $user, authRepository: $authRepository, appStateNotifier: $appStateNotifier, fullNameController: $fullNameController, userEmailController: $userEmailController, passwordController: $passwordController, ageController: $ageController)';
+    return 'LogInState(isLoading: $isLoading, isSuccessful: $isSuccessful, isFailed: $isFailed, obscurePassword: $obscurePassword, obscureConfirmPassword: $obscureConfirmPassword, errorEmail: $errorEmail, errorPassword: $errorPassword, errorMessage: $errorMessage, formKey: $formKey, appStateNotifier: $appStateNotifier, userEmailController: $userEmailController, passwordController: $passwordController, authRepository: $authRepository)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SignUpState &&
+            other is _LogInState &&
             const DeepCollectionEquality().equals(other.isLoading, isLoading) &&
             const DeepCollectionEquality()
                 .equals(other.isSuccessful, isSuccessful) &&
@@ -779,28 +670,20 @@ class _$_SignUpState implements _SignUpState {
             const DeepCollectionEquality()
                 .equals(other.obscureConfirmPassword, obscureConfirmPassword) &&
             const DeepCollectionEquality()
-                .equals(other.errorFullName, errorFullName) &&
-            const DeepCollectionEquality()
                 .equals(other.errorEmail, errorEmail) &&
             const DeepCollectionEquality()
                 .equals(other.errorPassword, errorPassword) &&
             const DeepCollectionEquality()
                 .equals(other.errorMessage, errorMessage) &&
-            const DeepCollectionEquality().equals(other.errorAge, errorAge) &&
             const DeepCollectionEquality().equals(other.formKey, formKey) &&
-            const DeepCollectionEquality().equals(other.user, user) &&
-            const DeepCollectionEquality()
-                .equals(other.authRepository, authRepository) &&
             const DeepCollectionEquality()
                 .equals(other.appStateNotifier, appStateNotifier) &&
-            const DeepCollectionEquality()
-                .equals(other.fullNameController, fullNameController) &&
             const DeepCollectionEquality()
                 .equals(other.userEmailController, userEmailController) &&
             const DeepCollectionEquality()
                 .equals(other.passwordController, passwordController) &&
             const DeepCollectionEquality()
-                .equals(other.ageController, ageController));
+                .equals(other.authRepository, authRepository));
   }
 
   @override
@@ -811,46 +694,36 @@ class _$_SignUpState implements _SignUpState {
       const DeepCollectionEquality().hash(isFailed),
       const DeepCollectionEquality().hash(obscurePassword),
       const DeepCollectionEquality().hash(obscureConfirmPassword),
-      const DeepCollectionEquality().hash(errorFullName),
       const DeepCollectionEquality().hash(errorEmail),
       const DeepCollectionEquality().hash(errorPassword),
       const DeepCollectionEquality().hash(errorMessage),
-      const DeepCollectionEquality().hash(errorAge),
       const DeepCollectionEquality().hash(formKey),
-      const DeepCollectionEquality().hash(user),
-      const DeepCollectionEquality().hash(authRepository),
       const DeepCollectionEquality().hash(appStateNotifier),
-      const DeepCollectionEquality().hash(fullNameController),
       const DeepCollectionEquality().hash(userEmailController),
       const DeepCollectionEquality().hash(passwordController),
-      const DeepCollectionEquality().hash(ageController));
+      const DeepCollectionEquality().hash(authRepository));
 
   @JsonKey(ignore: true)
   @override
-  _$SignUpStateCopyWith<_SignUpState> get copyWith =>
-      __$SignUpStateCopyWithImpl<_SignUpState>(this, _$identity);
+  _$LogInStateCopyWith<_LogInState> get copyWith =>
+      __$LogInStateCopyWithImpl<_LogInState>(this, _$identity);
 }
 
-abstract class _SignUpState implements SignUpState {
-  const factory _SignUpState(
+abstract class _LogInState implements LogInState {
+  const factory _LogInState(
       {required bool isLoading,
       required bool isSuccessful,
       required bool isFailed,
       required bool obscurePassword,
       required bool obscureConfirmPassword,
-      required String errorFullName,
       required String errorEmail,
       required String errorPassword,
       required String errorMessage,
-      required String errorAge,
       required GlobalKey<FormState> formKey,
-      UserDto? user,
-      required AuthRepository authRepository,
       required AppStateNotifier appStateNotifier,
-      required TextEditingController fullNameController,
       required TextEditingController userEmailController,
       required TextEditingController passwordController,
-      required TextEditingController ageController}) = _$_SignUpState;
+      required AuthRepository authRepository}) = _$_LogInState;
 
   @override
   bool get isLoading;
@@ -863,33 +736,23 @@ abstract class _SignUpState implements SignUpState {
   @override
   bool get obscureConfirmPassword;
   @override
-  String get errorFullName;
-  @override
   String get errorEmail;
   @override
   String get errorPassword;
   @override
   String get errorMessage;
   @override
-  String get errorAge;
-  @override
   GlobalKey<FormState> get formKey;
   @override
-  UserDto? get user;
-  @override
-  AuthRepository get authRepository;
-  @override
   AppStateNotifier get appStateNotifier;
-  @override
-  TextEditingController get fullNameController;
   @override
   TextEditingController get userEmailController;
   @override
   TextEditingController get passwordController;
   @override
-  TextEditingController get ageController;
+  AuthRepository get authRepository;
   @override
   @JsonKey(ignore: true)
-  _$SignUpStateCopyWith<_SignUpState> get copyWith =>
+  _$LogInStateCopyWith<_LogInState> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -83,11 +83,15 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     OutlineInputBorder outlineInputBorder = OutlineInputBorder(
       gapPadding: 0,
-      borderRadius: BorderRadius.circular(20),
+      borderRadius: BorderRadius.circular(28),
       borderSide: const BorderSide(color: Color(0xFFDDE2E5), width: 0.5),
     );
 
     TextFormField textFormField = TextFormField(
+      style: TextStyle(
+          overflow: TextOverflow.ellipsis,
+          color: const Color(0xFFABB3BB),
+          fontSize: 12.6.sp),
       controller: controller,
       initialValue: initialVal,
       validator: validator,
@@ -136,14 +140,19 @@ class CustomTextField extends StatelessWidget {
               )
             : null,
         hintText: hintText,
+        // contentPadding: EdgeInsets.symmetric(
+        //         // vertical: 2.sp,
+        //         // horizontal: 10.sp,
+        //         )
+        //     .copyWith(right: suffixIcon == null ? 10.sp : 0),
         contentPadding: EdgeInsets.symmetric(
-          // vertical: 1.sp,
+          vertical: 1.h,
           horizontal: 10.sp,
-        ).copyWith(right: suffixIcon == null ? 10.sp : 0),
+        ),
         hintStyle: TextStyle(
             overflow: TextOverflow.ellipsis,
             color: const Color(0xFFABB3BB),
-            fontSize: 12.sp),
+            fontSize: 8.sp),
         errorText: errorText,
       ),
       onChanged: onChanged,
@@ -162,11 +171,10 @@ class CustomTextField extends StatelessWidget {
           Column(
             children: [
               Text(
-                labelText ?? ' ',
-                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                      color: Theme.of(context).colorScheme.primaryContainer,
-                      fontSize: 12.sp,
-                      fontWeight: FontWeight.bold,
+                labelText ?? '',
+                style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                      color: Theme.of(context).colorScheme.onPrimary,
+                      fontWeight: FontWeight.w400,
                     ),
               ),
               SizedBox(

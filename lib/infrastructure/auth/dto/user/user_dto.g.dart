@@ -9,14 +9,20 @@ part of 'user_dto.dart';
 _$_UserDto _$$_UserDtoFromJson(Map<String, dynamic> json) => _$_UserDto(
       id: json['id'] as String,
       email: json['email'] as String,
-      fullName: json['fullName'] as String,
-      age: json['age'] as int?,
+      firstName: json['firstName'] as String?,
+      lastName: json['lastName'] as String?,
+      mobileNumber: json['mobileNumber'] as String?,
+      reference: json['reference'] as String?,
+      isProfileCompleted: json['isProfileCompleted'] as bool,
     );
 
 Map<String, dynamic> _$$_UserDtoToJson(_$_UserDto instance) =>
     <String, dynamic>{
       'id': instance.id,
       'email': instance.email,
-      'fullName': instance.fullName,
-      'age': instance.age,
+      'firstName': instance.firstName,
+      'lastName': instance.lastName,
+      'mobileNumber': instance.mobileNumber,
+      'reference': instance.reference,
+      'isProfileCompleted': instance.isProfileCompleted,
     };

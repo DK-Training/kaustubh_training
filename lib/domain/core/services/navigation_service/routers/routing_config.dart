@@ -1,10 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../../../../infrastructure/platform/platform_enum.dart';
+import '../../../../../presentation/auth/create_profile.dart';
 import '../../../../../presentation/auth/login_screen.dart';
 import '../../../../../presentation/auth/sign_screen.dart';
 import '../../../../../presentation/home/home_screen.dart';
-import '../../../../../presentation/home/update_user_info.dart';
+// import '../../../../../presentation/home/update_user_info.dart';
 import '../../../extensions/string_extensions.dart';
 import '../../../config/determine_platform.dart'
     if (dart.library.html) '../../../config/determine_platform_web.dart';
@@ -20,12 +21,12 @@ Route<dynamic> authorizedNavigation(RouteSettings settings) {
         const HomeScreen(),
         settings,
       );
-      
-    case CoreRoute.updateProfile:
-      return _getPageRoute(
-        const UpdateUserInfo(),
-        settings,
-      );
+
+    // case CoreRoute.updateProfile:
+    //   return _getPageRoute(
+    //     const UpdateUserInfo(),
+    //     settings,
+    //   );
 
     default:
       return commonNavigation(settings);
@@ -46,6 +47,12 @@ Route<dynamic> commonNavigation(RouteSettings settings) {
         const SignupScreen(),
         settings,
       );
+    case AuthRoutes.createProfile:
+      return _getPageRoute(
+        const CreateProfileScreen(),
+        settings,
+      );
+
     default:
       return _getPageRoute(
         Container(),

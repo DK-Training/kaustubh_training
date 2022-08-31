@@ -94,4 +94,25 @@ class IAuthRepository extends AuthRepository {
     final UserDto user = UserDto.fromJson(response.data()!);
     return user;
   }
+
+  @override
+  Future<Either<String, UserDto>> updateProfile({
+    required UserDto updatedUser,
+  }) async {
+    try {
+      await FirebaseFirestore.instance
+          .collection('users')
+          .doc(updatedUser.id)
+          .update(updatedUser.toJson());
+      final rawUser = await FirebaseFirestore.instance
+          .collection('users')
+          .doc(updatedUser.id)
+          .get();
+      final UserDto fetchedUser = UserDto.fromJson(rawUser.data()!);
+
+      return right(fetchedUser);
+    } catch (e) {
+      return left('failed to update profile');
+    }
+  }
 }

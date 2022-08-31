@@ -24,13 +24,19 @@ class _$UserDtoTearOff {
   _UserDto call(
       {required String id,
       required String email,
-      required String fullName,
-      int? age}) {
+      String? firstName,
+      String? lastName,
+      String? mobileNumber,
+      String? reference,
+      required bool isProfileCompleted}) {
     return _UserDto(
       id: id,
       email: email,
-      fullName: fullName,
-      age: age,
+      firstName: firstName,
+      lastName: lastName,
+      mobileNumber: mobileNumber,
+      reference: reference,
+      isProfileCompleted: isProfileCompleted,
     );
   }
 
@@ -46,8 +52,11 @@ const $UserDto = _$UserDtoTearOff();
 mixin _$UserDto {
   String get id => throw _privateConstructorUsedError;
   String get email => throw _privateConstructorUsedError;
-  String get fullName => throw _privateConstructorUsedError;
-  int? get age => throw _privateConstructorUsedError;
+  String? get firstName => throw _privateConstructorUsedError;
+  String? get lastName => throw _privateConstructorUsedError;
+  String? get mobileNumber => throw _privateConstructorUsedError;
+  String? get reference => throw _privateConstructorUsedError;
+  bool get isProfileCompleted => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -58,7 +67,14 @@ mixin _$UserDto {
 abstract class $UserDtoCopyWith<$Res> {
   factory $UserDtoCopyWith(UserDto value, $Res Function(UserDto) then) =
       _$UserDtoCopyWithImpl<$Res>;
-  $Res call({String id, String email, String fullName, int? age});
+  $Res call(
+      {String id,
+      String email,
+      String? firstName,
+      String? lastName,
+      String? mobileNumber,
+      String? reference,
+      bool isProfileCompleted});
 }
 
 /// @nodoc
@@ -73,8 +89,11 @@ class _$UserDtoCopyWithImpl<$Res> implements $UserDtoCopyWith<$Res> {
   $Res call({
     Object? id = freezed,
     Object? email = freezed,
-    Object? fullName = freezed,
-    Object? age = freezed,
+    Object? firstName = freezed,
+    Object? lastName = freezed,
+    Object? mobileNumber = freezed,
+    Object? reference = freezed,
+    Object? isProfileCompleted = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -85,14 +104,26 @@ class _$UserDtoCopyWithImpl<$Res> implements $UserDtoCopyWith<$Res> {
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String,
-      fullName: fullName == freezed
-          ? _value.fullName
-          : fullName // ignore: cast_nullable_to_non_nullable
-              as String,
-      age: age == freezed
-          ? _value.age
-          : age // ignore: cast_nullable_to_non_nullable
-              as int?,
+      firstName: firstName == freezed
+          ? _value.firstName
+          : firstName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      lastName: lastName == freezed
+          ? _value.lastName
+          : lastName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      mobileNumber: mobileNumber == freezed
+          ? _value.mobileNumber
+          : mobileNumber // ignore: cast_nullable_to_non_nullable
+              as String?,
+      reference: reference == freezed
+          ? _value.reference
+          : reference // ignore: cast_nullable_to_non_nullable
+              as String?,
+      isProfileCompleted: isProfileCompleted == freezed
+          ? _value.isProfileCompleted
+          : isProfileCompleted // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -102,7 +133,14 @@ abstract class _$UserDtoCopyWith<$Res> implements $UserDtoCopyWith<$Res> {
   factory _$UserDtoCopyWith(_UserDto value, $Res Function(_UserDto) then) =
       __$UserDtoCopyWithImpl<$Res>;
   @override
-  $Res call({String id, String email, String fullName, int? age});
+  $Res call(
+      {String id,
+      String email,
+      String? firstName,
+      String? lastName,
+      String? mobileNumber,
+      String? reference,
+      bool isProfileCompleted});
 }
 
 /// @nodoc
@@ -118,8 +156,11 @@ class __$UserDtoCopyWithImpl<$Res> extends _$UserDtoCopyWithImpl<$Res>
   $Res call({
     Object? id = freezed,
     Object? email = freezed,
-    Object? fullName = freezed,
-    Object? age = freezed,
+    Object? firstName = freezed,
+    Object? lastName = freezed,
+    Object? mobileNumber = freezed,
+    Object? reference = freezed,
+    Object? isProfileCompleted = freezed,
   }) {
     return _then(_UserDto(
       id: id == freezed
@@ -130,14 +171,26 @@ class __$UserDtoCopyWithImpl<$Res> extends _$UserDtoCopyWithImpl<$Res>
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String,
-      fullName: fullName == freezed
-          ? _value.fullName
-          : fullName // ignore: cast_nullable_to_non_nullable
-              as String,
-      age: age == freezed
-          ? _value.age
-          : age // ignore: cast_nullable_to_non_nullable
-              as int?,
+      firstName: firstName == freezed
+          ? _value.firstName
+          : firstName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      lastName: lastName == freezed
+          ? _value.lastName
+          : lastName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      mobileNumber: mobileNumber == freezed
+          ? _value.mobileNumber
+          : mobileNumber // ignore: cast_nullable_to_non_nullable
+              as String?,
+      reference: reference == freezed
+          ? _value.reference
+          : reference // ignore: cast_nullable_to_non_nullable
+              as String?,
+      isProfileCompleted: isProfileCompleted == freezed
+          ? _value.isProfileCompleted
+          : isProfileCompleted // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -148,8 +201,11 @@ class _$_UserDto implements _UserDto {
   _$_UserDto(
       {required this.id,
       required this.email,
-      required this.fullName,
-      this.age});
+      this.firstName,
+      this.lastName,
+      this.mobileNumber,
+      this.reference,
+      required this.isProfileCompleted});
 
   factory _$_UserDto.fromJson(Map<String, dynamic> json) =>
       _$$_UserDtoFromJson(json);
@@ -159,13 +215,19 @@ class _$_UserDto implements _UserDto {
   @override
   final String email;
   @override
-  final String fullName;
+  final String? firstName;
   @override
-  final int? age;
+  final String? lastName;
+  @override
+  final String? mobileNumber;
+  @override
+  final String? reference;
+  @override
+  final bool isProfileCompleted;
 
   @override
   String toString() {
-    return 'UserDto(id: $id, email: $email, fullName: $fullName, age: $age)';
+    return 'UserDto(id: $id, email: $email, firstName: $firstName, lastName: $lastName, mobileNumber: $mobileNumber, reference: $reference, isProfileCompleted: $isProfileCompleted)';
   }
 
   @override
@@ -175,8 +237,13 @@ class _$_UserDto implements _UserDto {
             other is _UserDto &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.email, email) &&
-            const DeepCollectionEquality().equals(other.fullName, fullName) &&
-            const DeepCollectionEquality().equals(other.age, age));
+            const DeepCollectionEquality().equals(other.firstName, firstName) &&
+            const DeepCollectionEquality().equals(other.lastName, lastName) &&
+            const DeepCollectionEquality()
+                .equals(other.mobileNumber, mobileNumber) &&
+            const DeepCollectionEquality().equals(other.reference, reference) &&
+            const DeepCollectionEquality()
+                .equals(other.isProfileCompleted, isProfileCompleted));
   }
 
   @override
@@ -184,8 +251,11 @@ class _$_UserDto implements _UserDto {
       runtimeType,
       const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(email),
-      const DeepCollectionEquality().hash(fullName),
-      const DeepCollectionEquality().hash(age));
+      const DeepCollectionEquality().hash(firstName),
+      const DeepCollectionEquality().hash(lastName),
+      const DeepCollectionEquality().hash(mobileNumber),
+      const DeepCollectionEquality().hash(reference),
+      const DeepCollectionEquality().hash(isProfileCompleted));
 
   @JsonKey(ignore: true)
   @override
@@ -202,8 +272,11 @@ abstract class _UserDto implements UserDto {
   factory _UserDto(
       {required String id,
       required String email,
-      required String fullName,
-      int? age}) = _$_UserDto;
+      String? firstName,
+      String? lastName,
+      String? mobileNumber,
+      String? reference,
+      required bool isProfileCompleted}) = _$_UserDto;
 
   factory _UserDto.fromJson(Map<String, dynamic> json) = _$_UserDto.fromJson;
 
@@ -212,9 +285,15 @@ abstract class _UserDto implements UserDto {
   @override
   String get email;
   @override
-  String get fullName;
+  String? get firstName;
   @override
-  int? get age;
+  String? get lastName;
+  @override
+  String? get mobileNumber;
+  @override
+  String? get reference;
+  @override
+  bool get isProfileCompleted;
   @override
   @JsonKey(ignore: true)
   _$UserDtoCopyWith<_UserDto> get copyWith =>
