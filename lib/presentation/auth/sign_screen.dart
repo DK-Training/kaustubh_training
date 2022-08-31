@@ -37,10 +37,13 @@ class SignupScreenConsumer extends StatelessWidget {
       if (state.isSuccessful) {
         debugPrint('sign up successful');
         Provider.of<AppStateNotifier>(context, listen: false)
-            .updateAfterAuthChange(isAuthorized: true, user: state.user);
+            .updateAfterAuthChange(
+                isAuthorized: true,
+                isProfileCompleted: false,
+                user: state.user);
         Future.delayed(const Duration(milliseconds: 100)).then((value) =>
             navigator<NavigationService>()
-                .navigateTo(CoreRoute.home, isClearStack: true));
+                .navigateTo(AuthRoutes.createProfile, isClearStack: true));
       } else if (state.isFailed) {
         debugPrint('sign up failed');
         if (state.errorMessage.isNotEmpty) {

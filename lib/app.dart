@@ -61,11 +61,14 @@ class MainApp extends StatelessWidget {
       ),
       builder: (context, child) => child!,
       navigatorKey: navigator<NavigationService>().navigatorKey,
-      onGenerateRoute: Provider.of<AppStateNotifier>(context).isAuthorized
+      onGenerateRoute: Provider.of<AppStateNotifier>(context).isAuthorized &&
+              Provider.of<AppStateNotifier>(context).isProfileCompleted
           ? authorizedNavigation
           : commonNavigation,
       initialRoute: Provider.of<AppStateNotifier>(context).isAuthorized
-          ? CoreRoute.home
+          ? Provider.of<AppStateNotifier>(context).isProfileCompleted
+              ? AuthRoutes.createProfile
+              : CoreRoute.home
           : AuthRoutes.login,
     );
   }
@@ -82,7 +85,10 @@ Future appInitializer(AppConfig appConfig) async {
       buildFlavor: appConfig.buildFlavor,
       child: ChangeNotifierProvider<AppStateNotifier>(
         create: (context) {
-          return AppStateNotifier(isAuthorized: isAuthorized, user: user);
+          return AppStateNotifier(
+              isAuthorized: isAuthorized,
+              user: user,
+              isProfileCompleted: false);
         },
         child: Sizer(builder: (context, orientation, deviceType) {
           return const MainApp();
