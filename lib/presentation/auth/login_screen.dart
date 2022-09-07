@@ -43,7 +43,7 @@ class LoginScreenConsumer extends StatelessWidget {
         );
         Future.delayed(const Duration(milliseconds: 100)).then(
           (value) => navigator<NavigationService>()
-              .navigateTo(CoreRoute.home, isClearStack: true),
+              .navigateTo(AuthRoutes.createProfile, isClearStack: true),
         );
       } else if (state.isFailed) {
         debugPrint('Login failed');

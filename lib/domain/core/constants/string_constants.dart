@@ -3,19 +3,28 @@ class AuthConstants {
   static const signup = 'Signup';
   static const login = 'Login';
   static const enterDetails = 'Enter following details to create account';
-  static const fullName = 'Full Name';
+  static const completeProfileDetails = ' Complete Profile Details';
+  static const reference = 'Where have you heard about us?';
+  static const mobileNumber = 'Mobile Number';
+  static const firstName = 'First Name';
+  static const lastName = 'Last Name';
   static const emailAddress = 'Email ';
   static const password = 'Password';
   static const confirmPassword = 'Confirm Password';
   static const age = 'Age';
+  static const done = 'Done';
   static const alreadyHaveAcc = 'Already have an account?';
   static const updateInfo = 'Update Profile';
+  static const createProfile = 'Create Profile';
+  static const homePageTitle = 'Mis propiedades';
+  static const homePageButtonCrear = 'Crear una nueva propiedad';
   static const update = 'Update ';
   static const cancle = 'Cancle';
 
   // hint text
-  static const hintFullName = 'Your Full Name';
-  static const hintEmail = 'Your Email Address';
-  static const hintPassword = 'Your Password';
-  static const hintAge = 'Your Age';
+  static const hintFirstName = 'Enter Name';
+  static const hintLastName = 'Last Name';
+  static const hintreference = 'Guzmán';
+  static const hintEmail = 'gerrguz@correo.com';
+  static const hintMobileNumber = '123 456 7890';
 }

@@ -1,8 +1,8 @@
-part of 'login_bloc.dart';
+part of 'create_profile_bloc.dart';
 
 @freezed
-class LogInState with _$LogInState {
-  const factory LogInState({
+class CreateProfileState with _$CreateProfileState {
+  const factory CreateProfileState({
     required bool isLoading,
     required bool isSuccessful,
     required bool isFailed,
@@ -11,30 +11,38 @@ class LogInState with _$LogInState {
     required String errorEmail,
     required String errorPassword,
     required String errorMessage,
-    required GlobalKey<FormState> formKey,
+    //required GlobalKey<FormState> formKey,
     required AppStateNotifier appStateNotifier,
+    required AuthRepository authRepository,
     required TextEditingController userEmailController,
     required TextEditingController passwordController,
-    required AuthRepository authRepository,
+    required TextEditingController firstNameController,
+    required TextEditingController lastNameController,
+    required TextEditingController referenceController,
+    required TextEditingController mobileNumberController,
     UserDto? user,
-  }) = _LogInState;
+  }) = _CreateProfileState;
 
-  factory LogInState.initial({
+  factory CreateProfileState.initial({
     required AppStateNotifier appStateNotifier,
   }) =>
-      LogInState(
+      CreateProfileState(
         errorPassword: '',
         obscurePassword: true,
         obscureConfirmPassword: true,
         authRepository: IAuthRepository(),
         errorEmail: '',
         errorMessage: '',
-        formKey: GlobalKey<FormState>(),
+        //formKey: GlobalKey<FormState>(),
         isLoading: false,
         isSuccessful: false,
         isFailed: false,
         appStateNotifier: appStateNotifier,
         userEmailController: TextEditingController(),
         passwordController: TextEditingController(),
+        firstNameController: TextEditingController(),
+        lastNameController: TextEditingController(),
+        referenceController: TextEditingController(),
+        mobileNumberController: TextEditingController(),
       );
 }

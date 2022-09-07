@@ -22,7 +22,7 @@ class MainApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Poppins',
         primaryColor: const Color(0xFF0099ff),
-        scaffoldBackgroundColor: const Color(0xFFffffff),
+        scaffoldBackgroundColor: const Color(0xFFF8F8F8),
         scrollbarTheme: const ScrollbarThemeData().copyWith(
           thumbColor: MaterialStateProperty.all(const Color(0xFF000000)),
         ),
@@ -31,9 +31,10 @@ class MainApp extends StatelessWidget {
               secondary: const Color(0xFF8E8E8E),
               onPrimary: const Color(0xFF979797),
               onSecondary: const Color(0xFFC4C4C4),
-              // primaryContainer: const Color(0xFF000000),
-              // secondaryContainer: const Color(0xFFA4CCF0),
-              // onTertiaryContainer: const Color(0xFF858494),
+              primaryContainer: const Color(0xFFDFDFDF),
+              secondaryContainer: const Color(0xFF0196FD),
+              onSecondaryContainer: const Color(0xFF046DDE),
+              // onTertiaryContainer:const Color(0xFF046DDE),
               // tertiary: const Color(0xFFFFFFFF),
               // onPrimaryContainer: const Color(0xFFFF3D00),
               // onTertiary: const Color(0XFFe7e6e6)

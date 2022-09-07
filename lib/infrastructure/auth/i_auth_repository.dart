@@ -96,17 +96,17 @@ class IAuthRepository extends AuthRepository {
   }
 
   @override
-  Future<Either<String, UserDto>> updateProfile({
-    required UserDto updatedUser,
+  Future<Either<String, UserDto>> createProfile({
+    required UserDto createUser,
   }) async {
     try {
       await FirebaseFirestore.instance
           .collection('users')
-          .doc(updatedUser.id)
-          .update(updatedUser.toJson());
+          .doc(createUser.id)
+          .update(createUser.toJson());
       final rawUser = await FirebaseFirestore.instance
           .collection('users')
-          .doc(updatedUser.id)
+          .doc(createUser.id)
           .get();
       final UserDto fetchedUser = UserDto.fromJson(rawUser.data()!);
 

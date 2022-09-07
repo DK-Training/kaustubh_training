@@ -352,7 +352,6 @@ class _$SignupStateTearOff {
       required String errorEmail,
       required String errorPassword,
       required String errorMessage,
-      required String errorAge,
       required GlobalKey<FormState> formKey,
       UserDto? user,
       required AuthRepository authRepository,
@@ -370,7 +369,6 @@ class _$SignupStateTearOff {
       errorEmail: errorEmail,
       errorPassword: errorPassword,
       errorMessage: errorMessage,
-      errorAge: errorAge,
       formKey: formKey,
       user: user,
       authRepository: authRepository,
@@ -396,7 +394,6 @@ mixin _$SignupState {
   String get errorEmail => throw _privateConstructorUsedError;
   String get errorPassword => throw _privateConstructorUsedError;
   String get errorMessage => throw _privateConstructorUsedError;
-  String get errorAge => throw _privateConstructorUsedError;
   GlobalKey<FormState> get formKey => throw _privateConstructorUsedError;
   UserDto? get user => throw _privateConstructorUsedError;
   AuthRepository get authRepository => throw _privateConstructorUsedError;
@@ -428,7 +425,6 @@ abstract class $SignupStateCopyWith<$Res> {
       String errorEmail,
       String errorPassword,
       String errorMessage,
-      String errorAge,
       GlobalKey<FormState> formKey,
       UserDto? user,
       AuthRepository authRepository,
@@ -459,7 +455,6 @@ class _$SignupStateCopyWithImpl<$Res> implements $SignupStateCopyWith<$Res> {
     Object? errorEmail = freezed,
     Object? errorPassword = freezed,
     Object? errorMessage = freezed,
-    Object? errorAge = freezed,
     Object? formKey = freezed,
     Object? user = freezed,
     Object? authRepository = freezed,
@@ -504,10 +499,6 @@ class _$SignupStateCopyWithImpl<$Res> implements $SignupStateCopyWith<$Res> {
       errorMessage: errorMessage == freezed
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
-              as String,
-      errorAge: errorAge == freezed
-          ? _value.errorAge
-          : errorAge // ignore: cast_nullable_to_non_nullable
               as String,
       formKey: formKey == freezed
           ? _value.formKey
@@ -569,7 +560,6 @@ abstract class _$SignupStateCopyWith<$Res>
       String errorEmail,
       String errorPassword,
       String errorMessage,
-      String errorAge,
       GlobalKey<FormState> formKey,
       UserDto? user,
       AuthRepository authRepository,
@@ -603,7 +593,6 @@ class __$SignupStateCopyWithImpl<$Res> extends _$SignupStateCopyWithImpl<$Res>
     Object? errorEmail = freezed,
     Object? errorPassword = freezed,
     Object? errorMessage = freezed,
-    Object? errorAge = freezed,
     Object? formKey = freezed,
     Object? user = freezed,
     Object? authRepository = freezed,
@@ -648,10 +637,6 @@ class __$SignupStateCopyWithImpl<$Res> extends _$SignupStateCopyWithImpl<$Res>
       errorMessage: errorMessage == freezed
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
-              as String,
-      errorAge: errorAge == freezed
-          ? _value.errorAge
-          : errorAge // ignore: cast_nullable_to_non_nullable
               as String,
       formKey: formKey == freezed
           ? _value.formKey
@@ -698,7 +683,6 @@ class _$_SignupState implements _SignupState {
       required this.errorEmail,
       required this.errorPassword,
       required this.errorMessage,
-      required this.errorAge,
       required this.formKey,
       this.user,
       required this.authRepository,
@@ -726,8 +710,6 @@ class _$_SignupState implements _SignupState {
   @override
   final String errorMessage;
   @override
-  final String errorAge;
-  @override
   final GlobalKey<FormState> formKey;
   @override
   final UserDto? user;
@@ -744,7 +726,7 @@ class _$_SignupState implements _SignupState {
 
   @override
   String toString() {
-    return 'SignupState(isLoading: $isLoading, isSuccessful: $isSuccessful, isFailed: $isFailed, obscurePassword: $obscurePassword, obscureConfirmPassword: $obscureConfirmPassword, errorFullName: $errorFullName, errorEmail: $errorEmail, errorPassword: $errorPassword, errorMessage: $errorMessage, errorAge: $errorAge, formKey: $formKey, user: $user, authRepository: $authRepository, appStateNotifier: $appStateNotifier, userEmailController: $userEmailController, passwordController: $passwordController, confirmPasswordController: $confirmPasswordController)';
+    return 'SignupState(isLoading: $isLoading, isSuccessful: $isSuccessful, isFailed: $isFailed, obscurePassword: $obscurePassword, obscureConfirmPassword: $obscureConfirmPassword, errorFullName: $errorFullName, errorEmail: $errorEmail, errorPassword: $errorPassword, errorMessage: $errorMessage, formKey: $formKey, user: $user, authRepository: $authRepository, appStateNotifier: $appStateNotifier, userEmailController: $userEmailController, passwordController: $passwordController, confirmPasswordController: $confirmPasswordController)';
   }
 
   @override
@@ -768,7 +750,6 @@ class _$_SignupState implements _SignupState {
                 .equals(other.errorPassword, errorPassword) &&
             const DeepCollectionEquality()
                 .equals(other.errorMessage, errorMessage) &&
-            const DeepCollectionEquality().equals(other.errorAge, errorAge) &&
             const DeepCollectionEquality().equals(other.formKey, formKey) &&
             const DeepCollectionEquality().equals(other.user, user) &&
             const DeepCollectionEquality()
@@ -795,7 +776,6 @@ class _$_SignupState implements _SignupState {
       const DeepCollectionEquality().hash(errorEmail),
       const DeepCollectionEquality().hash(errorPassword),
       const DeepCollectionEquality().hash(errorMessage),
-      const DeepCollectionEquality().hash(errorAge),
       const DeepCollectionEquality().hash(formKey),
       const DeepCollectionEquality().hash(user),
       const DeepCollectionEquality().hash(authRepository),
@@ -821,7 +801,6 @@ abstract class _SignupState implements SignupState {
           required String errorEmail,
           required String errorPassword,
           required String errorMessage,
-          required String errorAge,
           required GlobalKey<FormState> formKey,
           UserDto? user,
           required AuthRepository authRepository,
@@ -849,8 +828,6 @@ abstract class _SignupState implements SignupState {
   String get errorPassword;
   @override
   String get errorMessage;
-  @override
-  String get errorAge;
   @override
   GlobalKey<FormState> get formKey;
   @override

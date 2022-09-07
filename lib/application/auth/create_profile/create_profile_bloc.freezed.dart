@@ -2,7 +2,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
-part of 'login_bloc.dart';
+part of 'create_profile_bloc.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,14 +14,14 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-class _$LogInEventTearOff {
-  const _$LogInEventTearOff();
+class _$CreateProfileEventTearOff {
+  const _$CreateProfileEventTearOff();
 
-  _onLogInPressed onLogInPressed() {
-    return const _onLogInPressed();
+  _onDonePressed onDonePressed() {
+    return const _onDonePressed();
   }
 
-  _onEmitFromAnywhere emitFromAnywhere({required LogInState state}) {
+  _onEmitFromAnywhere emitFromAnywhere({required CreateProfileState state}) {
     return _onEmitFromAnywhere(
       state: state,
     );
@@ -29,44 +29,44 @@ class _$LogInEventTearOff {
 }
 
 /// @nodoc
-const $LogInEvent = _$LogInEventTearOff();
+const $CreateProfileEvent = _$CreateProfileEventTearOff();
 
 /// @nodoc
-mixin _$LogInEvent {
+mixin _$CreateProfileEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() onLogInPressed,
-    required TResult Function(LogInState state) emitFromAnywhere,
+    required TResult Function() onDonePressed,
+    required TResult Function(CreateProfileState state) emitFromAnywhere,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? onLogInPressed,
-    TResult Function(LogInState state)? emitFromAnywhere,
+    TResult Function()? onDonePressed,
+    TResult Function(CreateProfileState state)? emitFromAnywhere,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? onLogInPressed,
-    TResult Function(LogInState state)? emitFromAnywhere,
+    TResult Function()? onDonePressed,
+    TResult Function(CreateProfileState state)? emitFromAnywhere,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_onLogInPressed value) onLogInPressed,
+    required TResult Function(_onDonePressed value) onDonePressed,
     required TResult Function(_onEmitFromAnywhere value) emitFromAnywhere,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_onLogInPressed value)? onLogInPressed,
+    TResult Function(_onDonePressed value)? onDonePressed,
     TResult Function(_onEmitFromAnywhere value)? emitFromAnywhere,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_onLogInPressed value)? onLogInPressed,
+    TResult Function(_onDonePressed value)? onDonePressed,
     TResult Function(_onEmitFromAnywhere value)? emitFromAnywhere,
     required TResult orElse(),
   }) =>
@@ -74,53 +74,55 @@ mixin _$LogInEvent {
 }
 
 /// @nodoc
-abstract class $LogInEventCopyWith<$Res> {
-  factory $LogInEventCopyWith(
-          LogInEvent value, $Res Function(LogInEvent) then) =
-      _$LogInEventCopyWithImpl<$Res>;
+abstract class $CreateProfileEventCopyWith<$Res> {
+  factory $CreateProfileEventCopyWith(
+          CreateProfileEvent value, $Res Function(CreateProfileEvent) then) =
+      _$CreateProfileEventCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$LogInEventCopyWithImpl<$Res> implements $LogInEventCopyWith<$Res> {
-  _$LogInEventCopyWithImpl(this._value, this._then);
+class _$CreateProfileEventCopyWithImpl<$Res>
+    implements $CreateProfileEventCopyWith<$Res> {
+  _$CreateProfileEventCopyWithImpl(this._value, this._then);
 
-  final LogInEvent _value;
+  final CreateProfileEvent _value;
   // ignore: unused_field
-  final $Res Function(LogInEvent) _then;
+  final $Res Function(CreateProfileEvent) _then;
 }
 
 /// @nodoc
-abstract class _$onLogInPressedCopyWith<$Res> {
-  factory _$onLogInPressedCopyWith(
-          _onLogInPressed value, $Res Function(_onLogInPressed) then) =
-      __$onLogInPressedCopyWithImpl<$Res>;
+abstract class _$onDonePressedCopyWith<$Res> {
+  factory _$onDonePressedCopyWith(
+          _onDonePressed value, $Res Function(_onDonePressed) then) =
+      __$onDonePressedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$onLogInPressedCopyWithImpl<$Res> extends _$LogInEventCopyWithImpl<$Res>
-    implements _$onLogInPressedCopyWith<$Res> {
-  __$onLogInPressedCopyWithImpl(
-      _onLogInPressed _value, $Res Function(_onLogInPressed) _then)
-      : super(_value, (v) => _then(v as _onLogInPressed));
+class __$onDonePressedCopyWithImpl<$Res>
+    extends _$CreateProfileEventCopyWithImpl<$Res>
+    implements _$onDonePressedCopyWith<$Res> {
+  __$onDonePressedCopyWithImpl(
+      _onDonePressed _value, $Res Function(_onDonePressed) _then)
+      : super(_value, (v) => _then(v as _onDonePressed));
 
   @override
-  _onLogInPressed get _value => super._value as _onLogInPressed;
+  _onDonePressed get _value => super._value as _onDonePressed;
 }
 
 /// @nodoc
 
-class _$_onLogInPressed implements _onLogInPressed {
-  const _$_onLogInPressed();
+class _$_onDonePressed implements _onDonePressed {
+  const _$_onDonePressed();
 
   @override
   String toString() {
-    return 'LogInEvent.onLogInPressed()';
+    return 'CreateProfileEvent.onDonePressed()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _onLogInPressed);
+        (other.runtimeType == runtimeType && other is _onDonePressed);
   }
 
   @override
@@ -129,30 +131,30 @@ class _$_onLogInPressed implements _onLogInPressed {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() onLogInPressed,
-    required TResult Function(LogInState state) emitFromAnywhere,
+    required TResult Function() onDonePressed,
+    required TResult Function(CreateProfileState state) emitFromAnywhere,
   }) {
-    return onLogInPressed();
+    return onDonePressed();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? onLogInPressed,
-    TResult Function(LogInState state)? emitFromAnywhere,
+    TResult Function()? onDonePressed,
+    TResult Function(CreateProfileState state)? emitFromAnywhere,
   }) {
-    return onLogInPressed?.call();
+    return onDonePressed?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? onLogInPressed,
-    TResult Function(LogInState state)? emitFromAnywhere,
+    TResult Function()? onDonePressed,
+    TResult Function(CreateProfileState state)? emitFromAnywhere,
     required TResult orElse(),
   }) {
-    if (onLogInPressed != null) {
-      return onLogInPressed();
+    if (onDonePressed != null) {
+      return onDonePressed();
     }
     return orElse();
   }
@@ -160,37 +162,37 @@ class _$_onLogInPressed implements _onLogInPressed {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_onLogInPressed value) onLogInPressed,
+    required TResult Function(_onDonePressed value) onDonePressed,
     required TResult Function(_onEmitFromAnywhere value) emitFromAnywhere,
   }) {
-    return onLogInPressed(this);
+    return onDonePressed(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_onLogInPressed value)? onLogInPressed,
+    TResult Function(_onDonePressed value)? onDonePressed,
     TResult Function(_onEmitFromAnywhere value)? emitFromAnywhere,
   }) {
-    return onLogInPressed?.call(this);
+    return onDonePressed?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_onLogInPressed value)? onLogInPressed,
+    TResult Function(_onDonePressed value)? onDonePressed,
     TResult Function(_onEmitFromAnywhere value)? emitFromAnywhere,
     required TResult orElse(),
   }) {
-    if (onLogInPressed != null) {
-      return onLogInPressed(this);
+    if (onDonePressed != null) {
+      return onDonePressed(this);
     }
     return orElse();
   }
 }
 
-abstract class _onLogInPressed implements LogInEvent {
-  const factory _onLogInPressed() = _$_onLogInPressed;
+abstract class _onDonePressed implements CreateProfileEvent {
+  const factory _onDonePressed() = _$_onDonePressed;
 }
 
 /// @nodoc
@@ -198,14 +200,14 @@ abstract class _$onEmitFromAnywhereCopyWith<$Res> {
   factory _$onEmitFromAnywhereCopyWith(
           _onEmitFromAnywhere value, $Res Function(_onEmitFromAnywhere) then) =
       __$onEmitFromAnywhereCopyWithImpl<$Res>;
-  $Res call({LogInState state});
+  $Res call({CreateProfileState state});
 
-  $LogInStateCopyWith<$Res> get state;
+  $CreateProfileStateCopyWith<$Res> get state;
 }
 
 /// @nodoc
 class __$onEmitFromAnywhereCopyWithImpl<$Res>
-    extends _$LogInEventCopyWithImpl<$Res>
+    extends _$CreateProfileEventCopyWithImpl<$Res>
     implements _$onEmitFromAnywhereCopyWith<$Res> {
   __$onEmitFromAnywhereCopyWithImpl(
       _onEmitFromAnywhere _value, $Res Function(_onEmitFromAnywhere) _then)
@@ -222,13 +224,13 @@ class __$onEmitFromAnywhereCopyWithImpl<$Res>
       state: state == freezed
           ? _value.state
           : state // ignore: cast_nullable_to_non_nullable
-              as LogInState,
+              as CreateProfileState,
     ));
   }
 
   @override
-  $LogInStateCopyWith<$Res> get state {
-    return $LogInStateCopyWith<$Res>(_value.state, (value) {
+  $CreateProfileStateCopyWith<$Res> get state {
+    return $CreateProfileStateCopyWith<$Res>(_value.state, (value) {
       return _then(_value.copyWith(state: value));
     });
   }
@@ -240,11 +242,11 @@ class _$_onEmitFromAnywhere implements _onEmitFromAnywhere {
   const _$_onEmitFromAnywhere({required this.state});
 
   @override
-  final LogInState state;
+  final CreateProfileState state;
 
   @override
   String toString() {
-    return 'LogInEvent.emitFromAnywhere(state: $state)';
+    return 'CreateProfileEvent.emitFromAnywhere(state: $state)';
   }
 
   @override
@@ -267,8 +269,8 @@ class _$_onEmitFromAnywhere implements _onEmitFromAnywhere {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() onLogInPressed,
-    required TResult Function(LogInState state) emitFromAnywhere,
+    required TResult Function() onDonePressed,
+    required TResult Function(CreateProfileState state) emitFromAnywhere,
   }) {
     return emitFromAnywhere(state);
   }
@@ -276,8 +278,8 @@ class _$_onEmitFromAnywhere implements _onEmitFromAnywhere {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? onLogInPressed,
-    TResult Function(LogInState state)? emitFromAnywhere,
+    TResult Function()? onDonePressed,
+    TResult Function(CreateProfileState state)? emitFromAnywhere,
   }) {
     return emitFromAnywhere?.call(state);
   }
@@ -285,8 +287,8 @@ class _$_onEmitFromAnywhere implements _onEmitFromAnywhere {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? onLogInPressed,
-    TResult Function(LogInState state)? emitFromAnywhere,
+    TResult Function()? onDonePressed,
+    TResult Function(CreateProfileState state)? emitFromAnywhere,
     required TResult orElse(),
   }) {
     if (emitFromAnywhere != null) {
@@ -298,7 +300,7 @@ class _$_onEmitFromAnywhere implements _onEmitFromAnywhere {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_onLogInPressed value) onLogInPressed,
+    required TResult Function(_onDonePressed value) onDonePressed,
     required TResult Function(_onEmitFromAnywhere value) emitFromAnywhere,
   }) {
     return emitFromAnywhere(this);
@@ -307,7 +309,7 @@ class _$_onEmitFromAnywhere implements _onEmitFromAnywhere {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_onLogInPressed value)? onLogInPressed,
+    TResult Function(_onDonePressed value)? onDonePressed,
     TResult Function(_onEmitFromAnywhere value)? emitFromAnywhere,
   }) {
     return emitFromAnywhere?.call(this);
@@ -316,7 +318,7 @@ class _$_onEmitFromAnywhere implements _onEmitFromAnywhere {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_onLogInPressed value)? onLogInPressed,
+    TResult Function(_onDonePressed value)? onDonePressed,
     TResult Function(_onEmitFromAnywhere value)? emitFromAnywhere,
     required TResult orElse(),
   }) {
@@ -327,21 +329,21 @@ class _$_onEmitFromAnywhere implements _onEmitFromAnywhere {
   }
 }
 
-abstract class _onEmitFromAnywhere implements LogInEvent {
-  const factory _onEmitFromAnywhere({required LogInState state}) =
+abstract class _onEmitFromAnywhere implements CreateProfileEvent {
+  const factory _onEmitFromAnywhere({required CreateProfileState state}) =
       _$_onEmitFromAnywhere;
 
-  LogInState get state;
+  CreateProfileState get state;
   @JsonKey(ignore: true)
   _$onEmitFromAnywhereCopyWith<_onEmitFromAnywhere> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-class _$LogInStateTearOff {
-  const _$LogInStateTearOff();
+class _$CreateProfileStateTearOff {
+  const _$CreateProfileStateTearOff();
 
-  _LogInState call(
+  _CreateProfileState call(
       {required bool isLoading,
       required bool isSuccessful,
       required bool isFailed,
@@ -350,13 +352,16 @@ class _$LogInStateTearOff {
       required String errorEmail,
       required String errorPassword,
       required String errorMessage,
-      required GlobalKey<FormState> formKey,
       required AppStateNotifier appStateNotifier,
+      required AuthRepository authRepository,
       required TextEditingController userEmailController,
       required TextEditingController passwordController,
-      required AuthRepository authRepository,
+      required TextEditingController firstNameController,
+      required TextEditingController lastNameController,
+      required TextEditingController referenceController,
+      required TextEditingController mobileNumberController,
       UserDto? user}) {
-    return _LogInState(
+    return _CreateProfileState(
       isLoading: isLoading,
       isSuccessful: isSuccessful,
       isFailed: isFailed,
@@ -365,21 +370,24 @@ class _$LogInStateTearOff {
       errorEmail: errorEmail,
       errorPassword: errorPassword,
       errorMessage: errorMessage,
-      formKey: formKey,
       appStateNotifier: appStateNotifier,
+      authRepository: authRepository,
       userEmailController: userEmailController,
       passwordController: passwordController,
-      authRepository: authRepository,
+      firstNameController: firstNameController,
+      lastNameController: lastNameController,
+      referenceController: referenceController,
+      mobileNumberController: mobileNumberController,
       user: user,
     );
   }
 }
 
 /// @nodoc
-const $LogInState = _$LogInStateTearOff();
+const $CreateProfileState = _$CreateProfileStateTearOff();
 
 /// @nodoc
-mixin _$LogInState {
+mixin _$CreateProfileState {
   bool get isLoading => throw _privateConstructorUsedError;
   bool get isSuccessful => throw _privateConstructorUsedError;
   bool get isFailed => throw _privateConstructorUsedError;
@@ -387,26 +395,34 @@ mixin _$LogInState {
   bool get obscureConfirmPassword => throw _privateConstructorUsedError;
   String get errorEmail => throw _privateConstructorUsedError;
   String get errorPassword => throw _privateConstructorUsedError;
-  String get errorMessage => throw _privateConstructorUsedError;
-  GlobalKey<FormState> get formKey => throw _privateConstructorUsedError;
+  String get errorMessage =>
+      throw _privateConstructorUsedError; //required GlobalKey<FormState> formKey,
   AppStateNotifier get appStateNotifier => throw _privateConstructorUsedError;
+  AuthRepository get authRepository => throw _privateConstructorUsedError;
   TextEditingController get userEmailController =>
       throw _privateConstructorUsedError;
   TextEditingController get passwordController =>
       throw _privateConstructorUsedError;
-  AuthRepository get authRepository => throw _privateConstructorUsedError;
+  TextEditingController get firstNameController =>
+      throw _privateConstructorUsedError;
+  TextEditingController get lastNameController =>
+      throw _privateConstructorUsedError;
+  TextEditingController get referenceController =>
+      throw _privateConstructorUsedError;
+  TextEditingController get mobileNumberController =>
+      throw _privateConstructorUsedError;
   UserDto? get user => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $LogInStateCopyWith<LogInState> get copyWith =>
+  $CreateProfileStateCopyWith<CreateProfileState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LogInStateCopyWith<$Res> {
-  factory $LogInStateCopyWith(
-          LogInState value, $Res Function(LogInState) then) =
-      _$LogInStateCopyWithImpl<$Res>;
+abstract class $CreateProfileStateCopyWith<$Res> {
+  factory $CreateProfileStateCopyWith(
+          CreateProfileState value, $Res Function(CreateProfileState) then) =
+      _$CreateProfileStateCopyWithImpl<$Res>;
   $Res call(
       {bool isLoading,
       bool isSuccessful,
@@ -416,23 +432,27 @@ abstract class $LogInStateCopyWith<$Res> {
       String errorEmail,
       String errorPassword,
       String errorMessage,
-      GlobalKey<FormState> formKey,
       AppStateNotifier appStateNotifier,
+      AuthRepository authRepository,
       TextEditingController userEmailController,
       TextEditingController passwordController,
-      AuthRepository authRepository,
+      TextEditingController firstNameController,
+      TextEditingController lastNameController,
+      TextEditingController referenceController,
+      TextEditingController mobileNumberController,
       UserDto? user});
 
   $UserDtoCopyWith<$Res>? get user;
 }
 
 /// @nodoc
-class _$LogInStateCopyWithImpl<$Res> implements $LogInStateCopyWith<$Res> {
-  _$LogInStateCopyWithImpl(this._value, this._then);
+class _$CreateProfileStateCopyWithImpl<$Res>
+    implements $CreateProfileStateCopyWith<$Res> {
+  _$CreateProfileStateCopyWithImpl(this._value, this._then);
 
-  final LogInState _value;
+  final CreateProfileState _value;
   // ignore: unused_field
-  final $Res Function(LogInState) _then;
+  final $Res Function(CreateProfileState) _then;
 
   @override
   $Res call({
@@ -444,11 +464,14 @@ class _$LogInStateCopyWithImpl<$Res> implements $LogInStateCopyWith<$Res> {
     Object? errorEmail = freezed,
     Object? errorPassword = freezed,
     Object? errorMessage = freezed,
-    Object? formKey = freezed,
     Object? appStateNotifier = freezed,
+    Object? authRepository = freezed,
     Object? userEmailController = freezed,
     Object? passwordController = freezed,
-    Object? authRepository = freezed,
+    Object? firstNameController = freezed,
+    Object? lastNameController = freezed,
+    Object? referenceController = freezed,
+    Object? mobileNumberController = freezed,
     Object? user = freezed,
   }) {
     return _then(_value.copyWith(
@@ -484,14 +507,14 @@ class _$LogInStateCopyWithImpl<$Res> implements $LogInStateCopyWith<$Res> {
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
               as String,
-      formKey: formKey == freezed
-          ? _value.formKey
-          : formKey // ignore: cast_nullable_to_non_nullable
-              as GlobalKey<FormState>,
       appStateNotifier: appStateNotifier == freezed
           ? _value.appStateNotifier
           : appStateNotifier // ignore: cast_nullable_to_non_nullable
               as AppStateNotifier,
+      authRepository: authRepository == freezed
+          ? _value.authRepository
+          : authRepository // ignore: cast_nullable_to_non_nullable
+              as AuthRepository,
       userEmailController: userEmailController == freezed
           ? _value.userEmailController
           : userEmailController // ignore: cast_nullable_to_non_nullable
@@ -500,10 +523,22 @@ class _$LogInStateCopyWithImpl<$Res> implements $LogInStateCopyWith<$Res> {
           ? _value.passwordController
           : passwordController // ignore: cast_nullable_to_non_nullable
               as TextEditingController,
-      authRepository: authRepository == freezed
-          ? _value.authRepository
-          : authRepository // ignore: cast_nullable_to_non_nullable
-              as AuthRepository,
+      firstNameController: firstNameController == freezed
+          ? _value.firstNameController
+          : firstNameController // ignore: cast_nullable_to_non_nullable
+              as TextEditingController,
+      lastNameController: lastNameController == freezed
+          ? _value.lastNameController
+          : lastNameController // ignore: cast_nullable_to_non_nullable
+              as TextEditingController,
+      referenceController: referenceController == freezed
+          ? _value.referenceController
+          : referenceController // ignore: cast_nullable_to_non_nullable
+              as TextEditingController,
+      mobileNumberController: mobileNumberController == freezed
+          ? _value.mobileNumberController
+          : mobileNumberController // ignore: cast_nullable_to_non_nullable
+              as TextEditingController,
       user: user == freezed
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
@@ -524,10 +559,11 @@ class _$LogInStateCopyWithImpl<$Res> implements $LogInStateCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$LogInStateCopyWith<$Res> implements $LogInStateCopyWith<$Res> {
-  factory _$LogInStateCopyWith(
-          _LogInState value, $Res Function(_LogInState) then) =
-      __$LogInStateCopyWithImpl<$Res>;
+abstract class _$CreateProfileStateCopyWith<$Res>
+    implements $CreateProfileStateCopyWith<$Res> {
+  factory _$CreateProfileStateCopyWith(
+          _CreateProfileState value, $Res Function(_CreateProfileState) then) =
+      __$CreateProfileStateCopyWithImpl<$Res>;
   @override
   $Res call(
       {bool isLoading,
@@ -538,11 +574,14 @@ abstract class _$LogInStateCopyWith<$Res> implements $LogInStateCopyWith<$Res> {
       String errorEmail,
       String errorPassword,
       String errorMessage,
-      GlobalKey<FormState> formKey,
       AppStateNotifier appStateNotifier,
+      AuthRepository authRepository,
       TextEditingController userEmailController,
       TextEditingController passwordController,
-      AuthRepository authRepository,
+      TextEditingController firstNameController,
+      TextEditingController lastNameController,
+      TextEditingController referenceController,
+      TextEditingController mobileNumberController,
       UserDto? user});
 
   @override
@@ -550,14 +589,15 @@ abstract class _$LogInStateCopyWith<$Res> implements $LogInStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$LogInStateCopyWithImpl<$Res> extends _$LogInStateCopyWithImpl<$Res>
-    implements _$LogInStateCopyWith<$Res> {
-  __$LogInStateCopyWithImpl(
-      _LogInState _value, $Res Function(_LogInState) _then)
-      : super(_value, (v) => _then(v as _LogInState));
+class __$CreateProfileStateCopyWithImpl<$Res>
+    extends _$CreateProfileStateCopyWithImpl<$Res>
+    implements _$CreateProfileStateCopyWith<$Res> {
+  __$CreateProfileStateCopyWithImpl(
+      _CreateProfileState _value, $Res Function(_CreateProfileState) _then)
+      : super(_value, (v) => _then(v as _CreateProfileState));
 
   @override
-  _LogInState get _value => super._value as _LogInState;
+  _CreateProfileState get _value => super._value as _CreateProfileState;
 
   @override
   $Res call({
@@ -569,14 +609,17 @@ class __$LogInStateCopyWithImpl<$Res> extends _$LogInStateCopyWithImpl<$Res>
     Object? errorEmail = freezed,
     Object? errorPassword = freezed,
     Object? errorMessage = freezed,
-    Object? formKey = freezed,
     Object? appStateNotifier = freezed,
+    Object? authRepository = freezed,
     Object? userEmailController = freezed,
     Object? passwordController = freezed,
-    Object? authRepository = freezed,
+    Object? firstNameController = freezed,
+    Object? lastNameController = freezed,
+    Object? referenceController = freezed,
+    Object? mobileNumberController = freezed,
     Object? user = freezed,
   }) {
-    return _then(_LogInState(
+    return _then(_CreateProfileState(
       isLoading: isLoading == freezed
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
@@ -609,14 +652,14 @@ class __$LogInStateCopyWithImpl<$Res> extends _$LogInStateCopyWithImpl<$Res>
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
               as String,
-      formKey: formKey == freezed
-          ? _value.formKey
-          : formKey // ignore: cast_nullable_to_non_nullable
-              as GlobalKey<FormState>,
       appStateNotifier: appStateNotifier == freezed
           ? _value.appStateNotifier
           : appStateNotifier // ignore: cast_nullable_to_non_nullable
               as AppStateNotifier,
+      authRepository: authRepository == freezed
+          ? _value.authRepository
+          : authRepository // ignore: cast_nullable_to_non_nullable
+              as AuthRepository,
       userEmailController: userEmailController == freezed
           ? _value.userEmailController
           : userEmailController // ignore: cast_nullable_to_non_nullable
@@ -625,10 +668,22 @@ class __$LogInStateCopyWithImpl<$Res> extends _$LogInStateCopyWithImpl<$Res>
           ? _value.passwordController
           : passwordController // ignore: cast_nullable_to_non_nullable
               as TextEditingController,
-      authRepository: authRepository == freezed
-          ? _value.authRepository
-          : authRepository // ignore: cast_nullable_to_non_nullable
-              as AuthRepository,
+      firstNameController: firstNameController == freezed
+          ? _value.firstNameController
+          : firstNameController // ignore: cast_nullable_to_non_nullable
+              as TextEditingController,
+      lastNameController: lastNameController == freezed
+          ? _value.lastNameController
+          : lastNameController // ignore: cast_nullable_to_non_nullable
+              as TextEditingController,
+      referenceController: referenceController == freezed
+          ? _value.referenceController
+          : referenceController // ignore: cast_nullable_to_non_nullable
+              as TextEditingController,
+      mobileNumberController: mobileNumberController == freezed
+          ? _value.mobileNumberController
+          : mobileNumberController // ignore: cast_nullable_to_non_nullable
+              as TextEditingController,
       user: user == freezed
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
@@ -639,8 +694,8 @@ class __$LogInStateCopyWithImpl<$Res> extends _$LogInStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_LogInState implements _LogInState {
-  const _$_LogInState(
+class _$_CreateProfileState implements _CreateProfileState {
+  const _$_CreateProfileState(
       {required this.isLoading,
       required this.isSuccessful,
       required this.isFailed,
@@ -649,11 +704,14 @@ class _$_LogInState implements _LogInState {
       required this.errorEmail,
       required this.errorPassword,
       required this.errorMessage,
-      required this.formKey,
       required this.appStateNotifier,
+      required this.authRepository,
       required this.userEmailController,
       required this.passwordController,
-      required this.authRepository,
+      required this.firstNameController,
+      required this.lastNameController,
+      required this.referenceController,
+      required this.mobileNumberController,
       this.user});
 
   @override
@@ -672,29 +730,35 @@ class _$_LogInState implements _LogInState {
   final String errorPassword;
   @override
   final String errorMessage;
-  @override
-  final GlobalKey<FormState> formKey;
-  @override
+  @override //required GlobalKey<FormState> formKey,
   final AppStateNotifier appStateNotifier;
+  @override
+  final AuthRepository authRepository;
   @override
   final TextEditingController userEmailController;
   @override
   final TextEditingController passwordController;
   @override
-  final AuthRepository authRepository;
+  final TextEditingController firstNameController;
+  @override
+  final TextEditingController lastNameController;
+  @override
+  final TextEditingController referenceController;
+  @override
+  final TextEditingController mobileNumberController;
   @override
   final UserDto? user;
 
   @override
   String toString() {
-    return 'LogInState(isLoading: $isLoading, isSuccessful: $isSuccessful, isFailed: $isFailed, obscurePassword: $obscurePassword, obscureConfirmPassword: $obscureConfirmPassword, errorEmail: $errorEmail, errorPassword: $errorPassword, errorMessage: $errorMessage, formKey: $formKey, appStateNotifier: $appStateNotifier, userEmailController: $userEmailController, passwordController: $passwordController, authRepository: $authRepository, user: $user)';
+    return 'CreateProfileState(isLoading: $isLoading, isSuccessful: $isSuccessful, isFailed: $isFailed, obscurePassword: $obscurePassword, obscureConfirmPassword: $obscureConfirmPassword, errorEmail: $errorEmail, errorPassword: $errorPassword, errorMessage: $errorMessage, appStateNotifier: $appStateNotifier, authRepository: $authRepository, userEmailController: $userEmailController, passwordController: $passwordController, firstNameController: $firstNameController, lastNameController: $lastNameController, referenceController: $referenceController, mobileNumberController: $mobileNumberController, user: $user)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _LogInState &&
+            other is _CreateProfileState &&
             const DeepCollectionEquality().equals(other.isLoading, isLoading) &&
             const DeepCollectionEquality()
                 .equals(other.isSuccessful, isSuccessful) &&
@@ -709,15 +773,22 @@ class _$_LogInState implements _LogInState {
                 .equals(other.errorPassword, errorPassword) &&
             const DeepCollectionEquality()
                 .equals(other.errorMessage, errorMessage) &&
-            const DeepCollectionEquality().equals(other.formKey, formKey) &&
             const DeepCollectionEquality()
                 .equals(other.appStateNotifier, appStateNotifier) &&
+            const DeepCollectionEquality()
+                .equals(other.authRepository, authRepository) &&
             const DeepCollectionEquality()
                 .equals(other.userEmailController, userEmailController) &&
             const DeepCollectionEquality()
                 .equals(other.passwordController, passwordController) &&
             const DeepCollectionEquality()
-                .equals(other.authRepository, authRepository) &&
+                .equals(other.firstNameController, firstNameController) &&
+            const DeepCollectionEquality()
+                .equals(other.lastNameController, lastNameController) &&
+            const DeepCollectionEquality()
+                .equals(other.referenceController, referenceController) &&
+            const DeepCollectionEquality()
+                .equals(other.mobileNumberController, mobileNumberController) &&
             const DeepCollectionEquality().equals(other.user, user));
   }
 
@@ -732,21 +803,24 @@ class _$_LogInState implements _LogInState {
       const DeepCollectionEquality().hash(errorEmail),
       const DeepCollectionEquality().hash(errorPassword),
       const DeepCollectionEquality().hash(errorMessage),
-      const DeepCollectionEquality().hash(formKey),
       const DeepCollectionEquality().hash(appStateNotifier),
+      const DeepCollectionEquality().hash(authRepository),
       const DeepCollectionEquality().hash(userEmailController),
       const DeepCollectionEquality().hash(passwordController),
-      const DeepCollectionEquality().hash(authRepository),
+      const DeepCollectionEquality().hash(firstNameController),
+      const DeepCollectionEquality().hash(lastNameController),
+      const DeepCollectionEquality().hash(referenceController),
+      const DeepCollectionEquality().hash(mobileNumberController),
       const DeepCollectionEquality().hash(user));
 
   @JsonKey(ignore: true)
   @override
-  _$LogInStateCopyWith<_LogInState> get copyWith =>
-      __$LogInStateCopyWithImpl<_LogInState>(this, _$identity);
+  _$CreateProfileStateCopyWith<_CreateProfileState> get copyWith =>
+      __$CreateProfileStateCopyWithImpl<_CreateProfileState>(this, _$identity);
 }
 
-abstract class _LogInState implements LogInState {
-  const factory _LogInState(
+abstract class _CreateProfileState implements CreateProfileState {
+  const factory _CreateProfileState(
       {required bool isLoading,
       required bool isSuccessful,
       required bool isFailed,
@@ -755,12 +829,15 @@ abstract class _LogInState implements LogInState {
       required String errorEmail,
       required String errorPassword,
       required String errorMessage,
-      required GlobalKey<FormState> formKey,
       required AppStateNotifier appStateNotifier,
+      required AuthRepository authRepository,
       required TextEditingController userEmailController,
       required TextEditingController passwordController,
-      required AuthRepository authRepository,
-      UserDto? user}) = _$_LogInState;
+      required TextEditingController firstNameController,
+      required TextEditingController lastNameController,
+      required TextEditingController referenceController,
+      required TextEditingController mobileNumberController,
+      UserDto? user}) = _$_CreateProfileState;
 
   @override
   bool get isLoading;
@@ -778,20 +855,26 @@ abstract class _LogInState implements LogInState {
   String get errorPassword;
   @override
   String get errorMessage;
-  @override
-  GlobalKey<FormState> get formKey;
-  @override
+  @override //required GlobalKey<FormState> formKey,
   AppStateNotifier get appStateNotifier;
+  @override
+  AuthRepository get authRepository;
   @override
   TextEditingController get userEmailController;
   @override
   TextEditingController get passwordController;
   @override
-  AuthRepository get authRepository;
+  TextEditingController get firstNameController;
+  @override
+  TextEditingController get lastNameController;
+  @override
+  TextEditingController get referenceController;
+  @override
+  TextEditingController get mobileNumberController;
   @override
   UserDto? get user;
   @override
   @JsonKey(ignore: true)
-  _$LogInStateCopyWith<_LogInState> get copyWith =>
+  _$CreateProfileStateCopyWith<_CreateProfileState> get copyWith =>
       throw _privateConstructorUsedError;
 }

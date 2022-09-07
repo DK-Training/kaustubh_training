@@ -42,6 +42,7 @@ dependencies:
   # UI
   sizer: 2.0.15
   modal_progress_hud_nsn: 0.2.1
+  flutter_svg: 1.1.4
 
   # Utils
   flutter_bloc: 8.0.1
