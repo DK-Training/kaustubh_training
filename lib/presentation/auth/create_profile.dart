@@ -18,7 +18,8 @@ import '../core/widgets/custom_textfield.dart';
 import '../core/widgets/custom_textfield_normal.dart';
 
 class CreateProfileScreen extends StatelessWidget {
-  CreateProfileScreen({Key? key, this.result, this.file}) : super(key: key);
+  const CreateProfileScreen({Key? key, this.result, this.file})
+      : super(key: key);
   FilePickerResult? result;
   PlatformFile? file;
 
