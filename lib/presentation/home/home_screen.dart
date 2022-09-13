@@ -14,6 +14,7 @@ import '../../domain/core/constants/asset_constant.dart';
 import '../../domain/core/constants/string_constants.dart';
 import '../../domain/core/services/navigation_service/navigation_service.dart';
 import '../../domain/core/services/navigation_service/routers/route_names.dart';
+import '../core/widgets/hotel_info_card.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -68,7 +69,7 @@ class HomeScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 3.h, vertical: 3.h),
+          padding: EdgeInsets.symmetric(horizontal: 7.w, vertical: 3.h),
           child: Column(
             // mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -110,50 +111,45 @@ class HomeScreen extends StatelessWidget {
               // ),
 
               SizedBox(
-                height: 7.h,
+                height: 6.h,
               ),
-              Container(
-                // constraints: BoxConstraints(minHeight: 40.h, minWidth: 400.w),
-                height: 40.h,
-                width: 100.w,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  boxShadow: [BoxShadow(color: Color(0xFF0A000000))],
-                ),
-                child: Column(
-                  // crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      width: 100.w,
-                      child: Image.asset(
-                        'assets/images/cardimage-homepage.png',
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    Row(
-                      children: [
-                        IconButton(
-                            tooltip: 'Casa',
-                            onPressed: () {},
-                            icon: SvgPicture.asset(
-                              AssetConstant.houseIcon,
-                              // width: 17.w,
-                              // height: 20.h,
-                            )),
-                        Text(
-                          AuthConstants.age,
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodySmall
-                              ?.copyWith(
-                                  fontWeight: FontWeight.w600,
-                                  color: Theme.of(context).colorScheme.primary,
-                                  fontSize: 14.5.sp),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+              HotelInfoCard(
+                hotelName: 'Kaustubh',
+                hotelAddress:
+                    'Av. Cuesta de las Calesas, 21, 11006 Cádiz, España ',
+                houseName: 'Sagardeep',
+                totalBuildings: '2',
+                totalPeople: '100',
+              ),
+              SizedBox(
+                height: 6.h,
+              ),
+              HotelInfoCard(
+                hotelName: 'Kaustubh 3',
+                hotelAddress: 'Vikhroli',
+                houseName: 'Sagardeep',
+                totalBuildings: '2',
+                totalPeople: '100',
+              ),
+              SizedBox(
+                height: 6.h,
+              ),
+              HotelInfoCard(
+                hotelName: 'Kaustubh 1',
+                hotelAddress: 'Vikhroli',
+                houseName: 'Sagardeep',
+                totalBuildings: '2',
+                totalPeople: '100',
+              ),
+              SizedBox(
+                height: 6.h,
+              ),
+              HotelInfoCard(
+                hotelName: 'Kaustubh 2',
+                hotelAddress: 'Vikhroli',
+                houseName: 'Sagardeep',
+                totalBuildings: '2',
+                totalPeople: '100',
               ),
             ],
           ),

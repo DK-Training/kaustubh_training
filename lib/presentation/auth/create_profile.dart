@@ -1,8 +1,12 @@
+import 'dart:io';
+
 import 'package:email_validator/email_validator.dart';
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../domain/core/config/injection.dart';
@@ -14,7 +18,9 @@ import '../core/widgets/custom_textfield.dart';
 import '../core/widgets/custom_textfield_normal.dart';
 
 class CreateProfileScreen extends StatelessWidget {
-  const CreateProfileScreen({Key? key}) : super(key: key);
+  CreateProfileScreen({Key? key, this.result, this.file}) : super(key: key);
+  FilePickerResult? result;
+  PlatformFile? file;
 
   @override
   Widget build(BuildContext context) {
@@ -73,15 +79,30 @@ class CreateProfileScreen extends StatelessWidget {
                     ),
                     child: CircleAvatar(
                       backgroundColor: Colors.white,
+                      // backgroundImage: file == null
+                      //     ? Container()
+                      //     : FileImage(
+                      //         File(file!.path.toString()),
+                      //         width: 100,
+                      //         height: 100,
+                      //       ),
                       radius: 15.w,
                       child: Stack(
                         children: [
                           Positioned(
                               bottom: 3.w,
                               right: 2.w,
-                              child: SvgPicture.asset(
-                                AssetConstant.editProfile,
-                                width: 5.w,
+                              child: GestureDetector(
+                                onTap: () async {
+                                  result =
+                                      await FilePicker.platform.pickFiles();
+                                  if (result == null) return;
+                                  file = result!.files.first;
+                                },
+                                child: SvgPicture.asset(
+                                  AssetConstant.editProfile,
+                                  width: 5.w,
+                                ),
                               ))
                         ],
                       ),

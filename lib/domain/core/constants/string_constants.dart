@@ -20,6 +20,11 @@ class AuthConstants {
   static const homePageButtonCrear = 'Crear una nueva propiedad';
   static const update = 'Update ';
   static const cancle = 'Cancle';
+  static const casa = 'Casa';
+  static const habitaciones = '3 Habitaciones';
+  static const personas = '5 personas';
+  static const firstLocation =
+      'Av. Cuesta de las Calesas, 21, 11006 Cádiz, España ';
 
   // hint text
   static const hintFirstName = 'Enter Name';

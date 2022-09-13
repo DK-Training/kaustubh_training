@@ -52,11 +52,6 @@ Route<dynamic> commonNavigation(RouteSettings settings) {
         const CreateProfileScreen(),
         settings,
       );
-    case CoreRoute.home:
-      return _getPageRoute(
-        const HomeScreen(),
-        settings,
-      );
 
     default:
       return _getPageRoute(

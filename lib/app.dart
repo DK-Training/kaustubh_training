@@ -22,22 +22,24 @@ class MainApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Poppins',
         primaryColor: const Color(0xFF0099ff),
-        scaffoldBackgroundColor: const Color(0xFFF8F8F8),
+        scaffoldBackgroundColor: const Color(0xFFffffff),
+        backgroundColor: const Color(0xFFF8F8F8),
         scrollbarTheme: const ScrollbarThemeData().copyWith(
           thumbColor: MaterialStateProperty.all(const Color(0xFF000000)),
         ),
         colorScheme: ThemeData().colorScheme.copyWith(
-              primary: const Color(0xFF0099ff),
-              secondary: const Color(0xFF8E8E8E),
-              onPrimary: const Color(0xFF979797),
-              onSecondary: const Color(0xFFC4C4C4),
-              primaryContainer: const Color(0xFFDFDFDF),
-              secondaryContainer: const Color(0xFF0196FD),
-              onSecondaryContainer: const Color(0xFF046DDE),
-              // onTertiaryContainer:const Color(0xFF046DDE),
-              // tertiary: const Color(0xFFFFFFFF),
-              // onPrimaryContainer: const Color(0xFFFF3D00),
-              // onTertiary: const Color(0XFFe7e6e6)
+            primary: const Color(0xFF0099ff),
+            secondary: const Color(0xFF8E8E8E),
+            onPrimary: const Color(0xFF979797),
+            onSecondary: const Color(0xFFC4C4C4),
+            primaryContainer: const Color(0xFFDFDFDF),
+            secondaryContainer: const Color(0xFF0196FD),
+            onSecondaryContainer: const Color(0xFF046DDE),
+            tertiaryContainer: const Color(0xFFffffff)
+            // onTertiaryContainer:const Color(0xFF046DDE),
+            // tertiary: const Color(0xFFFFFFFF),
+            // onPrimaryContainer: const Color(0xFFFF3D00),
+            // onTertiary: const Color(0XFFe7e6e6)
             ),
         textTheme: TextTheme(
           bodyLarge: TextStyle(
@@ -68,8 +70,8 @@ class MainApp extends StatelessWidget {
           : commonNavigation,
       initialRoute: Provider.of<AppStateNotifier>(context).isAuthorized
           ? Provider.of<AppStateNotifier>(context).isProfileCompleted
-              ? AuthRoutes.createProfile
-              : CoreRoute.home
+              ? CoreRoute.home
+              : AuthRoutes.createProfile
           : AuthRoutes.login,
     );
   }
