@@ -13,6 +13,7 @@ _$_UserDto _$$_UserDtoFromJson(Map<String, dynamic> json) => _$_UserDto(
       lastName: json['lastName'] as String?,
       mobileNumber: json['mobileNumber'] as String?,
       reference: json['reference'] as String?,
+      profilePicture: json['profilePicture'] as String?,
       isProfileCompleted: json['isProfileCompleted'] as bool,
     );
 
@@ -24,5 +25,6 @@ Map<String, dynamic> _$$_UserDtoToJson(_$_UserDto instance) =>
       'lastName': instance.lastName,
       'mobileNumber': instance.mobileNumber,
       'reference': instance.reference,
+      'profilePicture': instance.profilePicture,
       'isProfileCompleted': instance.isProfileCompleted,
     };

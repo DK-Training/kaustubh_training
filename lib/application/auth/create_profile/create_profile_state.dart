@@ -21,6 +21,7 @@ class CreateProfileState with _$CreateProfileState {
     required TextEditingController referenceController,
     required TextEditingController mobileNumberController,
     UserDto? user,
+    required bool isProfilePictureUploading,
   }) = _CreateProfileState;
 
   factory CreateProfileState.initial({
@@ -33,11 +34,12 @@ class CreateProfileState with _$CreateProfileState {
         authRepository: IAuthRepository(),
         errorEmail: '',
         errorMessage: '',
-        //formKey: GlobalKey<FormState>(),
+        isProfilePictureUploading: false,
         isLoading: false,
         isSuccessful: false,
         isFailed: false,
         appStateNotifier: appStateNotifier,
+        user: appStateNotifier.user,
         userEmailController: TextEditingController(),
         passwordController: TextEditingController(),
         firstNameController: TextEditingController(),

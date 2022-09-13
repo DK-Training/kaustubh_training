@@ -1,11 +1,20 @@
+import 'dart:io';
+import 'dart:math';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
+import 'package:file_picker/file_picker.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 
 import '../../domain/auth/auth_repository.dart';
 import 'dto/user/user_dto.dart';
 
 class IAuthRepository extends AuthRepository {
+  final String _chars =
+      'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890';
+  final Random _rnd = Random();
+
   @override
   Future<Either<String, UserDto>> login(
       {required String email, required String password}) async {
@@ -115,4 +124,25 @@ class IAuthRepository extends AuthRepository {
       return left('failed to update profile');
     }
   }
+
+  @override
+  Future<Either<String, String>> uploadProfilePicture(
+      {required PlatformFile file}) async {
+    try {
+      final String randomString = getRandomString(12);
+      final Reference firebaseStorageRef = FirebaseStorage.instance
+          .ref()
+          .child('/profile_photos/$randomString.${file.extension}');
+      final UploadTask uploadTask =
+          firebaseStorageRef.putFile(File(file.path ?? ''));
+      await uploadTask;
+      final downloadURL = await firebaseStorageRef.getDownloadURL();
+      return right(downloadURL);
+    } catch (error) {
+      return left('File upload failed');
+    }
+  }
+
+  String getRandomString(int length) => String.fromCharCodes(Iterable.generate(
+      length, (_) => _chars.codeUnitAt(_rnd.nextInt(_chars.length))));
 }

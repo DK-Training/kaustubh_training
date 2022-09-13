@@ -26,6 +26,12 @@ class _$CreateProfileEventTearOff {
       state: state,
     );
   }
+
+  _UploadProfileToServer uploadProfileToServer({required PlatformFile file}) {
+    return _UploadProfileToServer(
+      file: file,
+    );
+  }
 }
 
 /// @nodoc
@@ -37,18 +43,21 @@ mixin _$CreateProfileEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() onDonePressed,
     required TResult Function(CreateProfileState state) emitFromAnywhere,
+    required TResult Function(PlatformFile file) uploadProfileToServer,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? onDonePressed,
     TResult Function(CreateProfileState state)? emitFromAnywhere,
+    TResult Function(PlatformFile file)? uploadProfileToServer,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? onDonePressed,
     TResult Function(CreateProfileState state)? emitFromAnywhere,
+    TResult Function(PlatformFile file)? uploadProfileToServer,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -56,18 +65,22 @@ mixin _$CreateProfileEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_onDonePressed value) onDonePressed,
     required TResult Function(_onEmitFromAnywhere value) emitFromAnywhere,
+    required TResult Function(_UploadProfileToServer value)
+        uploadProfileToServer,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_onDonePressed value)? onDonePressed,
     TResult Function(_onEmitFromAnywhere value)? emitFromAnywhere,
+    TResult Function(_UploadProfileToServer value)? uploadProfileToServer,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_onDonePressed value)? onDonePressed,
     TResult Function(_onEmitFromAnywhere value)? emitFromAnywhere,
+    TResult Function(_UploadProfileToServer value)? uploadProfileToServer,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -133,6 +146,7 @@ class _$_onDonePressed implements _onDonePressed {
   TResult when<TResult extends Object?>({
     required TResult Function() onDonePressed,
     required TResult Function(CreateProfileState state) emitFromAnywhere,
+    required TResult Function(PlatformFile file) uploadProfileToServer,
   }) {
     return onDonePressed();
   }
@@ -142,6 +156,7 @@ class _$_onDonePressed implements _onDonePressed {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? onDonePressed,
     TResult Function(CreateProfileState state)? emitFromAnywhere,
+    TResult Function(PlatformFile file)? uploadProfileToServer,
   }) {
     return onDonePressed?.call();
   }
@@ -151,6 +166,7 @@ class _$_onDonePressed implements _onDonePressed {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? onDonePressed,
     TResult Function(CreateProfileState state)? emitFromAnywhere,
+    TResult Function(PlatformFile file)? uploadProfileToServer,
     required TResult orElse(),
   }) {
     if (onDonePressed != null) {
@@ -164,6 +180,8 @@ class _$_onDonePressed implements _onDonePressed {
   TResult map<TResult extends Object?>({
     required TResult Function(_onDonePressed value) onDonePressed,
     required TResult Function(_onEmitFromAnywhere value) emitFromAnywhere,
+    required TResult Function(_UploadProfileToServer value)
+        uploadProfileToServer,
   }) {
     return onDonePressed(this);
   }
@@ -173,6 +191,7 @@ class _$_onDonePressed implements _onDonePressed {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_onDonePressed value)? onDonePressed,
     TResult Function(_onEmitFromAnywhere value)? emitFromAnywhere,
+    TResult Function(_UploadProfileToServer value)? uploadProfileToServer,
   }) {
     return onDonePressed?.call(this);
   }
@@ -182,6 +201,7 @@ class _$_onDonePressed implements _onDonePressed {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_onDonePressed value)? onDonePressed,
     TResult Function(_onEmitFromAnywhere value)? emitFromAnywhere,
+    TResult Function(_UploadProfileToServer value)? uploadProfileToServer,
     required TResult orElse(),
   }) {
     if (onDonePressed != null) {
@@ -271,6 +291,7 @@ class _$_onEmitFromAnywhere implements _onEmitFromAnywhere {
   TResult when<TResult extends Object?>({
     required TResult Function() onDonePressed,
     required TResult Function(CreateProfileState state) emitFromAnywhere,
+    required TResult Function(PlatformFile file) uploadProfileToServer,
   }) {
     return emitFromAnywhere(state);
   }
@@ -280,6 +301,7 @@ class _$_onEmitFromAnywhere implements _onEmitFromAnywhere {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? onDonePressed,
     TResult Function(CreateProfileState state)? emitFromAnywhere,
+    TResult Function(PlatformFile file)? uploadProfileToServer,
   }) {
     return emitFromAnywhere?.call(state);
   }
@@ -289,6 +311,7 @@ class _$_onEmitFromAnywhere implements _onEmitFromAnywhere {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? onDonePressed,
     TResult Function(CreateProfileState state)? emitFromAnywhere,
+    TResult Function(PlatformFile file)? uploadProfileToServer,
     required TResult orElse(),
   }) {
     if (emitFromAnywhere != null) {
@@ -302,6 +325,8 @@ class _$_onEmitFromAnywhere implements _onEmitFromAnywhere {
   TResult map<TResult extends Object?>({
     required TResult Function(_onDonePressed value) onDonePressed,
     required TResult Function(_onEmitFromAnywhere value) emitFromAnywhere,
+    required TResult Function(_UploadProfileToServer value)
+        uploadProfileToServer,
   }) {
     return emitFromAnywhere(this);
   }
@@ -311,6 +336,7 @@ class _$_onEmitFromAnywhere implements _onEmitFromAnywhere {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_onDonePressed value)? onDonePressed,
     TResult Function(_onEmitFromAnywhere value)? emitFromAnywhere,
+    TResult Function(_UploadProfileToServer value)? uploadProfileToServer,
   }) {
     return emitFromAnywhere?.call(this);
   }
@@ -320,6 +346,7 @@ class _$_onEmitFromAnywhere implements _onEmitFromAnywhere {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_onDonePressed value)? onDonePressed,
     TResult Function(_onEmitFromAnywhere value)? emitFromAnywhere,
+    TResult Function(_UploadProfileToServer value)? uploadProfileToServer,
     required TResult orElse(),
   }) {
     if (emitFromAnywhere != null) {
@@ -336,6 +363,149 @@ abstract class _onEmitFromAnywhere implements CreateProfileEvent {
   CreateProfileState get state;
   @JsonKey(ignore: true)
   _$onEmitFromAnywhereCopyWith<_onEmitFromAnywhere> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$UploadProfileToServerCopyWith<$Res> {
+  factory _$UploadProfileToServerCopyWith(_UploadProfileToServer value,
+          $Res Function(_UploadProfileToServer) then) =
+      __$UploadProfileToServerCopyWithImpl<$Res>;
+  $Res call({PlatformFile file});
+}
+
+/// @nodoc
+class __$UploadProfileToServerCopyWithImpl<$Res>
+    extends _$CreateProfileEventCopyWithImpl<$Res>
+    implements _$UploadProfileToServerCopyWith<$Res> {
+  __$UploadProfileToServerCopyWithImpl(_UploadProfileToServer _value,
+      $Res Function(_UploadProfileToServer) _then)
+      : super(_value, (v) => _then(v as _UploadProfileToServer));
+
+  @override
+  _UploadProfileToServer get _value => super._value as _UploadProfileToServer;
+
+  @override
+  $Res call({
+    Object? file = freezed,
+  }) {
+    return _then(_UploadProfileToServer(
+      file: file == freezed
+          ? _value.file
+          : file // ignore: cast_nullable_to_non_nullable
+              as PlatformFile,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_UploadProfileToServer implements _UploadProfileToServer {
+  const _$_UploadProfileToServer({required this.file});
+
+  @override
+  final PlatformFile file;
+
+  @override
+  String toString() {
+    return 'CreateProfileEvent.uploadProfileToServer(file: $file)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _UploadProfileToServer &&
+            const DeepCollectionEquality().equals(other.file, file));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(file));
+
+  @JsonKey(ignore: true)
+  @override
+  _$UploadProfileToServerCopyWith<_UploadProfileToServer> get copyWith =>
+      __$UploadProfileToServerCopyWithImpl<_UploadProfileToServer>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() onDonePressed,
+    required TResult Function(CreateProfileState state) emitFromAnywhere,
+    required TResult Function(PlatformFile file) uploadProfileToServer,
+  }) {
+    return uploadProfileToServer(file);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? onDonePressed,
+    TResult Function(CreateProfileState state)? emitFromAnywhere,
+    TResult Function(PlatformFile file)? uploadProfileToServer,
+  }) {
+    return uploadProfileToServer?.call(file);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? onDonePressed,
+    TResult Function(CreateProfileState state)? emitFromAnywhere,
+    TResult Function(PlatformFile file)? uploadProfileToServer,
+    required TResult orElse(),
+  }) {
+    if (uploadProfileToServer != null) {
+      return uploadProfileToServer(file);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_onDonePressed value) onDonePressed,
+    required TResult Function(_onEmitFromAnywhere value) emitFromAnywhere,
+    required TResult Function(_UploadProfileToServer value)
+        uploadProfileToServer,
+  }) {
+    return uploadProfileToServer(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_onDonePressed value)? onDonePressed,
+    TResult Function(_onEmitFromAnywhere value)? emitFromAnywhere,
+    TResult Function(_UploadProfileToServer value)? uploadProfileToServer,
+  }) {
+    return uploadProfileToServer?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_onDonePressed value)? onDonePressed,
+    TResult Function(_onEmitFromAnywhere value)? emitFromAnywhere,
+    TResult Function(_UploadProfileToServer value)? uploadProfileToServer,
+    required TResult orElse(),
+  }) {
+    if (uploadProfileToServer != null) {
+      return uploadProfileToServer(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UploadProfileToServer implements CreateProfileEvent {
+  const factory _UploadProfileToServer({required PlatformFile file}) =
+      _$_UploadProfileToServer;
+
+  PlatformFile get file;
+  @JsonKey(ignore: true)
+  _$UploadProfileToServerCopyWith<_UploadProfileToServer> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -360,7 +530,8 @@ class _$CreateProfileStateTearOff {
       required TextEditingController lastNameController,
       required TextEditingController referenceController,
       required TextEditingController mobileNumberController,
-      UserDto? user}) {
+      UserDto? user,
+      required bool isProfilePictureUploading}) {
     return _CreateProfileState(
       isLoading: isLoading,
       isSuccessful: isSuccessful,
@@ -379,6 +550,7 @@ class _$CreateProfileStateTearOff {
       referenceController: referenceController,
       mobileNumberController: mobileNumberController,
       user: user,
+      isProfilePictureUploading: isProfilePictureUploading,
     );
   }
 }
@@ -412,6 +584,7 @@ mixin _$CreateProfileState {
   TextEditingController get mobileNumberController =>
       throw _privateConstructorUsedError;
   UserDto? get user => throw _privateConstructorUsedError;
+  bool get isProfilePictureUploading => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $CreateProfileStateCopyWith<CreateProfileState> get copyWith =>
@@ -440,7 +613,8 @@ abstract class $CreateProfileStateCopyWith<$Res> {
       TextEditingController lastNameController,
       TextEditingController referenceController,
       TextEditingController mobileNumberController,
-      UserDto? user});
+      UserDto? user,
+      bool isProfilePictureUploading});
 
   $UserDtoCopyWith<$Res>? get user;
 }
@@ -473,6 +647,7 @@ class _$CreateProfileStateCopyWithImpl<$Res>
     Object? referenceController = freezed,
     Object? mobileNumberController = freezed,
     Object? user = freezed,
+    Object? isProfilePictureUploading = freezed,
   }) {
     return _then(_value.copyWith(
       isLoading: isLoading == freezed
@@ -543,6 +718,10 @@ class _$CreateProfileStateCopyWithImpl<$Res>
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
               as UserDto?,
+      isProfilePictureUploading: isProfilePictureUploading == freezed
+          ? _value.isProfilePictureUploading
+          : isProfilePictureUploading // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 
@@ -582,7 +761,8 @@ abstract class _$CreateProfileStateCopyWith<$Res>
       TextEditingController lastNameController,
       TextEditingController referenceController,
       TextEditingController mobileNumberController,
-      UserDto? user});
+      UserDto? user,
+      bool isProfilePictureUploading});
 
   @override
   $UserDtoCopyWith<$Res>? get user;
@@ -618,6 +798,7 @@ class __$CreateProfileStateCopyWithImpl<$Res>
     Object? referenceController = freezed,
     Object? mobileNumberController = freezed,
     Object? user = freezed,
+    Object? isProfilePictureUploading = freezed,
   }) {
     return _then(_CreateProfileState(
       isLoading: isLoading == freezed
@@ -688,6 +869,10 @@ class __$CreateProfileStateCopyWithImpl<$Res>
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
               as UserDto?,
+      isProfilePictureUploading: isProfilePictureUploading == freezed
+          ? _value.isProfilePictureUploading
+          : isProfilePictureUploading // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -712,7 +897,8 @@ class _$_CreateProfileState implements _CreateProfileState {
       required this.lastNameController,
       required this.referenceController,
       required this.mobileNumberController,
-      this.user});
+      this.user,
+      required this.isProfilePictureUploading});
 
   @override
   final bool isLoading;
@@ -748,10 +934,12 @@ class _$_CreateProfileState implements _CreateProfileState {
   final TextEditingController mobileNumberController;
   @override
   final UserDto? user;
+  @override
+  final bool isProfilePictureUploading;
 
   @override
   String toString() {
-    return 'CreateProfileState(isLoading: $isLoading, isSuccessful: $isSuccessful, isFailed: $isFailed, obscurePassword: $obscurePassword, obscureConfirmPassword: $obscureConfirmPassword, errorEmail: $errorEmail, errorPassword: $errorPassword, errorMessage: $errorMessage, appStateNotifier: $appStateNotifier, authRepository: $authRepository, userEmailController: $userEmailController, passwordController: $passwordController, firstNameController: $firstNameController, lastNameController: $lastNameController, referenceController: $referenceController, mobileNumberController: $mobileNumberController, user: $user)';
+    return 'CreateProfileState(isLoading: $isLoading, isSuccessful: $isSuccessful, isFailed: $isFailed, obscurePassword: $obscurePassword, obscureConfirmPassword: $obscureConfirmPassword, errorEmail: $errorEmail, errorPassword: $errorPassword, errorMessage: $errorMessage, appStateNotifier: $appStateNotifier, authRepository: $authRepository, userEmailController: $userEmailController, passwordController: $passwordController, firstNameController: $firstNameController, lastNameController: $lastNameController, referenceController: $referenceController, mobileNumberController: $mobileNumberController, user: $user, isProfilePictureUploading: $isProfilePictureUploading)';
   }
 
   @override
@@ -789,7 +977,9 @@ class _$_CreateProfileState implements _CreateProfileState {
                 .equals(other.referenceController, referenceController) &&
             const DeepCollectionEquality()
                 .equals(other.mobileNumberController, mobileNumberController) &&
-            const DeepCollectionEquality().equals(other.user, user));
+            const DeepCollectionEquality().equals(other.user, user) &&
+            const DeepCollectionEquality().equals(
+                other.isProfilePictureUploading, isProfilePictureUploading));
   }
 
   @override
@@ -811,7 +1001,8 @@ class _$_CreateProfileState implements _CreateProfileState {
       const DeepCollectionEquality().hash(lastNameController),
       const DeepCollectionEquality().hash(referenceController),
       const DeepCollectionEquality().hash(mobileNumberController),
-      const DeepCollectionEquality().hash(user));
+      const DeepCollectionEquality().hash(user),
+      const DeepCollectionEquality().hash(isProfilePictureUploading));
 
   @JsonKey(ignore: true)
   @override
@@ -837,7 +1028,8 @@ abstract class _CreateProfileState implements CreateProfileState {
       required TextEditingController lastNameController,
       required TextEditingController referenceController,
       required TextEditingController mobileNumberController,
-      UserDto? user}) = _$_CreateProfileState;
+      UserDto? user,
+      required bool isProfilePictureUploading}) = _$_CreateProfileState;
 
   @override
   bool get isLoading;
@@ -873,6 +1065,8 @@ abstract class _CreateProfileState implements CreateProfileState {
   TextEditingController get mobileNumberController;
   @override
   UserDto? get user;
+  @override
+  bool get isProfilePictureUploading;
   @override
   @JsonKey(ignore: true)
   _$CreateProfileStateCopyWith<_CreateProfileState> get copyWith =>

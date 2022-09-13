@@ -5,4 +5,6 @@ class CreateProfileEvent with _$CreateProfileEvent {
   const factory CreateProfileEvent.onDonePressed() = _onDonePressed;
   const factory CreateProfileEvent.emitFromAnywhere(
       {required CreateProfileState state}) = _onEmitFromAnywhere;
+  const factory CreateProfileEvent.uploadProfileToServer(
+      {required PlatformFile file}) = _UploadProfileToServer;
 }

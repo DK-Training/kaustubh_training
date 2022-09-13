@@ -28,6 +28,7 @@ class _$UserDtoTearOff {
       String? lastName,
       String? mobileNumber,
       String? reference,
+      String? profilePicture,
       required bool isProfileCompleted}) {
     return _UserDto(
       id: id,
@@ -36,6 +37,7 @@ class _$UserDtoTearOff {
       lastName: lastName,
       mobileNumber: mobileNumber,
       reference: reference,
+      profilePicture: profilePicture,
       isProfileCompleted: isProfileCompleted,
     );
   }
@@ -56,6 +58,7 @@ mixin _$UserDto {
   String? get lastName => throw _privateConstructorUsedError;
   String? get mobileNumber => throw _privateConstructorUsedError;
   String? get reference => throw _privateConstructorUsedError;
+  String? get profilePicture => throw _privateConstructorUsedError;
   bool get isProfileCompleted => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -74,6 +77,7 @@ abstract class $UserDtoCopyWith<$Res> {
       String? lastName,
       String? mobileNumber,
       String? reference,
+      String? profilePicture,
       bool isProfileCompleted});
 }
 
@@ -93,6 +97,7 @@ class _$UserDtoCopyWithImpl<$Res> implements $UserDtoCopyWith<$Res> {
     Object? lastName = freezed,
     Object? mobileNumber = freezed,
     Object? reference = freezed,
+    Object? profilePicture = freezed,
     Object? isProfileCompleted = freezed,
   }) {
     return _then(_value.copyWith(
@@ -120,6 +125,10 @@ class _$UserDtoCopyWithImpl<$Res> implements $UserDtoCopyWith<$Res> {
           ? _value.reference
           : reference // ignore: cast_nullable_to_non_nullable
               as String?,
+      profilePicture: profilePicture == freezed
+          ? _value.profilePicture
+          : profilePicture // ignore: cast_nullable_to_non_nullable
+              as String?,
       isProfileCompleted: isProfileCompleted == freezed
           ? _value.isProfileCompleted
           : isProfileCompleted // ignore: cast_nullable_to_non_nullable
@@ -140,6 +149,7 @@ abstract class _$UserDtoCopyWith<$Res> implements $UserDtoCopyWith<$Res> {
       String? lastName,
       String? mobileNumber,
       String? reference,
+      String? profilePicture,
       bool isProfileCompleted});
 }
 
@@ -160,6 +170,7 @@ class __$UserDtoCopyWithImpl<$Res> extends _$UserDtoCopyWithImpl<$Res>
     Object? lastName = freezed,
     Object? mobileNumber = freezed,
     Object? reference = freezed,
+    Object? profilePicture = freezed,
     Object? isProfileCompleted = freezed,
   }) {
     return _then(_UserDto(
@@ -187,6 +198,10 @@ class __$UserDtoCopyWithImpl<$Res> extends _$UserDtoCopyWithImpl<$Res>
           ? _value.reference
           : reference // ignore: cast_nullable_to_non_nullable
               as String?,
+      profilePicture: profilePicture == freezed
+          ? _value.profilePicture
+          : profilePicture // ignore: cast_nullable_to_non_nullable
+              as String?,
       isProfileCompleted: isProfileCompleted == freezed
           ? _value.isProfileCompleted
           : isProfileCompleted // ignore: cast_nullable_to_non_nullable
@@ -205,6 +220,7 @@ class _$_UserDto implements _UserDto {
       this.lastName,
       this.mobileNumber,
       this.reference,
+      this.profilePicture,
       required this.isProfileCompleted});
 
   factory _$_UserDto.fromJson(Map<String, dynamic> json) =>
@@ -223,11 +239,13 @@ class _$_UserDto implements _UserDto {
   @override
   final String? reference;
   @override
+  final String? profilePicture;
+  @override
   final bool isProfileCompleted;
 
   @override
   String toString() {
-    return 'UserDto(id: $id, email: $email, firstName: $firstName, lastName: $lastName, mobileNumber: $mobileNumber, reference: $reference, isProfileCompleted: $isProfileCompleted)';
+    return 'UserDto(id: $id, email: $email, firstName: $firstName, lastName: $lastName, mobileNumber: $mobileNumber, reference: $reference, profilePicture: $profilePicture, isProfileCompleted: $isProfileCompleted)';
   }
 
   @override
@@ -243,6 +261,8 @@ class _$_UserDto implements _UserDto {
                 .equals(other.mobileNumber, mobileNumber) &&
             const DeepCollectionEquality().equals(other.reference, reference) &&
             const DeepCollectionEquality()
+                .equals(other.profilePicture, profilePicture) &&
+            const DeepCollectionEquality()
                 .equals(other.isProfileCompleted, isProfileCompleted));
   }
 
@@ -255,6 +275,7 @@ class _$_UserDto implements _UserDto {
       const DeepCollectionEquality().hash(lastName),
       const DeepCollectionEquality().hash(mobileNumber),
       const DeepCollectionEquality().hash(reference),
+      const DeepCollectionEquality().hash(profilePicture),
       const DeepCollectionEquality().hash(isProfileCompleted));
 
   @JsonKey(ignore: true)
@@ -276,6 +297,7 @@ abstract class _UserDto implements UserDto {
       String? lastName,
       String? mobileNumber,
       String? reference,
+      String? profilePicture,
       required bool isProfileCompleted}) = _$_UserDto;
 
   factory _UserDto.fromJson(Map<String, dynamic> json) = _$_UserDto.fromJson;
@@ -292,6 +314,8 @@ abstract class _UserDto implements UserDto {
   String? get mobileNumber;
   @override
   String? get reference;
+  @override
+  String? get profilePicture;
   @override
   bool get isProfileCompleted;
   @override
