@@ -1,17 +1,13 @@
-import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:kaustubh_training/application/auth/new_task/new_task_bloc.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../../domain/core/config/app_config.dart';
 import '../../../domain/core/config/injection.dart';
-import '../../../domain/core/constants/asset_constant.dart';
 import '../../../domain/core/constants/string_constants.dart';
 import '../../../domain/core/services/navigation_service/navigation_service.dart';
-import '../../../domain/core/services/navigation_service/routers/route_names.dart';
 import '../../core/widgets/custom_textfield.dart';
 // import '../../domain/core/services/navigation_service/navigation_service.dart';
 // import '../../domain/core/services/navigation_service/routers/route_names.dart';
@@ -102,6 +98,8 @@ class LoginScreenConsumer extends StatelessWidget {
 
                                 return null;
                               },
+                              // maxLength: 5,
+                              // minLines: 5,
                               controller: state.descriptionController,
 
                               hintText: AuthConstants.hintTaskDescription,
