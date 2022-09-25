@@ -21,9 +21,11 @@ class CreateProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final appStateNotifier = Provider.of<AppStateNotifier>(context);
+
     return BlocProvider(
-      create: (context) => CreateProfileBloc(
-          CreateProfileState.initial(appStateNotifier: appStateNotifier)),
+      create: (BuildContext context) => CreateProfileBloc(
+        CreateProfileState.initial(appStateNotifier: appStateNotifier),
+      ),
       child: const CreateProfileConsumerScreen(),
     );
   }
@@ -35,37 +37,64 @@ class CreateProfileConsumerScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<CreateProfileBloc, CreateProfileState>(
-      listener: (context, state) {},
+      listener: (context, state) {
+        if (state.isSuccessful) {
+          debugPrint('Profile Created successfully');
+          Provider.of<AppStateNotifier>(context, listen: false)
+              .updateAfterAuthChange(
+            isAuthorized: true,
+            //user: state.user,
+          );
+          Future.delayed(const Duration(milliseconds: 100)).then(
+            (value) => navigator<NavigationService>()
+                .navigateTo(CoreRoute.home, isClearStack: true),
+          );
+        } else if (state.isFailed) {
+          debugPrint('Profile Creation failed');
+          if (state.errorMessage.isNotEmpty) {
+            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+              content: Text(state.errorMessage),
+              duration: const Duration(seconds: 3),
+            ));
+            context
+                .read<CreateProfileBloc>()
+                .add(CreateProfileEvent.emitFromAnywhere(
+                    state: state.copyWith(
+                  isFailed: false,
+                )));
+          }
+        }
+      },
       builder: (context, state) {
         return SafeArea(
-          child: Scaffold(
-            appBar: AppBar(
-              centerTitle: true,
-              elevation: 0,
-              backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-              leading: TextButton.icon(
-                onPressed: () {
-                  navigator<NavigationService>().goBack();
-                },
-                icon: const Icon(
-                  Icons.arrow_back_ios,
-                  color: Colors.grey,
-                ),
-                label: const Text(''),
+            child: Scaffold(
+          appBar: AppBar(
+            centerTitle: true,
+            elevation: 0,
+            backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+            leading: TextButton.icon(
+              onPressed: () {
+                navigator<NavigationService>().goBack();
+              },
+              icon: const Icon(
+                Icons.arrow_back_ios,
+                color: Colors.grey,
               ),
-              title: Text(
-                AuthConstants.createProfile,
-                style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                    fontWeight: FontWeight.w600,
-                    color: Theme.of(context).colorScheme.primary,
-                    fontSize: 14.5.sp),
-              ),
+              label: const Text(''),
             ),
-            body: SingleChildScrollView(
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 3.h, vertical: 1.h),
-                // child: Form(
-                //   key: state.formKey,
+            title: Text(
+              AuthConstants.createProfile,
+              style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                  fontWeight: FontWeight.w600,
+                  color: Theme.of(context).colorScheme.primary,
+                  fontSize: 14.5.sp),
+            ),
+          ),
+          body: SingleChildScrollView(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 3.h, vertical: 1.h),
+              child: Form(
+                key: state.formKey,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -133,7 +162,6 @@ class CreateProfileConsumerScreen extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 3.h),
-
                     CustomTextFieldNormal(
                       validator: (value) {
                         if (value == null || value.isEmpty) {
@@ -142,16 +170,16 @@ class CreateProfileConsumerScreen extends StatelessWidget {
 
                         return null;
                       },
-                      // errorText: state.errorFullName.isNotEmpty
-                      //     ? state.errorFullName
-                      //     : null,
-                      // controller: state.fullNameController,
+                      errorText: state.errorFirstName.isNotEmpty
+                          ? state.errorFirstName
+                          : null,
+                      controller: state.firstNameController,
                       // prefixIcon: const Icon(Icons.person, color: Colors.green),
                       // height: 65,
                       labelText: AuthConstants.firstName,
+                      inputWithLabel: true,
                       hintText: AuthConstants.hintFirstName,
                     ),
-
                     CustomTextFieldNormal(
                       validator: (value) {
                         if (value == null || value.isEmpty) {
@@ -160,16 +188,15 @@ class CreateProfileConsumerScreen extends StatelessWidget {
 
                         return null;
                       },
-                      // errorText: state.errorFullName.isNotEmpty
-                      //     ? state.errorFullName
-                      //     : null,
-                      // controller: state.fullNameController,
+                      errorText: state.errorLastName.isNotEmpty
+                          ? state.errorLastName
+                          : null,
+                      controller: state.lastNameController,
                       // prefixIcon: const Icon(Icons.person, color: Colors.green),
                       // height: 65,
                       labelText: AuthConstants.lastName,
                       hintText: AuthConstants.hintLastName,
                     ),
-
                     CustomTextFieldNormal(
                       validator: (value) {
                         if (value == null || value.isEmpty) {
@@ -178,16 +205,15 @@ class CreateProfileConsumerScreen extends StatelessWidget {
 
                         return null;
                       },
-                      // errorText: state.errorFullName.isNotEmpty
-                      //     ? state.errorFullName
-                      //     : null,
-                      // controller: state.fullNameController,
+                      errorText: state.errorReference.isNotEmpty
+                          ? state.errorReference
+                          : null,
+                      controller: state.referenceController,
                       // prefixIcon: const Icon(Icons.person, color: Colors.green),
                       // height: 65,
                       labelText: AuthConstants.reference,
                       hintText: AuthConstants.hintreference,
                     ),
-
                     CustomTextFieldNormal(
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -198,10 +224,9 @@ class CreateProfileConsumerScreen extends StatelessWidget {
 
                           return null;
                         },
-                        //controller: state.confirmPasswordController,
+                        controller: state.mobileNumberController,
                         hintText: AuthConstants.hintMobileNumber,
                         labelText: AuthConstants.mobileNumber),
-
                     CustomTextFieldNormal(
                       validator: (value) {
                         if (value == null || value.isEmpty) {
@@ -212,51 +237,48 @@ class CreateProfileConsumerScreen extends StatelessWidget {
 
                         return null;
                       },
-                      //controller: state.userEmailController,
+                      controller: state.userEmailController,
                       hintText: AuthConstants.hintEmail,
                       labelText: AuthConstants.emailAddress,
                     ),
-
                     SizedBox(height: 2.8.h),
-                    // state.isLoading
-                    //     ? const Center(
-                    //         child: CircularProgressIndicator(
-                    //           color: Colors.red,
-                    //         ),
-                    //       )
-                    //     :
-                    ElevatedButton(
-                      onPressed: () {
-                        navigator<NavigationService>()
-                            .navigateTo(CoreRoute.home);
-                        //   FocusScope.of(context).unfocus();
+                    state.isLoading
+                        ? const Center(
+                            child: CircularProgressIndicator(
+                              color: Colors.red,
+                            ),
+                          )
+                        : ElevatedButton(
+                            onPressed: () {
+                              // navigator<NavigationService>()
+                              //     .navigateTo(CoreRoute.home);
+                              // FocusScope.of(context).unfocus();
 
-                        //   if (state.formKey.currentState!.validate()) {
-                        //     // print('sign up success');
-                        //     context
-                        //         .read<SignupBloc>()
-                        //         .add(const SignupEvent.onRegisterPressed());
-                        //   } else {
-                        //     // print('sign up failed');
-                        //   }
-                      },
-                      style: ElevatedButton.styleFrom(
-                        primary: Theme.of(context).colorScheme.primary,
-                        onPrimary: Colors.white,
-                        shadowColor: const Color.fromRGBO(4, 109, 222, 1),
-                        elevation: 3,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(25.0)),
-                        minimumSize: const Size(400, 50),
-                      ),
-                      child: const Text(AuthConstants.done),
-                    ),
+                              if (state.formKey.currentState!.validate()) {
+                                print('create profile success');
+                                context.read<CreateProfileBloc>().add(
+                                    const CreateProfileEvent.onDonePressed());
+                              } else {
+                                print('create profile failed');
+                              }
+                            },
+                            style: ElevatedButton.styleFrom(
+                              primary: Theme.of(context).colorScheme.primary,
+                              onPrimary: Colors.white,
+                              shadowColor: const Color.fromRGBO(4, 109, 222, 1),
+                              elevation: 3,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(25.0)),
+                              minimumSize: const Size(400, 50),
+                            ),
+                            child: const Text(AuthConstants.done),
+                          ),
                   ],
                 ),
               ),
             ),
           ),
-        );
+        ));
       },
     );
   }

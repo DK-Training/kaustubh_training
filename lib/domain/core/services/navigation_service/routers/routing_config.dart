@@ -4,6 +4,7 @@ import '../../../../../infrastructure/platform/platform_enum.dart';
 import '../../../../../presentation/auth/create_profile.dart';
 import '../../../../../presentation/auth/login_screen.dart';
 import '../../../../../presentation/auth/sign_screen.dart';
+import '../../../../../presentation/home/add_task/new_task_screen.dart';
 import '../../../../../presentation/home/home_screen.dart';
 // import '../../../../../presentation/home/update_user_info.dart';
 import '../../../extensions/string_extensions.dart';
@@ -19,6 +20,12 @@ Route<dynamic> authorizedNavigation(RouteSettings settings) {
     case CoreRoute.home:
       return _getPageRoute(
         const HomeScreen(),
+        settings,
+      );
+
+    case CoreRoute.addTask:
+      return _getPageRoute(
+        const NewTaskScreen(),
         settings,
       );
 

@@ -9,9 +9,11 @@ abstract class AuthRepository {
   Future<Either<String, UserDto>> register(
       {required UserDto tempUser, required String password});
   Future<bool> logoutUser();
+
   Future<UserDto?> isUserLogged();
   Future<Either<String, UserDto>> createProfile({
     required UserDto createUser,
   });
-Future<Either<String, String>> uploadProfilePicture({required PlatformFile file});
+  Future<Either<String, String>> uploadProfilePicture(
+      {required PlatformFile file});
 }

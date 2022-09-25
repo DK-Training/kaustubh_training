@@ -16,7 +16,8 @@ class AuthConstants {
   static const alreadyHaveAcc = 'Already have an account?';
   static const updateInfo = 'Update Profile';
   static const createProfile = 'Create Profile';
-  static const homePageTitle = 'Mis propiedades';
+  static const homePageTitle = 'TODO';
+
   static const homePageButtonCrear = 'Crear una nueva propiedad';
   static const update = 'Update ';
   static const cancle = 'Cancle';
@@ -25,6 +26,8 @@ class AuthConstants {
   static const personas = '5 personas';
   static const firstLocation =
       'Av. Cuesta de las Calesas, 21, 11006 Cádiz, España ';
+  static const newTaskTitle = 'New Task';
+  static const addTask = 'Add Task';
 
   // hint text
   static const hintFirstName = 'Enter Name';
@@ -32,4 +35,6 @@ class AuthConstants {
   static const hintreference = 'Guzmán';
   static const hintEmail = 'gerrguz@correo.com';
   static const hintMobileNumber = '123 456 7890';
+  static const hintTaskTitle = 'Enter Title';
+  static const hintTaskDescription = 'Enter Description';
 }

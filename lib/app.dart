@@ -91,7 +91,7 @@ Future appInitializer(AppConfig appConfig) async {
           return AppStateNotifier(
               isAuthorized: isAuthorized,
               user: user,
-              isProfileCompleted: false);
+              isProfileCompleted: user!.isProfileCompleted);
         },
         child: Sizer(builder: (context, orientation, deviceType) {
           return const MainApp();

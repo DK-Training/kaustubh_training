@@ -113,6 +113,7 @@ class IAuthRepository extends AuthRepository {
           .collection('users')
           .doc(createUser.id)
           .update(createUser.toJson());
+
       final rawUser = await FirebaseFirestore.instance
           .collection('users')
           .doc(createUser.id)

@@ -36,6 +36,45 @@ class CreateProfileBloc extends Bloc<CreateProfileEvent, CreateProfileState> {
         ));
       });
     });
-    on<_onDonePressed>((event, emit) async {});
+    on<_onDonePressed>((event, emit) async {
+      debugPrint('Login user');
+      emit(state.copyWith(isLoading: true));
+
+      final String firstName = state.firstNameController.text;
+      final String lastName = state.lastNameController.text;
+      final String reference = state.referenceController.text;
+      final String mobileNumber = state.mobileNumberController.text;
+      final String email = state.userEmailController.text;
+      UserDto newUser = UserDto(
+          id: state.appStateNotifier.user!.id,
+          email: email,
+          firstName: firstName,
+          lastName: lastName,
+          reference: reference,
+          mobileNumber: mobileNumber,
+          isProfileCompleted: true);
+
+      // print(email);
+      final Either<String, UserDto> response =
+          await state.authRepository.createProfile(createUser: newUser);
+      response.fold(
+        (l) {
+          add(CreateProfileEvent.emitFromAnywhere(
+              state: state.copyWith(
+                  isLoading: false,
+                  isSuccessful: false,
+                  isFailed: true,
+                  errorMessage: l)));
+        },
+        (r) {
+          add(CreateProfileEvent.emitFromAnywhere(
+              state: state.copyWith(
+                  user: r,
+                  isLoading: false,
+                  isSuccessful: true,
+                  isFailed: false)));
+        },
+      );
+    });
   }
 }

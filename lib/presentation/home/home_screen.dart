@@ -35,126 +35,42 @@ class HomeScreen extends StatelessWidget {
               fontSize: 14.5.sp),
         ),
         actions: [
-          CircleAvatar(
-            backgroundColor: Colors.white,
-            radius: 12.5.sp,
-            // minRadius: 10,
-            child: IconButton(
-                onPressed: () {},
-                icon: SvgPicture.asset(
-                  AssetConstant.filterProfile,
-                  width: 17.w,
-                  height: 20.h,
-                )),
-          ),
-          SizedBox(
-            width: 3.w,
-          ),
-          CircleAvatar(
-            backgroundColor: Colors.white,
-            radius: 12.5.sp,
-            // minRadius: 10,
-            child: IconButton(
-                onPressed: () {},
-                icon: SvgPicture.asset(
-                  AssetConstant.myProfile,
-                  width: 17.w,
-                  height: 20.h,
-                )),
-          ),
           SizedBox(
             width: 8.w,
           )
         ],
       ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 7.w, vertical: 3.h),
-          child: Column(
-            // mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              // Container(
-              // decoration: BoxDecoration(
-              //     gradient: LinearGradient(
-              //         begin: Alignment.bottomLeft,
-              //         end: Alignment.centerRight,
-              //         colors: [
-              //       Theme.of(context).colorScheme.secondaryContainer,
-              //       Theme.of(context).colorScheme.onSecondaryContainer
-              //     ])),
-              // child:
-              ElevatedButton(
-                onPressed: () {
-                  navigator<NavigationService>().navigateTo(CoreRoute.home);
-                  //   FocusScope.of(context).unfocus();
-
-                  //   if (state.formKey.currentState!.validate()) {
-                  //     // print('sign up success');
-                  //     context
-                  //         .read<SignupBloc>()
-                  //         .add(const SignupEvent.onRegisterPressed());
-                  //   } else {
-                  //     // print('sign up failed');
-                  //   }
-                },
-                style: ElevatedButton.styleFrom(
-                  onPrimary: Colors.white,
-                  // shadowColor: const Color.fromRGBO(4, 109, 222, 1),
-                  elevation: 3,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(25.0)),
-                  minimumSize: const Size(400, 50),
-                ),
-                child: const Text(AuthConstants.homePageButtonCrear),
-              ),
-              // ),
-
-              SizedBox(
-                height: 6.h,
-              ),
-              HotelInfoCard(
-                hotelName: 'Kaustubh',
-                hotelAddress:
-                    'Av. Cuesta de las Calesas, 21, 11006 Cádiz, España ',
-                houseName: 'Sagardeep',
-                totalBuildings: '2',
-                totalPeople: '100',
-              ),
-              SizedBox(
-                height: 6.h,
-              ),
-              HotelInfoCard(
-                hotelName: 'Kaustubh 3',
-                hotelAddress: 'Vikhroli',
-                houseName: 'Sagardeep',
-                totalBuildings: '2',
-                totalPeople: '100',
-              ),
-              SizedBox(
-                height: 6.h,
-              ),
-              HotelInfoCard(
-                hotelName: 'Kaustubh 1',
-                hotelAddress: 'Vikhroli',
-                houseName: 'Sagardeep',
-                totalBuildings: '2',
-                totalPeople: '100',
-              ),
-              SizedBox(
-                height: 6.h,
-              ),
-              HotelInfoCard(
-                hotelName: 'Kaustubh 2',
-                hotelAddress: 'Vikhroli',
-                houseName: 'Sagardeep',
-                totalBuildings: '2',
-                totalPeople: '100',
-              ),
-            ],
-          ),
-        ),
+      body: ListView.separated(
+        separatorBuilder: (context, index) {
+          return SizedBox(
+            height: 2.h,
+          );
+        },
+        itemCount: hashCode,
+        itemBuilder: (context, index) {
+          return Container(
+            decoration: BoxDecoration(
+              color: Colors.blue,
+              borderRadius: BorderRadius.circular(10),
+            ),
+            height: 70,
+            width: 100,
+          );
+        },
       ),
+    );
+
+    floatingActionButton:
+    FloatingActionButton(
+      child: Icon(
+        Icons.add,
+        color: Theme.of(context).scaffoldBackgroundColor,
+      ),
+      backgroundColor: Theme.of(context).primaryColor,
+      elevation: 15,
+      onPressed: (() {
+        navigator<NavigationService>().navigateTo(CoreRoute.addTask);
+      }),
     );
 
     // body: Column(

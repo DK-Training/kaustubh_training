@@ -521,7 +521,12 @@ class _$CreateProfileStateTearOff {
       required bool obscureConfirmPassword,
       required String errorEmail,
       required String errorPassword,
+      required String errorFirstName,
+      required String errorLastName,
+      required String errorReference,
+      required String mobileNumber,
       required String errorMessage,
+      required GlobalKey<FormState> formKey,
       required AppStateNotifier appStateNotifier,
       required AuthRepository authRepository,
       required TextEditingController userEmailController,
@@ -540,7 +545,12 @@ class _$CreateProfileStateTearOff {
       obscureConfirmPassword: obscureConfirmPassword,
       errorEmail: errorEmail,
       errorPassword: errorPassword,
+      errorFirstName: errorFirstName,
+      errorLastName: errorLastName,
+      errorReference: errorReference,
+      mobileNumber: mobileNumber,
       errorMessage: errorMessage,
+      formKey: formKey,
       appStateNotifier: appStateNotifier,
       authRepository: authRepository,
       userEmailController: userEmailController,
@@ -567,8 +577,12 @@ mixin _$CreateProfileState {
   bool get obscureConfirmPassword => throw _privateConstructorUsedError;
   String get errorEmail => throw _privateConstructorUsedError;
   String get errorPassword => throw _privateConstructorUsedError;
-  String get errorMessage =>
-      throw _privateConstructorUsedError; //required GlobalKey<FormState> formKey,
+  String get errorFirstName => throw _privateConstructorUsedError;
+  String get errorLastName => throw _privateConstructorUsedError;
+  String get errorReference => throw _privateConstructorUsedError;
+  String get mobileNumber => throw _privateConstructorUsedError;
+  String get errorMessage => throw _privateConstructorUsedError;
+  GlobalKey<FormState> get formKey => throw _privateConstructorUsedError;
   AppStateNotifier get appStateNotifier => throw _privateConstructorUsedError;
   AuthRepository get authRepository => throw _privateConstructorUsedError;
   TextEditingController get userEmailController =>
@@ -604,7 +618,12 @@ abstract class $CreateProfileStateCopyWith<$Res> {
       bool obscureConfirmPassword,
       String errorEmail,
       String errorPassword,
+      String errorFirstName,
+      String errorLastName,
+      String errorReference,
+      String mobileNumber,
       String errorMessage,
+      GlobalKey<FormState> formKey,
       AppStateNotifier appStateNotifier,
       AuthRepository authRepository,
       TextEditingController userEmailController,
@@ -637,7 +656,12 @@ class _$CreateProfileStateCopyWithImpl<$Res>
     Object? obscureConfirmPassword = freezed,
     Object? errorEmail = freezed,
     Object? errorPassword = freezed,
+    Object? errorFirstName = freezed,
+    Object? errorLastName = freezed,
+    Object? errorReference = freezed,
+    Object? mobileNumber = freezed,
     Object? errorMessage = freezed,
+    Object? formKey = freezed,
     Object? appStateNotifier = freezed,
     Object? authRepository = freezed,
     Object? userEmailController = freezed,
@@ -678,10 +702,30 @@ class _$CreateProfileStateCopyWithImpl<$Res>
           ? _value.errorPassword
           : errorPassword // ignore: cast_nullable_to_non_nullable
               as String,
+      errorFirstName: errorFirstName == freezed
+          ? _value.errorFirstName
+          : errorFirstName // ignore: cast_nullable_to_non_nullable
+              as String,
+      errorLastName: errorLastName == freezed
+          ? _value.errorLastName
+          : errorLastName // ignore: cast_nullable_to_non_nullable
+              as String,
+      errorReference: errorReference == freezed
+          ? _value.errorReference
+          : errorReference // ignore: cast_nullable_to_non_nullable
+              as String,
+      mobileNumber: mobileNumber == freezed
+          ? _value.mobileNumber
+          : mobileNumber // ignore: cast_nullable_to_non_nullable
+              as String,
       errorMessage: errorMessage == freezed
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
               as String,
+      formKey: formKey == freezed
+          ? _value.formKey
+          : formKey // ignore: cast_nullable_to_non_nullable
+              as GlobalKey<FormState>,
       appStateNotifier: appStateNotifier == freezed
           ? _value.appStateNotifier
           : appStateNotifier // ignore: cast_nullable_to_non_nullable
@@ -752,7 +796,12 @@ abstract class _$CreateProfileStateCopyWith<$Res>
       bool obscureConfirmPassword,
       String errorEmail,
       String errorPassword,
+      String errorFirstName,
+      String errorLastName,
+      String errorReference,
+      String mobileNumber,
       String errorMessage,
+      GlobalKey<FormState> formKey,
       AppStateNotifier appStateNotifier,
       AuthRepository authRepository,
       TextEditingController userEmailController,
@@ -788,7 +837,12 @@ class __$CreateProfileStateCopyWithImpl<$Res>
     Object? obscureConfirmPassword = freezed,
     Object? errorEmail = freezed,
     Object? errorPassword = freezed,
+    Object? errorFirstName = freezed,
+    Object? errorLastName = freezed,
+    Object? errorReference = freezed,
+    Object? mobileNumber = freezed,
     Object? errorMessage = freezed,
+    Object? formKey = freezed,
     Object? appStateNotifier = freezed,
     Object? authRepository = freezed,
     Object? userEmailController = freezed,
@@ -829,10 +883,30 @@ class __$CreateProfileStateCopyWithImpl<$Res>
           ? _value.errorPassword
           : errorPassword // ignore: cast_nullable_to_non_nullable
               as String,
+      errorFirstName: errorFirstName == freezed
+          ? _value.errorFirstName
+          : errorFirstName // ignore: cast_nullable_to_non_nullable
+              as String,
+      errorLastName: errorLastName == freezed
+          ? _value.errorLastName
+          : errorLastName // ignore: cast_nullable_to_non_nullable
+              as String,
+      errorReference: errorReference == freezed
+          ? _value.errorReference
+          : errorReference // ignore: cast_nullable_to_non_nullable
+              as String,
+      mobileNumber: mobileNumber == freezed
+          ? _value.mobileNumber
+          : mobileNumber // ignore: cast_nullable_to_non_nullable
+              as String,
       errorMessage: errorMessage == freezed
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
               as String,
+      formKey: formKey == freezed
+          ? _value.formKey
+          : formKey // ignore: cast_nullable_to_non_nullable
+              as GlobalKey<FormState>,
       appStateNotifier: appStateNotifier == freezed
           ? _value.appStateNotifier
           : appStateNotifier // ignore: cast_nullable_to_non_nullable
@@ -888,7 +962,12 @@ class _$_CreateProfileState implements _CreateProfileState {
       required this.obscureConfirmPassword,
       required this.errorEmail,
       required this.errorPassword,
+      required this.errorFirstName,
+      required this.errorLastName,
+      required this.errorReference,
+      required this.mobileNumber,
       required this.errorMessage,
+      required this.formKey,
       required this.appStateNotifier,
       required this.authRepository,
       required this.userEmailController,
@@ -915,8 +994,18 @@ class _$_CreateProfileState implements _CreateProfileState {
   @override
   final String errorPassword;
   @override
+  final String errorFirstName;
+  @override
+  final String errorLastName;
+  @override
+  final String errorReference;
+  @override
+  final String mobileNumber;
+  @override
   final String errorMessage;
-  @override //required GlobalKey<FormState> formKey,
+  @override
+  final GlobalKey<FormState> formKey;
+  @override
   final AppStateNotifier appStateNotifier;
   @override
   final AuthRepository authRepository;
@@ -939,7 +1028,7 @@ class _$_CreateProfileState implements _CreateProfileState {
 
   @override
   String toString() {
-    return 'CreateProfileState(isLoading: $isLoading, isSuccessful: $isSuccessful, isFailed: $isFailed, obscurePassword: $obscurePassword, obscureConfirmPassword: $obscureConfirmPassword, errorEmail: $errorEmail, errorPassword: $errorPassword, errorMessage: $errorMessage, appStateNotifier: $appStateNotifier, authRepository: $authRepository, userEmailController: $userEmailController, passwordController: $passwordController, firstNameController: $firstNameController, lastNameController: $lastNameController, referenceController: $referenceController, mobileNumberController: $mobileNumberController, user: $user, isProfilePictureUploading: $isProfilePictureUploading)';
+    return 'CreateProfileState(isLoading: $isLoading, isSuccessful: $isSuccessful, isFailed: $isFailed, obscurePassword: $obscurePassword, obscureConfirmPassword: $obscureConfirmPassword, errorEmail: $errorEmail, errorPassword: $errorPassword, errorFirstName: $errorFirstName, errorLastName: $errorLastName, errorReference: $errorReference, mobileNumber: $mobileNumber, errorMessage: $errorMessage, formKey: $formKey, appStateNotifier: $appStateNotifier, authRepository: $authRepository, userEmailController: $userEmailController, passwordController: $passwordController, firstNameController: $firstNameController, lastNameController: $lastNameController, referenceController: $referenceController, mobileNumberController: $mobileNumberController, user: $user, isProfilePictureUploading: $isProfilePictureUploading)';
   }
 
   @override
@@ -960,7 +1049,16 @@ class _$_CreateProfileState implements _CreateProfileState {
             const DeepCollectionEquality()
                 .equals(other.errorPassword, errorPassword) &&
             const DeepCollectionEquality()
+                .equals(other.errorFirstName, errorFirstName) &&
+            const DeepCollectionEquality()
+                .equals(other.errorLastName, errorLastName) &&
+            const DeepCollectionEquality()
+                .equals(other.errorReference, errorReference) &&
+            const DeepCollectionEquality()
+                .equals(other.mobileNumber, mobileNumber) &&
+            const DeepCollectionEquality()
                 .equals(other.errorMessage, errorMessage) &&
+            const DeepCollectionEquality().equals(other.formKey, formKey) &&
             const DeepCollectionEquality()
                 .equals(other.appStateNotifier, appStateNotifier) &&
             const DeepCollectionEquality()
@@ -983,26 +1081,32 @@ class _$_CreateProfileState implements _CreateProfileState {
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(isLoading),
-      const DeepCollectionEquality().hash(isSuccessful),
-      const DeepCollectionEquality().hash(isFailed),
-      const DeepCollectionEquality().hash(obscurePassword),
-      const DeepCollectionEquality().hash(obscureConfirmPassword),
-      const DeepCollectionEquality().hash(errorEmail),
-      const DeepCollectionEquality().hash(errorPassword),
-      const DeepCollectionEquality().hash(errorMessage),
-      const DeepCollectionEquality().hash(appStateNotifier),
-      const DeepCollectionEquality().hash(authRepository),
-      const DeepCollectionEquality().hash(userEmailController),
-      const DeepCollectionEquality().hash(passwordController),
-      const DeepCollectionEquality().hash(firstNameController),
-      const DeepCollectionEquality().hash(lastNameController),
-      const DeepCollectionEquality().hash(referenceController),
-      const DeepCollectionEquality().hash(mobileNumberController),
-      const DeepCollectionEquality().hash(user),
-      const DeepCollectionEquality().hash(isProfilePictureUploading));
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(isLoading),
+        const DeepCollectionEquality().hash(isSuccessful),
+        const DeepCollectionEquality().hash(isFailed),
+        const DeepCollectionEquality().hash(obscurePassword),
+        const DeepCollectionEquality().hash(obscureConfirmPassword),
+        const DeepCollectionEquality().hash(errorEmail),
+        const DeepCollectionEquality().hash(errorPassword),
+        const DeepCollectionEquality().hash(errorFirstName),
+        const DeepCollectionEquality().hash(errorLastName),
+        const DeepCollectionEquality().hash(errorReference),
+        const DeepCollectionEquality().hash(mobileNumber),
+        const DeepCollectionEquality().hash(errorMessage),
+        const DeepCollectionEquality().hash(formKey),
+        const DeepCollectionEquality().hash(appStateNotifier),
+        const DeepCollectionEquality().hash(authRepository),
+        const DeepCollectionEquality().hash(userEmailController),
+        const DeepCollectionEquality().hash(passwordController),
+        const DeepCollectionEquality().hash(firstNameController),
+        const DeepCollectionEquality().hash(lastNameController),
+        const DeepCollectionEquality().hash(referenceController),
+        const DeepCollectionEquality().hash(mobileNumberController),
+        const DeepCollectionEquality().hash(user),
+        const DeepCollectionEquality().hash(isProfilePictureUploading)
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -1019,7 +1123,12 @@ abstract class _CreateProfileState implements CreateProfileState {
       required bool obscureConfirmPassword,
       required String errorEmail,
       required String errorPassword,
+      required String errorFirstName,
+      required String errorLastName,
+      required String errorReference,
+      required String mobileNumber,
       required String errorMessage,
+      required GlobalKey<FormState> formKey,
       required AppStateNotifier appStateNotifier,
       required AuthRepository authRepository,
       required TextEditingController userEmailController,
@@ -1046,8 +1155,18 @@ abstract class _CreateProfileState implements CreateProfileState {
   @override
   String get errorPassword;
   @override
+  String get errorFirstName;
+  @override
+  String get errorLastName;
+  @override
+  String get errorReference;
+  @override
+  String get mobileNumber;
+  @override
   String get errorMessage;
-  @override //required GlobalKey<FormState> formKey,
+  @override
+  GlobalKey<FormState> get formKey;
+  @override
   AppStateNotifier get appStateNotifier;
   @override
   AuthRepository get authRepository;
