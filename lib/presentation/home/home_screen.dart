@@ -40,13 +40,13 @@ class HomeScreenConsumer extends StatelessWidget {
         return Scaffold(
             appBar: AppBar(
               elevation: 0,
-              backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+              backgroundColor: Theme.of(context).colorScheme.primary,
               titleSpacing: 8.w,
               title: Text(
                 AuthConstants.homePageTitle,
                 style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                     fontWeight: FontWeight.w600,
-                    color: Theme.of(context).colorScheme.primary,
+                    color: Theme.of(context).scaffoldBackgroundColor,
                     fontSize: 14.5.sp),
               ),
               actions: [
@@ -66,6 +66,7 @@ class HomeScreenConsumer extends StatelessWidget {
               itemBuilder: (context, index) {
                 final TaskDto task = state.tasks[index];
                 return Container(
+                  margin: EdgeInsets.only(top: 10),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     boxShadow: const [
@@ -92,7 +93,9 @@ class HomeScreenConsumer extends StatelessWidget {
                       ),
                       IconButton(
                           onPressed: () {
-                            context.read<ListTaskBloc>().add(ListTaskEvent.deleteTask(taskId: task.id));
+                            context
+                                .read<ListTaskBloc>()
+                                .add(ListTaskEvent.deleteTask(taskId: task.id));
                           },
                           icon: Icon(
                             Icons.delete,
