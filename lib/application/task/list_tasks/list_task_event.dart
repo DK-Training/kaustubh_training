@@ -5,7 +5,8 @@ class ListTaskEvent with _$ListTaskEvent {
   const factory ListTaskEvent.getAllTasks() = _GetAllTasks;
   const factory ListTaskEvent.deleteTask({required String taskId}) =
       _DeleteTask;
-
+  const factory ListTaskEvent.updateTask({required TaskDto task}) =
+      _UpdateTask;
   const factory ListTaskEvent.emitFromAnywhere({required ListTaskState state}) =
       _onEmitFromAnywhere;
 }

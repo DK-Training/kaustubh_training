@@ -7,4 +7,6 @@ abstract class TaskRepository {
       {required String title, required String description});
   Future<List<TaskDto>> getAllTask();
   Future<Either<String,bool>> deleteTask({required String taskId});
+    Future<Either<String, String>> updateTask(
+      {required TaskDto task});
 }

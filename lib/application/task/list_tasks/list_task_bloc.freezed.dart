@@ -27,6 +27,12 @@ class _$ListTaskEventTearOff {
     );
   }
 
+  _UpdateTask updateTask({required TaskDto task}) {
+    return _UpdateTask(
+      task: task,
+    );
+  }
+
   _onEmitFromAnywhere emitFromAnywhere({required ListTaskState state}) {
     return _onEmitFromAnywhere(
       state: state,
@@ -43,6 +49,7 @@ mixin _$ListTaskEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() getAllTasks,
     required TResult Function(String taskId) deleteTask,
+    required TResult Function(TaskDto task) updateTask,
     required TResult Function(ListTaskState state) emitFromAnywhere,
   }) =>
       throw _privateConstructorUsedError;
@@ -50,6 +57,7 @@ mixin _$ListTaskEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? getAllTasks,
     TResult Function(String taskId)? deleteTask,
+    TResult Function(TaskDto task)? updateTask,
     TResult Function(ListTaskState state)? emitFromAnywhere,
   }) =>
       throw _privateConstructorUsedError;
@@ -57,6 +65,7 @@ mixin _$ListTaskEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getAllTasks,
     TResult Function(String taskId)? deleteTask,
+    TResult Function(TaskDto task)? updateTask,
     TResult Function(ListTaskState state)? emitFromAnywhere,
     required TResult orElse(),
   }) =>
@@ -65,6 +74,7 @@ mixin _$ListTaskEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_GetAllTasks value) getAllTasks,
     required TResult Function(_DeleteTask value) deleteTask,
+    required TResult Function(_UpdateTask value) updateTask,
     required TResult Function(_onEmitFromAnywhere value) emitFromAnywhere,
   }) =>
       throw _privateConstructorUsedError;
@@ -72,6 +82,7 @@ mixin _$ListTaskEvent {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_GetAllTasks value)? getAllTasks,
     TResult Function(_DeleteTask value)? deleteTask,
+    TResult Function(_UpdateTask value)? updateTask,
     TResult Function(_onEmitFromAnywhere value)? emitFromAnywhere,
   }) =>
       throw _privateConstructorUsedError;
@@ -79,6 +90,7 @@ mixin _$ListTaskEvent {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetAllTasks value)? getAllTasks,
     TResult Function(_DeleteTask value)? deleteTask,
+    TResult Function(_UpdateTask value)? updateTask,
     TResult Function(_onEmitFromAnywhere value)? emitFromAnywhere,
     required TResult orElse(),
   }) =>
@@ -144,6 +156,7 @@ class _$_GetAllTasks implements _GetAllTasks {
   TResult when<TResult extends Object?>({
     required TResult Function() getAllTasks,
     required TResult Function(String taskId) deleteTask,
+    required TResult Function(TaskDto task) updateTask,
     required TResult Function(ListTaskState state) emitFromAnywhere,
   }) {
     return getAllTasks();
@@ -154,6 +167,7 @@ class _$_GetAllTasks implements _GetAllTasks {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? getAllTasks,
     TResult Function(String taskId)? deleteTask,
+    TResult Function(TaskDto task)? updateTask,
     TResult Function(ListTaskState state)? emitFromAnywhere,
   }) {
     return getAllTasks?.call();
@@ -164,6 +178,7 @@ class _$_GetAllTasks implements _GetAllTasks {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getAllTasks,
     TResult Function(String taskId)? deleteTask,
+    TResult Function(TaskDto task)? updateTask,
     TResult Function(ListTaskState state)? emitFromAnywhere,
     required TResult orElse(),
   }) {
@@ -178,6 +193,7 @@ class _$_GetAllTasks implements _GetAllTasks {
   TResult map<TResult extends Object?>({
     required TResult Function(_GetAllTasks value) getAllTasks,
     required TResult Function(_DeleteTask value) deleteTask,
+    required TResult Function(_UpdateTask value) updateTask,
     required TResult Function(_onEmitFromAnywhere value) emitFromAnywhere,
   }) {
     return getAllTasks(this);
@@ -188,6 +204,7 @@ class _$_GetAllTasks implements _GetAllTasks {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_GetAllTasks value)? getAllTasks,
     TResult Function(_DeleteTask value)? deleteTask,
+    TResult Function(_UpdateTask value)? updateTask,
     TResult Function(_onEmitFromAnywhere value)? emitFromAnywhere,
   }) {
     return getAllTasks?.call(this);
@@ -198,6 +215,7 @@ class _$_GetAllTasks implements _GetAllTasks {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetAllTasks value)? getAllTasks,
     TResult Function(_DeleteTask value)? deleteTask,
+    TResult Function(_UpdateTask value)? updateTask,
     TResult Function(_onEmitFromAnywhere value)? emitFromAnywhere,
     required TResult orElse(),
   }) {
@@ -278,6 +296,7 @@ class _$_DeleteTask implements _DeleteTask {
   TResult when<TResult extends Object?>({
     required TResult Function() getAllTasks,
     required TResult Function(String taskId) deleteTask,
+    required TResult Function(TaskDto task) updateTask,
     required TResult Function(ListTaskState state) emitFromAnywhere,
   }) {
     return deleteTask(taskId);
@@ -288,6 +307,7 @@ class _$_DeleteTask implements _DeleteTask {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? getAllTasks,
     TResult Function(String taskId)? deleteTask,
+    TResult Function(TaskDto task)? updateTask,
     TResult Function(ListTaskState state)? emitFromAnywhere,
   }) {
     return deleteTask?.call(taskId);
@@ -298,6 +318,7 @@ class _$_DeleteTask implements _DeleteTask {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getAllTasks,
     TResult Function(String taskId)? deleteTask,
+    TResult Function(TaskDto task)? updateTask,
     TResult Function(ListTaskState state)? emitFromAnywhere,
     required TResult orElse(),
   }) {
@@ -312,6 +333,7 @@ class _$_DeleteTask implements _DeleteTask {
   TResult map<TResult extends Object?>({
     required TResult Function(_GetAllTasks value) getAllTasks,
     required TResult Function(_DeleteTask value) deleteTask,
+    required TResult Function(_UpdateTask value) updateTask,
     required TResult Function(_onEmitFromAnywhere value) emitFromAnywhere,
   }) {
     return deleteTask(this);
@@ -322,6 +344,7 @@ class _$_DeleteTask implements _DeleteTask {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_GetAllTasks value)? getAllTasks,
     TResult Function(_DeleteTask value)? deleteTask,
+    TResult Function(_UpdateTask value)? updateTask,
     TResult Function(_onEmitFromAnywhere value)? emitFromAnywhere,
   }) {
     return deleteTask?.call(this);
@@ -332,6 +355,7 @@ class _$_DeleteTask implements _DeleteTask {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetAllTasks value)? getAllTasks,
     TResult Function(_DeleteTask value)? deleteTask,
+    TResult Function(_UpdateTask value)? updateTask,
     TResult Function(_onEmitFromAnywhere value)? emitFromAnywhere,
     required TResult orElse(),
   }) {
@@ -348,6 +372,160 @@ abstract class _DeleteTask implements ListTaskEvent {
   String get taskId;
   @JsonKey(ignore: true)
   _$DeleteTaskCopyWith<_DeleteTask> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$UpdateTaskCopyWith<$Res> {
+  factory _$UpdateTaskCopyWith(
+          _UpdateTask value, $Res Function(_UpdateTask) then) =
+      __$UpdateTaskCopyWithImpl<$Res>;
+  $Res call({TaskDto task});
+
+  $TaskDtoCopyWith<$Res> get task;
+}
+
+/// @nodoc
+class __$UpdateTaskCopyWithImpl<$Res> extends _$ListTaskEventCopyWithImpl<$Res>
+    implements _$UpdateTaskCopyWith<$Res> {
+  __$UpdateTaskCopyWithImpl(
+      _UpdateTask _value, $Res Function(_UpdateTask) _then)
+      : super(_value, (v) => _then(v as _UpdateTask));
+
+  @override
+  _UpdateTask get _value => super._value as _UpdateTask;
+
+  @override
+  $Res call({
+    Object? task = freezed,
+  }) {
+    return _then(_UpdateTask(
+      task: task == freezed
+          ? _value.task
+          : task // ignore: cast_nullable_to_non_nullable
+              as TaskDto,
+    ));
+  }
+
+  @override
+  $TaskDtoCopyWith<$Res> get task {
+    return $TaskDtoCopyWith<$Res>(_value.task, (value) {
+      return _then(_value.copyWith(task: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$_UpdateTask implements _UpdateTask {
+  const _$_UpdateTask({required this.task});
+
+  @override
+  final TaskDto task;
+
+  @override
+  String toString() {
+    return 'ListTaskEvent.updateTask(task: $task)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _UpdateTask &&
+            const DeepCollectionEquality().equals(other.task, task));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(task));
+
+  @JsonKey(ignore: true)
+  @override
+  _$UpdateTaskCopyWith<_UpdateTask> get copyWith =>
+      __$UpdateTaskCopyWithImpl<_UpdateTask>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getAllTasks,
+    required TResult Function(String taskId) deleteTask,
+    required TResult Function(TaskDto task) updateTask,
+    required TResult Function(ListTaskState state) emitFromAnywhere,
+  }) {
+    return updateTask(task);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? getAllTasks,
+    TResult Function(String taskId)? deleteTask,
+    TResult Function(TaskDto task)? updateTask,
+    TResult Function(ListTaskState state)? emitFromAnywhere,
+  }) {
+    return updateTask?.call(task);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getAllTasks,
+    TResult Function(String taskId)? deleteTask,
+    TResult Function(TaskDto task)? updateTask,
+    TResult Function(ListTaskState state)? emitFromAnywhere,
+    required TResult orElse(),
+  }) {
+    if (updateTask != null) {
+      return updateTask(task);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_GetAllTasks value) getAllTasks,
+    required TResult Function(_DeleteTask value) deleteTask,
+    required TResult Function(_UpdateTask value) updateTask,
+    required TResult Function(_onEmitFromAnywhere value) emitFromAnywhere,
+  }) {
+    return updateTask(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_GetAllTasks value)? getAllTasks,
+    TResult Function(_DeleteTask value)? deleteTask,
+    TResult Function(_UpdateTask value)? updateTask,
+    TResult Function(_onEmitFromAnywhere value)? emitFromAnywhere,
+  }) {
+    return updateTask?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_GetAllTasks value)? getAllTasks,
+    TResult Function(_DeleteTask value)? deleteTask,
+    TResult Function(_UpdateTask value)? updateTask,
+    TResult Function(_onEmitFromAnywhere value)? emitFromAnywhere,
+    required TResult orElse(),
+  }) {
+    if (updateTask != null) {
+      return updateTask(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UpdateTask implements ListTaskEvent {
+  const factory _UpdateTask({required TaskDto task}) = _$_UpdateTask;
+
+  TaskDto get task;
+  @JsonKey(ignore: true)
+  _$UpdateTaskCopyWith<_UpdateTask> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -427,6 +605,7 @@ class _$_onEmitFromAnywhere implements _onEmitFromAnywhere {
   TResult when<TResult extends Object?>({
     required TResult Function() getAllTasks,
     required TResult Function(String taskId) deleteTask,
+    required TResult Function(TaskDto task) updateTask,
     required TResult Function(ListTaskState state) emitFromAnywhere,
   }) {
     return emitFromAnywhere(state);
@@ -437,6 +616,7 @@ class _$_onEmitFromAnywhere implements _onEmitFromAnywhere {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? getAllTasks,
     TResult Function(String taskId)? deleteTask,
+    TResult Function(TaskDto task)? updateTask,
     TResult Function(ListTaskState state)? emitFromAnywhere,
   }) {
     return emitFromAnywhere?.call(state);
@@ -447,6 +627,7 @@ class _$_onEmitFromAnywhere implements _onEmitFromAnywhere {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getAllTasks,
     TResult Function(String taskId)? deleteTask,
+    TResult Function(TaskDto task)? updateTask,
     TResult Function(ListTaskState state)? emitFromAnywhere,
     required TResult orElse(),
   }) {
@@ -461,6 +642,7 @@ class _$_onEmitFromAnywhere implements _onEmitFromAnywhere {
   TResult map<TResult extends Object?>({
     required TResult Function(_GetAllTasks value) getAllTasks,
     required TResult Function(_DeleteTask value) deleteTask,
+    required TResult Function(_UpdateTask value) updateTask,
     required TResult Function(_onEmitFromAnywhere value) emitFromAnywhere,
   }) {
     return emitFromAnywhere(this);
@@ -471,6 +653,7 @@ class _$_onEmitFromAnywhere implements _onEmitFromAnywhere {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_GetAllTasks value)? getAllTasks,
     TResult Function(_DeleteTask value)? deleteTask,
+    TResult Function(_UpdateTask value)? updateTask,
     TResult Function(_onEmitFromAnywhere value)? emitFromAnywhere,
   }) {
     return emitFromAnywhere?.call(this);
@@ -481,6 +664,7 @@ class _$_onEmitFromAnywhere implements _onEmitFromAnywhere {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetAllTasks value)? getAllTasks,
     TResult Function(_DeleteTask value)? deleteTask,
+    TResult Function(_UpdateTask value)? updateTask,
     TResult Function(_onEmitFromAnywhere value)? emitFromAnywhere,
     required TResult orElse(),
   }) {

@@ -52,4 +52,17 @@ class ITaskRepository extends TaskRepository {
       return left('Failed');
     }
   }
+
+  @override
+  Future<Either<String, String>> updateTask({required TaskDto task}) async {
+    try {
+      FirebaseFirestore.instance.collection('tasks').doc(task.id).update({
+        'title': task.title,
+        'description': task.description,
+      });
+      return right('Done');
+    } catch (error) {
+      return left('Failed');
+    }
+  }
 }

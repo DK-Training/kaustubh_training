@@ -92,6 +92,64 @@ class HomeScreenConsumer extends StatelessWidget {
                             ]),
                       ),
                       IconButton(
+                          onPressed: () async {
+                            TextEditingController titleController =
+                                TextEditingController(text: task.title);
+                            TextEditingController descriptionController =
+                                TextEditingController(text: task.description);
+                            final TaskDto? updatedTask =
+                                await showDialog<TaskDto>(
+                                    context: context,
+                                    builder: (context) {
+                                      return AlertDialog(
+                                        title: const Text('Update Task'),
+                                        content: SizedBox(
+                                          height: 300,
+                                          child: Column(children: [
+                                            TextField(
+                                              controller: titleController,
+                                              decoration: const InputDecoration(
+                                                  hintText: "Title"),
+                                            ),
+                                            TextField(
+                                              controller: descriptionController,
+                                              maxLines: 10,
+                                              decoration: const InputDecoration(
+                                                  hintText: "Description"),
+                                            )
+                                          ]),
+                                        ),
+                                        actions: <Widget>[
+                                          ElevatedButton(
+                                            child: const Text(
+                                              'Update',
+                                              style: TextStyle(
+                                                  color: Colors.white),
+                                            ),
+                                            onPressed: () {
+                                              final TaskDto updatedTask =
+                                                  task.copyWith(
+                                                title: titleController.text,
+                                                description:
+                                                    descriptionController.text,
+                                              );
+                                              Navigator.of(context)
+                                                  .pop(updatedTask);
+                                            },
+                                          )
+                                        ],
+                                      );
+                                    });
+                            if (updatedTask != null) {
+                              context.read<ListTaskBloc>().add(
+                                  ListTaskEvent.updateTask(task: updatedTask));
+                            }
+                          },
+                          icon: Icon(
+                            Icons.edit,
+                            color: Theme.of(context).primaryColor,
+                          )),
+                      IconButton(
                           onPressed: () {
                             context
                                 .read<ListTaskBloc>()

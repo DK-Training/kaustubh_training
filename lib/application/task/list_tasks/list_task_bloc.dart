@@ -1,6 +1,4 @@
 import 'package:bloc/bloc.dart';
-import 'package:dartz/dartz.dart';
-import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../domain/core/config/app_config.dart';
@@ -28,7 +26,20 @@ class ListTaskBloc extends Bloc<ListTaskEvent, ListTaskState> {
           await state.taskRepository.deleteTask(taskId: event.taskId);
       response.fold(
           (l) => {
-                add(ListTaskEvent.emitFromAnywhere(state: state.copyWith(
+                add(ListTaskEvent.emitFromAnywhere(
+                    state: state.copyWith(
+                  isFailed: true,
+                ))),
+              }, (r) {
+        add(const ListTaskEvent.getAllTasks());
+      });
+    });
+    on<_UpdateTask>((event, emit) async {
+      final response = await state.taskRepository.updateTask(task: event.task);
+      response.fold(
+          (l) => {
+                add(ListTaskEvent.emitFromAnywhere(
+                    state: state.copyWith(
                   isFailed: true,
                 ))),
               }, (r) {
